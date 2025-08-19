@@ -8,44 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../style.css" />
     <style>
-      .pdf-btn {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        min-height: 220px;
-        background: #fff;
-        border-radius: 22px;
-        border: 2px solid #e0e0e0;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-        transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
-        cursor: pointer;
-        text-decoration: none;
-      }
-      .pdf-btn:hover {
-        box-shadow: 0 6px 24px rgba(0,0,0,0.13);
-        border-color: #b30000;
-        transform: translateY(-3px) scale(1.03);
-        background: #fff6f6;
-      }
-      .pdf-btn .fa-file-pdf {
-        font-size: 5.5rem;
-      }
-      .pdf-btn .pdf-label {
-        font-size: 1.18rem;
-        font-weight: 500;
-        color: #222;
-        margin-top: 1rem;
-        text-decoration: underline;
-      }
       .page-hero { background: #f8f6f2; padding: 60px 0 20px; text-align: center; }
       .page-hero h1 { font-weight: 800; }
 .page-hero h1 span { color: #004200; }
       .page-hero p { max-width: 900px; margin: 10px auto 0; }
       .page-cover img { max-height: 460px; object-fit: cover; border-radius: 12px; width: 100%; }
-  .page-content { max-width: 1000px; margin: 30px auto; }
-  p { font-size: 22px; }
+      .page-content { max-width: 1000px; margin: 30px auto; }
     </style>
   </head>
   <body>
@@ -79,89 +47,19 @@
         </div>
       </section>
 
-      <section class="container page-content mt-4">
-        <div class="row align-items-start g-4 ">
-          <div class="col-lg-5 col-md-6 col-12 mb-3 mb-md-0">
-            <div class="page-cover">
-              <img src="https://static.wixstatic.com/media/697903_89872cd8ba19413fad554c887da5f2e0~mv2.jpg/v1/fill/w_300,h_192,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/697903_89872cd8ba19413fad554c887da5f2e0~mv2.jpg" alt="2014 Apropiación social del conocimiento" class="img-fluid rounded shadow" />
-            </div>
+      <section class="container page-content">
+        <div class="page-cover mb-4">
+        <div class="row align-items-center g-4">
+          <div class="col-md-6 mb-3 mb-md-0">
+            <img src="https://static.wixstatic.com/media/697903_89872cd8ba19413fad554c887da5f2e0~mv2.jpg/v1/fill/w_300,h_192,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/697903_89872cd8ba19413fad554c887da5f2e0~mv2.jpg" alt="2014 Apropiación social del conocimiento" class="img-fluid rounded shadow w-100" />
           </div>
-          <div class="col-lg-7 col-md-6 col-12">
-            <article class="content">
-              <h3>Descripción</h3>
-              <p>
-                A pesquisa propõe o estudo das relações entre as políticas públicas e de mobilidade urbana, 
-                que geram práticas de turismo e transformações urbanas e sociais com a apropriação de 
-                espaços que são turistificados, em favelas da cidade do Rio de Janeiro e em bairros populares 
-                de Medellín, Colômbia, com o estudo da apropriação de espaços em favelas da cidade do 
-                Rio de Janeiro, Brasil e em bairros populares na cidade de Medellín, Colômbia. As cidades 
-                do Rio de Janeiro e de Medellín possuem processos particulares de desenvolvimento 
-                econômico social e político, próprios de cada cidade, e apresentam semelhanças. Grande 
-                parte de suas populações habitam áreas chamadas de informais - no caso do Rio de Janeiro, 
-                em torno de 23% de sua população -, e de Medellín em torno de 30%; ambas cidades têm 
-                sido palco de intervenções urbanísticas recentes em assentamentos precários (a partir da 
-                década dos 2000),
-              </p>
-            </article>
+          <div class="col-md-6 d-flex flex-column justify-content-center">
+            <h3 class="mb-3">Apropiación social del conocimiento</h3>
+            <p>
+              Proyecto orientado a la construcción colectiva y contextualizada del conocimiento en comunidades, promoviendo la participación social y el desarrollo territorial a través de procesos colaborativos y educativos.
+            </p>
           </div>
         </div>
-
-        <hr>
-        <div class="subtitulos text-center">
-            <h3>Conoce más </h3>
-          </div>
-        
-        <div class="textos">
-          <div class="row justify-content-center  my-5 gap-4  ">
-            <div class="col-md-5 text-center mb-4 mb-md-0 ">
-              <button type="button" class="pdf-btn" data-bs-toggle="modal" data-bs-target="#pdfModalMedellin">
-                <i class="fa-solid fa-file-pdf text-danger "></i>
-                <span class="pdf-label">Informe General de Investigación Medellín</span>
-              </button>
-            </div>
-            <div class="col-md-5 text-center">
-              <button type="button" class="pdf-btn" data-bs-toggle="modal" data-bs-target="#pdfModalRio">
-                <i class="fa-solid fa-file-pdf text-danger"></i>
-                <span class="pdf-label">Informe General de Investigación Río de Janeiro</span>
-              </button>
-            </div>
-          </div>
-
-
-          
-
-          <!-- Modal PDF Medellín -->
-          <div class="modal fade" id="pdfModalMedellin" tabindex="-1" aria-labelledby="pdfModalMedellinLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered" style="max-width: 95vw;">
-              <div class="modal-content" style="height: 90vh;">
-                <div class="modal-header border-0">
-                  <h5 class="modal-title" id="pdfModalMedellinLabel">Informe General de Investigación Medellín</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body p-0" style="height: calc(90vh - 56px);">
-                  <iframe src="" id="pdfFrameMedellin" style="width:100%; height:100%; border:none; background:#f8f8f8;" allowfullscreen></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Modal PDF Río de Janeiro -->
-          <div class="modal fade" id="pdfModalRio" tabindex="-1" aria-labelledby="pdfModalRioLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered" style="max-width: 95vw;">
-              <div class="modal-content" style="height: 90vh;">
-                <div class="modal-header border-0">
-                  <h5 class="modal-title" id="pdfModalRioLabel">Informe General de Investigación Río de Janeiro</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body p-0" style="height: calc(90vh - 56px);">
-                  <iframe src="" id="pdfFrameRio" style="width:100%; height:100%; border:none; background:#f8f8f8;" allowfullscreen></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
       </section>
     </main>
 
@@ -226,29 +124,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
   </html>
-    <script>
-      // URLs reales de los PDFs
-      const PDF_MEDELLIN_URL = 'https://4ea48ece-f696-4271-8da1-2da6bbc8dbe8.filesusr.com/ugd/697903_7798773331744972b38becd09cc181b2.pdf';
-      const PDF_RIO_URL = 'https://4ea48ece-f696-4271-8da1-2da6bbc8dbe8.filesusr.com/ugd/697903_583e3d3b8b034e21a53d752fae4a3dae.pdf';
-
-      // Cargar PDF solo al abrir el modal
-      document.addEventListener('DOMContentLoaded', function() {
-        var medellinModal = document.getElementById('pdfModalMedellin');
-        var rioModal = document.getElementById('pdfModalRio');
-        var frameMedellin = document.getElementById('pdfFrameMedellin');
-        var frameRio = document.getElementById('pdfFrameRio');
-
-        medellinModal.addEventListener('show.bs.modal', function () {
-          frameMedellin.src = PDF_MEDELLIN_URL;
-        });
-        medellinModal.addEventListener('hidden.bs.modal', function () {
-          frameMedellin.src = '';
-        });
-        rioModal.addEventListener('show.bs.modal', function () {
-          frameRio.src = PDF_RIO_URL;
-        });
-        rioModal.addEventListener('hidden.bs.modal', function () {
-          frameRio.src = '';
-        });
-      });
-    </script>
