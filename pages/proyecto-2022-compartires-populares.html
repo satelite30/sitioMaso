@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../style.css" />
     <style>
+      /* X blanca en el modal de galería */
+      .modal-content .btn-close {
+        filter: invert(1) grayscale(1) brightness(2);
+        opacity: 1;
+      }
       .page-hero {
         background: #f8f6f2;
         padding: 60px 0 20px;
@@ -16,16 +21,37 @@
       .page-hero h1 { font-weight: 800; }
       .page-hero h1 span { color: #004200; }
       .page-hero p { max-width: 900px; margin: 10px auto 0; }
-      .page-cover img { max-height: 460px; object-fit: cover; border-radius: 12px; width: 100%; }
+      .page-cover {
+        height: 100%;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      .page-cover img {
+        height: 100%;
+        width: 100%;
+        max-height: 460px;
+        object-fit: cover;
+        border-radius: 12px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+      }
+      .page-cover img:hover {
+        transform: scale(1.04) rotate(-1deg);
+        box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+        cursor: pointer;
+      }
       .page-content { max-width: 1000px; margin: 30px auto; }
+      p{font-size: 22px; }
     </style>
   </head>
   <body>
     <header>
       <nav class="navbar d-flex navbar-expand-lg navbar-light bg-white shadow-sm">
         <div class="container justify-content-center">
-          <a class="navbar-brand m-4 justify-content-center col-lg-4 col-md-6 col-sm-8" href="../index.html">
-            <img src="../recursos/img/logo3.png" alt="Logo" width="0%" class="logo d-flex m-auto" />
+          <a class="navbar-brand  m-4 justify-content-center col-lg-4 col-md-6 col-sm-8" href="../index.html">
+            <img src="../recursos/img/logo3.png" alt="Logo" width="100%" class="logo d-flex m-auto" />
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -51,28 +77,47 @@
         </div>
       </section>
 
-      <section class="container page-content">
-        <div class="row align-items-center g-4">
+      <section class="container-fluid  page-content">
+  <div class="row align-items-start g-4">
           <div class="col-lg-5 col-md-6 col-12 mb-3 mb-md-0">
-            <div class="page-cover">
-              <img src="../recursos/img/ParteIVElcorazóndelbarrio-ObedYepes-2021.jpg" alt="CompartirES PopularES" class="img-fluid rounded shadow" />
+            <div class="page-cover ">
+              <img src="../recursos/img/ParteIVElcorazóndelbarrio-ObedYepes-2021.jpg" alt="CompartirES PopularES" style="object-fit: contain;padding:20px 0;" class="img-fluid rounded shadow" />
+            </div>
+            <div class="page-cover align-items-end ">
+              <img src="https://github.com/satelite30/logo-test/blob/main/02.jpeg?raw=true" alt="CompartirES PopularES" style="object-fit: contain;padding:20px 10px;" class="img-fluid rounded shadow" />
+            </div>
+            <div class="page-cover align-items-end ">
+              <img src="https://github.com/satelite30/logo-test/blob/main/04.jpeg?raw=true" alt="CompartirES PopularES" style="object-fit: contain;padding:20px 10px;" class="img-fluid rounded shadow" />
             </div>
           </div>
-          <div class="col-lg-7 col-md-6 col-12">
+          <div class="col-lg-7 col-md-6 col-12" >
             <article class="content">
               <h3>Descripción</h3>
               <p>
-                Iniciativa en curso orientada a fortalecer procesos de apropiación social del conocimiento
-                y la articulación entre comunidades, academia e instituciones, mediante prácticas sentipensantes,
-                recorridos, laboratorios y publicaciones colaborativas.
+                Proceso de investigación-acción-participación, con inicio en 2010, en el que han participado habitantes de barrios populares de Medellín, universidades de diferentes ciudades de América Latina y servidores públicos.
               </p>
-              <h3 class="mt-4">Objetivos</h3>
-              <ul>
-                <li>Fortalecer capacidades locales para la transformación territorial.</li>
-                <li>Visibilizar memorias y experiencias de vida en los barrios populares.</li>
-                <li>Producir y compartir conocimiento situado.</li>
-              </ul>
+              <p>
+                La pretensión es comprender las contradicciones que ocurren en la apropiación de espacios y equipamientos públicos de barrios y el fortalecimiento de propuestas comunitarias para su disfrute colectivo frente a su mercantilización, abandono social e institucional y bajo interés de uso social. Son claves del proceso acompañar la incidencia de la política pública en la vida de la gente y la visibilización de la memoria urbana, desde sus identidades y diversidades, como clave de lucha social.​
+              </p>
+              <p>
+                Los resultados divulgados en este sitio muestran una línea del tiempo de creación popular. Entre 2010 y 2015 se construyen referentes contextuales, conceptuales y teóricos comprehensivos de la incidencia de la política urbana latinoamericana en los barrios, así como de la lucha de pobladores frente a nuevas lógicas de mercantilización de la vida; mientras que a partir de 2016, el foco ha estado en la juntanza popular de mano de habitantes, visitantes, e instituciones amigas. La implementación de estrategias metodológicas participativas nos han ayudado comprender, intervenir e incidir en las dinámicas urbanas; siendo producto la creación de nuevas formas de apropiación social y cultural de los espacios públicos, en evidente disputa.
+              </p>
+              <p>
+                Se ha producido y apropiado conocimiento socialmente útil mediante intercambios recíprocos entre participantes que parten de las potencialidades y necesidades de los barrios en diversos lenguajes y formatos: murales, canciones, poemas, fanzines, relatos de vida, microdocumentales, obras de teatro, emprendimientos, siembra, cuentos, cartillas, propuestas de intervención y proyectos de investigación y publicaciones en artículos, libros, capítulos de libro y ponencias.
+              </p>
+             
             </article>
+          </div>
+
+          <div class="container">
+             <h3 class="mt-4">Nombre del producto para la feria Clacso: Huellas de Barrio: red popular, sentipensante y actuante</h3>
+              <p>
+                <strong>Resumen:</strong> La transformación y afectación del cotidiano de los barrios populares de Medellín por prácticas de turismo es el contexto en el que emerge el colectivo Huellas de Barrio, una red de ciudad constituida en 2018, con antecedentes de procesos participativos desde el 2016. Esta reúne personas de instituciones públicas gubernamentales, de universidades, organizaciones sociales y colectivos comunitarios presentes en barrios populares de las comunas 1, 2, 6, 8, 10 y 13 de Medellín-Colombia de manera solidaria. Su despliegue ha sido fundado como proceso formativo, expositivo, gestor y multiplicador de conversaciones que se extendieron desde las localidades de los barrios habitados por cada participante hasta los escenarios de ciudad para observar, sentir, revelar y plantear los problemas y alternativas en defensa de lo humano, de lo colectivo y de la vida digna.
+              </p>
+              <p>
+                Esta juntanza multiplicadora, hoy vigente, desde su conformación fue grito de revisión de las formas de relacionamiento reproductoras de desigualdades en la producción de conocimiento, allí el cuidado y el afecto se desplegaron como el protocolo común para hacer frente a las preguntas iniciales y garantizar la permanencia de la acción colectiva. El recurso audiovisual es un relato a voces de la experiencia de Huellas de Barrio tras la presencia enmascarada del mercado en el turismo y la transformación de las prácticas cotidianas en la ciudad popular. Un proceso que fue incentivo para poner en entredicho las formas serias y solitarias de la producción de conocimiento y celebrar la construcción de confianza, la intimidad y la amistad como fuerza metodológica para encontrar caminos a los retos de la ciudad hoy.
+              </p>
+            
           </div>
         </div>
       </section>
@@ -137,5 +182,64 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Modal para galería de imágenes -->
+    <div class="modal fade " id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark ">
+          <div class="modal-header border-0 flex-column align-items-start">
+            <h4 class="modal-title w-100 text-center text-light fw-bold mb-2" id="galleryModalLabel">Compartir-ES popular-ES</h4>
+            <button type="button" class="btn-close  ms-auto"  data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body d-flex justify-content-center align-items-center position-relative" style="min-height:60vh;">
+            <button id="prevImgBtn" class="btn btn-dark position-absolute top-50 start-0 translate-middle-y" style="z-index:2;" aria-label="Anterior"><i class="fa fa-chevron-left fa-2x"></i></button>
+            <img id="modalGalleryImg" src="" alt="Imagen ampliada" class="img-fluid rounded shadow mx-auto d-block" style="max-height:70vh; object-fit:contain; background:#f8f8f8;" />
+            <button id="nextImgBtn" class="btn btn-dark position-absolute top-50 end-0 translate-middle-y" style="z-index:2;" aria-label="Siguiente"><i class="fa fa-chevron-right fa-2x"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Array de URLs de las imágenes de la columna
+      const galleryImages = [
+        '../recursos/img/ParteIVElcorazóndelbarrio-ObedYepes-2021.jpg',
+        'https://github.com/satelite30/logo-test/blob/main/02.jpeg?raw=true',
+        'https://github.com/satelite30/logo-test/blob/main/04.jpeg?raw=true'
+      ];
+      let currentImgIdx = 0;
+
+      // Asignar evento click a cada imagen de la columna
+      document.addEventListener('DOMContentLoaded', function() {
+        const imgNodes = document.querySelectorAll('.col-lg-5 .page-cover img');
+        imgNodes.forEach((img, idx) => {
+          img.style.cursor = 'pointer';
+          img.addEventListener('click', function() {
+            openGalleryModal(idx);
+          });
+        });
+        document.getElementById('prevImgBtn').addEventListener('click', function(e) {
+          e.stopPropagation();
+          showGalleryImg(currentImgIdx - 1);
+        });
+        document.getElementById('nextImgBtn').addEventListener('click', function(e) {
+          e.stopPropagation();
+          showGalleryImg(currentImgIdx + 1);
+        });
+      });
+
+      function openGalleryModal(idx) {
+        currentImgIdx = idx;
+        showGalleryImg(currentImgIdx);
+        const modal = new bootstrap.Modal(document.getElementById('galleryModal'));
+        modal.show();
+      }
+
+      function showGalleryImg(idx) {
+        if (idx < 0) idx = galleryImages.length - 1;
+        if (idx >= galleryImages.length) idx = 0;
+        currentImgIdx = idx;
+        document.getElementById('modalGalleryImg').src = galleryImages[currentImgIdx];
+      }
+    </script>
   </body>
   </html>
