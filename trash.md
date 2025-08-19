@@ -392,3 +392,26 @@
             </div>
           </div>
           </div>
+
+
+
+          ---------------------------modales  pdf activador 2018--------
+
+      <div class="subtitulos text-center">
+            <h3>Conoce  <span style="color: #004200;">más</span>   </h3>
+          </div>
+
+           <div class="row justify-content-center  my-5 gap-4  ">
+            <div class="col-md-5 text-center mb-4 mb-md-0 ">
+              <button type="button" class="pdf-btn" data-bs-toggle="modal" data-bs-target="#pdfModalMedellin">
+                <i class="fa-solid fa-file-pdf text-danger "></i>
+                <span class="pdf-label">Informe General de Investigación Medellín</span>
+              </button>
+            </div>
+            <div class="col-md-5 text-center">
+              <button type="button" class="pdf-btn" data-bs-toggle="modal" data-bs-target="#pdfModalRio">
+                <i class="fa-solid fa-file-pdf text-danger"></i>
+                <span class="pdf-label">Informe General de Investigación Río de Janeiro</span>
+              </button>
+            </div>
+          </div>

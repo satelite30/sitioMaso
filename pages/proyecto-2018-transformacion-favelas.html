@@ -92,6 +92,18 @@
             <div class="page-cover">
               <img src="https://static.wixstatic.com/media/697903_14a4e71cde2f4069a2180282fa7410a4~mv2.jpg/v1/fill/w_317,h_212,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5769_JPG.jpg" alt="2014 Apropiación social del conocimiento" class="img-fluid rounded shadow" />
             </div>
+
+            <div class="botones border mt-2">
+
+            <button type="button" class="btn btn-primary w-100 mb-2" data-bs-toggle="modal" data-bs-target="#pdfModalMedellin">
+              Informe General de Investigación Medellín
+            </button>
+
+            <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#pdfModalRio">
+              Informe General de Investigación Rio de Janeiro
+            </button>
+            </div>
+
           </div>
           <div class="col-lg-7 col-md-6 col-12">
             <article class="content" >
@@ -113,30 +125,180 @@
           </div>
         </div>
 
-        <hr>
-        <div class="subtitulos text-center">
-            <h3>Conoce  <span style="color: #004200;">más</span>   </h3>
+       
+
+      </section>
+
+      <!-- timeline linea de tiempo -->
+  <div class="container-fluid  lineadetiempo " style="background-color: #b1b1b1ad;">
+
+  <div class=" rounded-3 p-3" style="position:relative;width:100%;max-width:760px;margin:0 auto;background:#ffffff00;">
+        <canvas id="timeline-canvas" style="position:absolute;left:0;top:0;width:100%;height:100%;z-index:1;pointer-events:none;"></canvas>
+        <ul class="timeline" style="position:relative;z-index:2;">
+
+          <!-- Item 0 -->
+        <li>
+          <div class="direction-l">
+            <div class="flag-wrapper">
+              <img class="timeline-img" src="https://static.wixstatic.com/media/697903_9bb6bdaed82042acba1886e7f8be292f~mv2.jpg/v1/fill/w_767,h_511,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_9bb6bdaed82042acba1886e7f8be292f~mv2.jpg" alt="Apple Inc." />
+              <span class="timeline-img-tooltip bg-white">
+                <h2>Encuentros</h2>
+                <p>Encuentros - Reconociéndonos para <br> crear red. (1-5)</p>
+                <p>Encuentros - Formándonos (6-13) </p>
+                <p>Encuentros - Laboratorio cultural (14-16)</p>
+                <p>2019 - 2020</p>
+                    
+                </span>
+              <span class="flag">Talleres Participativos</span>
+              <span class="time-wrapper"><span class="time">2011 - 2013</span></span>
+            </div>
+            <div class="desc">
+              Talleres Participativos
+            </div>
           </div>
+        </li>
+
+
+        <!-- Item 1 -->
+        <li>
+          <div class="direction-r">
+            <div class="flag-wrapper">
+              <img class="timeline-img" src="https://static.wixstatic.com/media/697903_5754937e97d540729d134900f2f4fc8e~mv2.jpg/v1/fill/w_767,h_511,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_5754937e97d540729d134900f2f4fc8e~mv2.jpg" alt="Freelancer" />
+              <span class="timeline-img-tooltip bg-white" style="border: green 2px solid;">
+                <h2>Recorridos</h2>
+                <p>Recorrido Comuna 1 y 2</p>
+                <p>Recorrido Comuna 8</p>
+                <p>Recorrido Comuna 13</p>
+                
+
+              </span>
+              <span class="flag">Recorridos territoriales</span>
+              <span class="time-wrapper"><span class="time">2013 - present</span></span>
+            </div>
+            <div class="desc">
+              Recorridos territoriales
+            </div>
+          </div>
+        </li>
         
-        <div class="textos">
-          <div class="row justify-content-center  my-5 gap-4  ">
-            <div class="col-md-5 text-center mb-4 mb-md-0 ">
-              <button type="button" class="pdf-btn" data-bs-toggle="modal" data-bs-target="#pdfModalMedellin">
-                <i class="fa-solid fa-file-pdf text-danger "></i>
-                <span class="pdf-label">Informe General de Investigación Medellín</span>
-              </button>
+         <!-- Item 2 -->
+        <li>
+          <div class="direction-r">
+            <div class="flag-wrapper">
+              <img class="timeline-img" src="https://github.com/satelite30/logo-test/blob/main/foto20.jpg?raw=true" alt="Freelancer" />
+              <span class="timeline-img-tooltip bg-white" style="border: green 2px solid;">
+                <h2>Voces de los barrios - podcast</h2>
+                <p>Recorrido Comuna 1 y 2</p>
+                
+
+              </span>
+              <span class="flag">Voces de los barrios</span>
+              <span class="time-wrapper"><span class="time">2013 - present</span></span>
             </div>
-            <div class="col-md-5 text-center">
-              <button type="button" class="pdf-btn" data-bs-toggle="modal" data-bs-target="#pdfModalRio">
-                <i class="fa-solid fa-file-pdf text-danger"></i>
-                <span class="pdf-label">Informe General de Investigación Río de Janeiro</span>
-              </button>
+            <div class="desc">
+              Voces de los barrios
             </div>
           </div>
+        </li>
 
 
-          
+        <!-- Item 3 -->
+        <li>
+          <div class="direction-l">
+            <div class="flag-wrapper">
+              <img class="timeline-img" src="https://static.wixstatic.com/media/697903_872e886131054fec875e26eb37e3234f~mv2.jpg/v1/fill/w_205,h_206,q_90,enc_avif,quality_auto/697903_872e886131054fec875e26eb37e3234f~mv2.jpg" alt="Apple Inc." />
+              <span class="timeline-img-tooltip bg-white">
+                <h2>Deseos participativos</h2>
+                <p>Deseos Participativo: comunas 1 y 2</p>
+                <p>Deseos Participativo: comunas 6</p>
+                <p>Deseos Participativo: comunas 8</p>
+                <p>Deseos Participativo: comuna 13</p>
 
+
+              </span>
+              <span class="flag">Deseos Participativos:</span>
+              <span class="time-wrapper"><span class="time">2011 - 2013</span></span>
+            </div>
+            <div class="desc">
+              Socialización con comunidad
+            </div>
+          </div>
+        </li>
+
+         <!-- Item 4 -->
+        <li>
+          <div class="direction-r">
+            <div class="flag-wrapper">
+              <img class="timeline-img" src="https://github.com/satelite30/logo-test/blob/main/foto21.jpg?raw=true" alt="Freelancer" />
+              <span class="timeline-img-tooltip bg-white" style="border: green 2px solid;">
+                <h2>Cartillas</h2>
+                <p>Laboratorios Hechos de <br><span> HECHOS POPULARES</span> </p>
+                <p>Abrazar los barrios populares</p>
+                <p>Cosechando la palabra</p>
+                
+
+              </span>
+              <span class="flag">Laboratorios </span>
+              <span class="time-wrapper"><span class="time">2013 - present</span></span>
+            </div>
+            <div class="desc">
+              Cartillas
+            </div>
+          </div>
+        </li>
+
+
+         <!-- Item 5 -->
+        <li>
+          <div class="direction-l">
+            <div class="flag-wrapper">
+              <img class="timeline-img" src="https://static.wixstatic.com/media/697903_8edd0173d59b4d79b00fbb69579b0765~mv2.jpg/v1/fill/w_758,h_485,q_90,enc_avif,quality_auto/697903_8edd0173d59b4d79b00fbb69579b0765~mv2.jpg" alt="Apple Inc." />
+              <span class="timeline-img-tooltip bg-white">
+                <h2>Pasantía Río de Janeiro</h2>
+                <p>Producto del trabajo conjunto de los grupos <br> de investigación 
+                  de Medellín (UdeA) <br> y Río de Janeiro (UFRJ y UNIRIO)</p>
+                
+
+
+              </span>
+              <span class="flag">Pasantía Río de Janeiro</span>
+              <span class="time-wrapper"><span class="time">2011 - 2013</span></span>
+            </div>
+            <div class="desc">
+              Pasantía Río de Janeiro
+            </div>
+          </div>
+        </li>
+
+          <!-- Item 6 -->
+        <li>
+          <div class="direction-r">
+            <div class="flag-wrapper">
+              <img class="timeline-img" src="https://static.wixstatic.com/media/697903_3f9c1cca108a400e943b761dd62018ca~mv2.jpg/v1/fill/w_707,h_472,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_3f9c1cca108a400e943b761dd62018ca~mv2.jpg" alt="Freelancer" />
+              <span class="timeline-img-tooltip bg-white" style="border: green 2px solid;">
+                <h2>Ponencias internacionales</h2>
+              </span>
+              <span class="flag">Publicaciones  </span>
+              <span class="time-wrapper"><span class="time">2013 - present</span></span>
+            </div>
+            <div class="desc">
+              Publicaciones, Productos de nuevo conocimiento
+            </div>
+          </div>
+        </li>
+
+
+        
+
+
+        </ul>
+      </div>
+      </div>
+    
+      <div class="documentosDescarga container">
+         
+        <div class="textos">
+        
           <!-- Modal PDF Medellín -->
           <div class="modal fade" id="pdfModalMedellin" tabindex="-1" aria-labelledby="pdfModalMedellinLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl modal-dialog-centered" style="max-width: 95vw;">
@@ -169,175 +331,7 @@
         </div>
 
 
-      </section>
-
-      <!-- timeline linea de tiempo -->
-  <div class="container-fluid  lineadetiempo " style="background-color: #b1b1b1ad;">
-
-  <div class=" rounded-3 p-3" style="position:relative;width:100%;max-width:760px;margin:0 auto;background:#ffffff00;">
-        <canvas id="timeline-canvas" style="position:absolute;left:0;top:0;width:100%;height:100%;z-index:1;pointer-events:none;"></canvas>
-        <ul class="timeline" style="position:relative;z-index:2;">
-
-          <!-- Item 0 -->
-        <li>
-          <div class="direction-l">
-            <div class="flag-wrapper">
-              <img class="timeline-img" src="https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg" alt="Apple Inc." />
-              <span class="timeline-img-tooltip bg-white">
-                <h2>Encuentros</h2>
-                <p>Encuentros - Reconociéndonos para <br> crear red. (1-5)</p>
-                <p>Encuentros - Formándonos (6-13) </p>
-                <p>Encuentros - Laboratorio cultural (14-16)</p>
-                <p>2019 - 2020</p>
-                    
-                </span>
-              <span class="flag">Talleres Participativos</span>
-              <span class="time-wrapper"><span class="time">2011 - 2013</span></span>
-            </div>
-            <div class="desc">
-              Talleres Participativos
-            </div>
-          </div>
-        </li>
-
-
-        <!-- Item 1 -->
-        <li>
-          <div class="direction-r">
-            <div class="flag-wrapper">
-              <img class="timeline-img" src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg" alt="Freelancer" />
-              <span class="timeline-img-tooltip bg-white" style="border: green 2px solid;">
-                <h2>Recorridos</h2>
-                <p>Recorrido Comuna 1 y 2</p>
-                <p>Recorrido Comuna 8</p>
-                <p>Recorrido Comuna 13</p>
-                
-
-              </span>
-              <span class="flag">Recorridos territoriales</span>
-              <span class="time-wrapper"><span class="time">2013 - present</span></span>
-            </div>
-            <div class="desc">
-              Recorridos territoriales
-            </div>
-          </div>
-        </li>
-        
-         <!-- Item 2 -->
-        <li>
-          <div class="direction-r">
-            <div class="flag-wrapper">
-              <img class="timeline-img" src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg" alt="Freelancer" />
-              <span class="timeline-img-tooltip bg-white" style="border: green 2px solid;">
-                <h2>Voces de los barrios - podcast</h2>
-                <p>Recorrido Comuna 1 y 2</p>
-                
-
-              </span>
-              <span class="flag">Voces de los barrios</span>
-              <span class="time-wrapper"><span class="time">2013 - present</span></span>
-            </div>
-            <div class="desc">
-              Voces de los barrios
-            </div>
-          </div>
-        </li>
-
-
-        <!-- Item 3 -->
-        <li>
-          <div class="direction-l">
-            <div class="flag-wrapper">
-              <img class="timeline-img" src="https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg" alt="Apple Inc." />
-              <span class="timeline-img-tooltip bg-white">
-                <h2>Deseos participativos</h2>
-                <p>Deseos Participativo: comunas 1 y 2</p>
-                <p>Deseos Participativo: comunas 6</p>
-                <p>Deseos Participativo: comunas 8</p>
-                <p>Deseos Participativo: comuna 13</p>
-
-
-              </span>
-              <span class="flag">Deseos Participativos:</span>
-              <span class="time-wrapper"><span class="time">2011 - 2013</span></span>
-            </div>
-            <div class="desc">
-              Socialización con comunidad
-            </div>
-          </div>
-        </li>
-
-         <!-- Item 4 -->
-        <li>
-          <div class="direction-r">
-            <div class="flag-wrapper">
-              <img class="timeline-img" src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg" alt="Freelancer" />
-              <span class="timeline-img-tooltip bg-white" style="border: green 2px solid;">
-                <h2>Cartillas</h2>
-                <p>Laboratorios Hechos de <br><span> HECHOS POPULARES</span> </p>
-                <p>Abrazar los barrios populares</p>
-                <p>Cosechando la palabra</p>
-                
-
-              </span>
-              <span class="flag">Laboratorios </span>
-              <span class="time-wrapper"><span class="time">2013 - present</span></span>
-            </div>
-            <div class="desc">
-              Cartillas
-            </div>
-          </div>
-        </li>
-
-
-         <!-- Item 5 -->
-        <li>
-          <div class="direction-l">
-            <div class="flag-wrapper">
-              <img class="timeline-img" src="https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg" alt="Apple Inc." />
-              <span class="timeline-img-tooltip bg-white">
-                <h2>Pasantía Río de Janeiro</h2>
-                <p>Producto del trabajo conjunto de los grupos <br> de investigación 
-                  de Medellín (UdeA) <br> y Río de Janeiro (UFRJ y UNIRIO)</p>
-                
-
-
-              </span>
-              <span class="flag">Pasantía Río de Janeiro</span>
-              <span class="time-wrapper"><span class="time">2011 - 2013</span></span>
-            </div>
-            <div class="desc">
-              Pasantía Río de Janeiro
-            </div>
-          </div>
-        </li>
-
-          <!-- Item 6 -->
-        <li>
-          <div class="direction-r">
-            <div class="flag-wrapper">
-              <img class="timeline-img" src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg" alt="Freelancer" />
-              <span class="timeline-img-tooltip bg-white" style="border: green 2px solid;">
-                <h2>Ponencias internacionales</h2>
-              </span>
-              <span class="flag">Publicaciones  </span>
-              <span class="time-wrapper"><span class="time">2013 - present</span></span>
-            </div>
-            <div class="desc">
-              Publicaciones, Productos de nuevo conocimiento
-            </div>
-          </div>
-        </li>
-
-
-        
-
-
-        </ul>
       </div>
-      </div>
-    
-
 
 
 
