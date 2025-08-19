@@ -8,6 +8,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../style.css" />
     <style>
+      .pdf-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 220px;
+        background: #fff;
+        border-radius: 22px;
+        border: 2px solid #e0e0e0;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .pdf-btn:hover {
+        box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+        border-color: #b30000;
+        transform: translateY(-3px) scale(1.03);
+        background: #fff6f6;
+      }
+      .pdf-btn .fa-file-pdf {
+        font-size: 5.5rem;
+      }
+      .pdf-btn .pdf-label {
+        font-size: 1.18rem;
+        font-weight: 500;
+        color: #222;
+        margin-top: 1rem;
+        text-decoration: underline;
+      }
       .page-hero { background: #f8f6f2; padding: 60px 0 20px; text-align: center; }
       .page-hero h1 { font-weight: 800; }
 .page-hero h1 span { color: #004200; }
@@ -48,8 +79,8 @@
         </div>
       </section>
 
-      <section class="container page-content">
-        <div class="row align-items-start g-4 border">
+      <section class="container page-content mt-4">
+        <div class="row align-items-start g-4 ">
           <div class="col-lg-5 col-md-6 col-12 mb-3 mb-md-0">
             <div class="page-cover">
               <img src="https://static.wixstatic.com/media/697903_89872cd8ba19413fad554c887da5f2e0~mv2.jpg/v1/fill/w_300,h_192,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/697903_89872cd8ba19413fad554c887da5f2e0~mv2.jpg" alt="2014 Apropiación social del conocimiento" class="img-fluid rounded shadow" />
@@ -75,23 +106,57 @@
           </div>
         </div>
 
+        <hr>
+        <div class="subtitulos text-center">
+            <h3>Conoce más </h3>
+          </div>
+        
         <div class="textos">
-          <div class="row justify-content-center my-5">
-            <div class="col-md-4 text-center mb-4 mb-md-0">
-              <a href="#" target="_blank" class="d-block mb-2">
-                <i class="fa-solid fa-file-pdf fa-7x text-danger"></i>
-              </a>
-              <a href="#" target="_blank" class="fw-semibold fs-5 d-block mt-2" style="text-decoration: underline;">
-                Informe General de Investigación Medellín
-              </a>
+          <div class="row justify-content-center  my-5 gap-4  ">
+            <div class="col-md-5 text-center mb-4 mb-md-0 ">
+              <button type="button" class="pdf-btn" data-bs-toggle="modal" data-bs-target="#pdfModalMedellin">
+                <i class="fa-solid fa-file-pdf text-danger "></i>
+                <span class="pdf-label">Informe General de Investigación Medellín</span>
+              </button>
             </div>
-            <div class="col-md-4 text-center">
-              <a href="#" target="_blank" class="d-block mb-2">
-                <i class="fa-solid fa-file-pdf fa-7x text-danger"></i>
-              </a>
-              <a href="#" target="_blank" class="fw-semibold fs-5 d-block mt-2" style="text-decoration: underline;">
-                Informe General de Investigación Río de Janeiro
-              </a>
+            <div class="col-md-5 text-center">
+              <button type="button" class="pdf-btn" data-bs-toggle="modal" data-bs-target="#pdfModalRio">
+                <i class="fa-solid fa-file-pdf text-danger"></i>
+                <span class="pdf-label">Informe General de Investigación Río de Janeiro</span>
+              </button>
+            </div>
+          </div>
+
+
+          
+
+          <!-- Modal PDF Medellín -->
+          <div class="modal fade" id="pdfModalMedellin" tabindex="-1" aria-labelledby="pdfModalMedellinLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered" style="max-width: 95vw;">
+              <div class="modal-content" style="height: 90vh;">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title" id="pdfModalMedellinLabel">Informe General de Investigación Medellín</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body p-0" style="height: calc(90vh - 56px);">
+                  <iframe src="" id="pdfFrameMedellin" style="width:100%; height:100%; border:none; background:#f8f8f8;" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal PDF Río de Janeiro -->
+          <div class="modal fade" id="pdfModalRio" tabindex="-1" aria-labelledby="pdfModalRioLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered" style="max-width: 95vw;">
+              <div class="modal-content" style="height: 90vh;">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title" id="pdfModalRioLabel">Informe General de Investigación Río de Janeiro</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body p-0" style="height: calc(90vh - 56px);">
+                  <iframe src="" id="pdfFrameRio" style="width:100%; height:100%; border:none; background:#f8f8f8;" allowfullscreen></iframe>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -161,3 +226,29 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
   </html>
+    <script>
+      // URLs reales de los PDFs
+      const PDF_MEDELLIN_URL = 'https://4ea48ece-f696-4271-8da1-2da6bbc8dbe8.filesusr.com/ugd/697903_7798773331744972b38becd09cc181b2.pdf';
+      const PDF_RIO_URL = 'https://4ea48ece-f696-4271-8da1-2da6bbc8dbe8.filesusr.com/ugd/697903_583e3d3b8b034e21a53d752fae4a3dae.pdf';
+
+      // Cargar PDF solo al abrir el modal
+      document.addEventListener('DOMContentLoaded', function() {
+        var medellinModal = document.getElementById('pdfModalMedellin');
+        var rioModal = document.getElementById('pdfModalRio');
+        var frameMedellin = document.getElementById('pdfFrameMedellin');
+        var frameRio = document.getElementById('pdfFrameRio');
+
+        medellinModal.addEventListener('show.bs.modal', function () {
+          frameMedellin.src = PDF_MEDELLIN_URL;
+        });
+        medellinModal.addEventListener('hidden.bs.modal', function () {
+          frameMedellin.src = '';
+        });
+        rioModal.addEventListener('show.bs.modal', function () {
+          frameRio.src = PDF_RIO_URL;
+        });
+        rioModal.addEventListener('hidden.bs.modal', function () {
+          frameRio.src = '';
+        });
+      });
+    </script>
