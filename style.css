@@ -6,6 +6,9 @@
     padding: 0;
   }
 
+
+
+
   .navbar{
     z-index: 1000;
     position: relative;
@@ -92,6 +95,9 @@
         height: 110%;
     }
   }
+
+
+
 
   /* Cambiar el color del texto cuando el navbar está cubierto */
   .navbar.filled .nav-link {
@@ -343,6 +349,173 @@
     border-color: #ffd900da transparent transparent transparent; /* Amarillo */
     transform: rotate(135deg) scale(2);
   }
+
+
+  .w-90 {
+        width: 100% !important;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .carousel-item img {
+        object-fit: cover;
+        height: 100vh;
+        width: 100%;
+      }
+
+      .carousel-item {
+        height: 100vh;
+        position: relative;
+      }
+
+      /* Estilos para el overlay del carrusel */
+      .carousel-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      .carousel-container {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Estilos para el lightbox */
+      .lightbox-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+      }
+
+      .lightbox-content {
+        max-width: 90%;
+        max-height: 90vh;
+        position: relative;
+      }
+
+      .lightbox-content img {
+        max-width: 100%;
+        max-height: 90vh;
+        object-fit: contain;
+      }
+
+      .lightbox-close {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 5px;
+      }
+
+      .carousel-item img {
+        cursor: pointer;
+      }
+
+      /* Estilos para el nav flotante */
+      .floating-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 15px rgba(51, 204, 102, 0.3);
+        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        z-index: 1000;
+        transform: translateY(-100%);
+        opacity: 0;
+        border-bottom: 2px solid #004200;
+      }
+
+      .floating-nav.show {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+
+      .floating-nav.hide {
+        transform: translateY(-100%) scale(0.95);
+        opacity: 0;
+      }
+      
+      .floating-nav.ready {
+        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      }
+      
+      /* Efectos para los elementos del menú en el navbar flotante */
+      .floating-nav .nav-link {
+        position: relative;
+        transition: color 0.3s ease;
+      }
+      
+      .floating-nav .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background-color: #004200;
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+      
+      .floating-nav .nav-link:hover::after {
+        width: 80%;
+      }
+
+      #videoCarousel {
+        max-width: 90%;
+        margin: 0 auto;
+      }
+
+      #videoCarousel .carousel-item {
+        height: 70vh;
+      }
+
+      #videoCarousel video {
+        height: 100%;
+        object-fit: cover;
+      }
+
+      #videoCarousel .carousel-control-prev,
+      #videoCarousel .carousel-control-next {
+        width: 5%;
+        opacity: 0.8;
+      }
+
+      #videoCarousel .carousel-control-prev:hover,
+      #videoCarousel .carousel-control-next:hover {
+        opacity: 1;
+      }
+
+      .video-container {
+        max-width: 90%;
+        margin: 0 auto;
+      }
+
+      .video-container video {
+        height: 70vh;
+        object-fit: cover;
+        width: 100%;
+      }
   
  /*  .hero h1 {
     font-size: 3rem;
