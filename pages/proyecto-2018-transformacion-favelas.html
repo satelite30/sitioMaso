@@ -7,7 +7,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../style.css" />
+
+    <link rel="stylesheet" href="../css/timeline.css">
+
     <style>
+ 
+
+
       .pdf-btn {
         display: flex;
         flex-direction: column;
@@ -88,9 +94,9 @@
             </div>
           </div>
           <div class="col-lg-7 col-md-6 col-12">
-            <article class="content">
+            <article class="content" >
               <h3>Descripción</h3>
-              <p>
+              <p style="font-size: 18px;">
                 A pesquisa propõe o estudo das relações entre as políticas públicas e de mobilidade urbana, 
                 que geram práticas de turismo e transformações urbanas e sociais com a apropriação de 
                 espaços que são turistificados, em favelas da cidade do Rio de Janeiro e em bairros populares 
@@ -164,6 +170,171 @@
 
 
       </section>
+
+      <!-- timeline linea de tiempo -->
+  <div class="container lineadetiempo">
+
+  <div class=" rounded-3 p-3" style="position:relative;width:100%;max-width:760px;margin:0 auto;background:#ffffff00;">
+        <canvas id="timeline-canvas" style="position:absolute;left:0;top:0;width:100%;height:100%;z-index:1;pointer-events:none;"></canvas>
+        <ul class="timeline" style="position:relative;z-index:2;">
+        <!-- Item 1 -->
+        <li>
+          <div class="direction-r">
+            <div class="flag-wrapper">
+              <img class="timeline-img" src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg" alt="Freelancer" />
+              <span class="flag">Freelancer</span>
+              <span class="time-wrapper"><span class="time">2013 - present</span></span>
+            </div>
+            <div class="desc">
+              My current employment. Way better than the position before!
+            </div>
+          </div>
+        </li>
+
+        <!-- Item 2 -->
+        <li>
+          <div class="direction-l">
+            <div class="flag-wrapper">
+              <img class="timeline-img" src="https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg" alt="Apple Inc." />
+              <span class="flag">Apple Inc.</span>
+              <span class="time-wrapper"><span class="time">2011 - 2013</span></span>
+            </div>
+            <div class="desc">
+              My first employer. All the stuff I've learned and projects I've
+              been working on.
+            </div>
+          </div>
+        </li>
+
+        <!-- Item 3 -->
+        <li>
+          <div class="direction-r">
+            <div class="flag-wrapper">
+              <img class="timeline-img" src="https://images.pexels.com/photos/159775/library-la-trobe-study-students-159775.jpeg" alt="Harvard University" />
+              <span class="flag">Harvard University</span>
+              <span class="time-wrapper"><span class="time">2008 - 2011</span></span>
+            </div>
+            <div class="desc">
+              A description of all the lectures and courses I have taken and my
+              final degree?
+            </div>
+          </div>
+        </li>
+
+        <!-- Item 2 -->
+        <li>
+          <div class="direction-l">
+            <div class="flag-wrapper">
+              <img class="timeline-img" src="https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg" alt="Apple Inc." />
+              <span class="flag">Apple Inc.</span>
+              <span class="time-wrapper"><span class="time">2011 - 2013</span></span>
+            </div>
+            <div class="desc">
+              My first employer. All the stuff I've learned and projects I've
+              been working on.
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="direction-r">
+            <div class="flag-wrapper">
+              <img class="timeline-img" src="https://images.pexels.com/photos/159775/library-la-trobe-study-students-159775.jpeg" alt="Harvard University" />
+              <span class="flag">Harvard University</span>
+              <span class="time-wrapper"><span class="time">2008 - 2011</span></span>
+            </div>
+            <div class="desc">
+              A description of all the lectures and courses I have taken and my
+              final degree?
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="direction-r">
+            <div class="flag-wrapper">
+              <span class="flag">Harvard University</span>
+              <span class="time-wrapper"
+                ><span class="time">2008 - 2011</span></span
+              >
+            </div>
+            <div class="desc">
+              A description of all the lectures and courses I have taken and my
+              final degree?
+            </div>
+          </div>
+        </li>
+
+        <!-- Item 2 -->
+        <li>
+          <div class="direction-l">
+            <div class="flag-wrapper">
+              <img class="timeline-img" src="https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg" alt="Apple Inc." />
+              <span class="flag">Apple Inc.</span>
+              <span class="time-wrapper"><span class="time">2011 - 2013</span></span>
+            </div>
+            <div class="desc">
+              My first employer. All the stuff I've learned and projects I've
+              been working on.
+            </div>
+          </div>
+        </li>
+
+        
+
+
+        <li>
+          <div class="direction-r">
+            <div class="flag-wrapper">
+              <img class="timeline-img" src="https://images.pexels.com/photos/159775/library-la-trobe-study-students-159775.jpeg" alt="Harvard University" />
+              <span class="flag">Harvard University</span>
+              <span class="time-wrapper"><span class="time">2008 - 2011</span></span>
+            </div>
+            <div class="desc">
+              A description of all the lectures and courses I have taken and my
+              final degree?
+            </div>
+          </div>
+        </li>
+
+
+        <li>
+          <div class="direction-r">
+            <div class="flag-wrapper">
+              <span class="flag">Harvard University</span>
+              <span class="time-wrapper"
+                ><span class="time">2008 - 2011</span></span
+              >
+            </div>
+            <div class="desc">
+              A description of all the lectures and courses I have taken and my
+              final degree?
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="direction-r">
+            <div class="flag-wrapper">
+              <img class="timeline-img" src="https://images.pexels.com/photos/159775/library-la-trobe-study-students-159775.jpeg" alt="Harvard University" />
+              <span class="flag">Harvard University</span>
+              <span class="time-wrapper"><span class="time">2008 - 2011</span></span>
+            </div>
+            <div class="desc">
+              A description of all the lectures and courses I have taken and my
+              final degree?
+            </div>
+          </div>
+        </li>
+
+
+        </ul>
+      </div>
+      </div>
+    
+
+
+
 
       </main>
 
@@ -254,6 +425,67 @@
           frameRio.src = '';
         });
       });
+    </script>
+
+
+<script>
+    // Timeline central line animation (cuerda)
+    const canvas = document.getElementById('timeline-canvas');
+    const timeline = document.querySelector('.timeline');
+    function resizeCanvas() {
+      if (!canvas || !timeline) return;
+      const rect = timeline.getBoundingClientRect();
+      canvas.width = rect.width;
+      canvas.height = rect.height;
+      canvas.style.width = rect.width + 'px';
+      canvas.style.height = rect.height + 'px';
+      canvas.style.left = timeline.offsetLeft + 'px';
+      canvas.style.top = timeline.offsetTop + 'px';
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Ondas
+    let mouseY = null;
+    timeline.addEventListener('mousemove', e => {
+      const rect = timeline.getBoundingClientRect();
+      mouseY = e.clientY - rect.top;
+    });
+    timeline.addEventListener('mouseleave', () => { mouseY = null; });
+
+    function drawLine() {
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const x = canvas.width / 2;
+      const steps = 120;
+      ctx.save();
+      ctx.beginPath();
+      for (let i = 0; i <= steps; i++) {
+        const y = (canvas.height / steps) * i;
+        let offset = 0;
+        if (mouseY !== null) {
+          // Onda reactiva al mouse
+          const dist = Math.abs(y - mouseY);
+          offset = Math.sin((y + Date.now()/200) / 30) * Math.max(18 - dist/8, 0);
+        } else {
+          offset = Math.sin((y + Date.now()/200) / 30) * 6;
+        }
+        if (i === 0) ctx.moveTo(x + offset, y);
+        else ctx.lineTo(x + offset, y);
+      }
+  ctx.strokeStyle = '#1c3321fa'; // verde
+      ctx.lineWidth = 6;
+      ctx.lineCap = 'round';
+  ctx.shadowColor = 'rgba(4, 195, 45, 0.842)'; // verde contorno
+      ctx.stroke();
+      ctx.restore();
+    }
+    function animate() {
+      drawLine();
+      requestAnimationFrame(animate);
+    }
+    animate();
     </script>
   </body>
   </html>
