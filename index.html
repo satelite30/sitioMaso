@@ -438,7 +438,7 @@ Este sitio muestra la relación de la línea de
             <h3>Procesos y encuentros comunitarios Comuna Popular</h3>
             <p>Construyendo un mejor futuro.</p>
           </div>
-          <div class="grid-item" style="background-image: url('https://i0.wp.com/lamemoriaseconstruyecaminando.wordpress.com/wp-content/uploads/2017/02/dsc4519-editar-1.jpg?w=388&h=702&ssl=1'); cursor:pointer;" onclick="openGalleryModal('https://i0.wp.com/lamemoriaseconstruyecaminando.wordpress.com/wp-content/uploads/2017/02/dsc4519-editar-1.jpg?w=388&h=702&ssl=1','Educación para todos')">
+          <div class="grid-item" style="background-image: url('https://i0.wp.com/lamemoriaseconstruyecaminando.wordpress.com/wp-content/uploads/2017/02/dsc4519-editar-1.jpg?w=388&h=702&ssl=1'); cursor:pointer; " onclick="openGalleryModal('https://i0.wp.com/lamemoriaseconstruyecaminando.wordpress.com/wp-content/uploads/2017/02/dsc4519-editar-1.jpg?w=388&h=702&ssl=1','Educación para todos')">
             <h3>Procesos y encuentros comunitarios Comuna Popular</h3>
             <p>Invirtiendo en conocimiento.</p>
           </div>
@@ -448,15 +448,15 @@ Este sitio muestra la relación de la línea de
           </div>
 <!-- Modal para galería -->
 <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content bg-dark position-relative">
+  <div class="modal-dialog modal-dialog-centered modal-lg col-lg-10" style="height:90vh;">
+    <div class="modal-content bg-dark position-relative" style="height:90vh;">
       <div class="modal-header border-0">
         <h5 class="modal-title text-light" id="galleryModalLabel"></h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body text-center position-relative">
+      <div class="modal-body text-center position-relative" style="height:calc(90vh - 56px);display:flex;align-items:center;justify-content:center;">
         <button id="galleryPrev" type="button" class="btn btn-dark position-absolute top-50 start-0 translate-middle-y" style="z-index:2;left:10px;font-size:2rem;" aria-label="Anterior"><i class="fa-solid fa-angle-left"></i></button>
-        <img id="galleryModalImg" src="" alt="Imagen galería" style="max-width:100%;max-height:70vh;border-radius:10px;box-shadow:0 2px 20px #000;">
+        <img id="galleryModalImg" src="" alt="Imagen galería" style="max-width:100%;max-height:85vh;border-radius:10px;box-shadow:0 2px 20px #000;object-fit:contain;">
         <button id="galleryNext" type="button" class="btn btn-dark position-absolute top-50 end-0 translate-middle-y" style="z-index:2;right:10px;font-size:2rem;" aria-label="Siguiente"><i class="fa-solid fa-angle-right"></i></button>
       </div>
     </div>
@@ -634,6 +634,56 @@ Este sitio muestra la relación de la línea de
       src: 'https://i0.wp.com/lamemoriaseconstruyecaminando.wordpress.com/wp-content/uploads/2017/02/dsc5518-editar-1.jpg?w=324&h=277&ssl=1',
       title: 'Apoyo a las familias'
     }
+    ,
+    // Nuevas imágenes solo para el modal/lightbox
+    {
+      src: 'https://github.com/satelite30/logo-test/blob/main/012.jpeg?raw=true',
+      title: 'Encuentro comunitario  la memoria se construye caminando'
+    },
+    {
+      src: 'https://github.com/satelite30/logo-test/blob/main/02.jpeg?raw=true',
+      title: 'Encuentro comunitario la memoria se construye caminando'
+    },
+    {
+      src: 'https://github.com/satelite30/logo-test/blob/main/03.jpeg?raw=true',
+      title: 'Encuentro comunitario la memoria se construye caminando'
+    },
+    {
+      src: 'https://github.com/satelite30/logo-test/blob/main/09.jpeg?raw=true',
+      title: 'Encuentro comunitario la memoria se construye caminando'
+    },
+    {
+      src: 'https://github.com/satelite30/logo-test/blob/main/01.jpeg?raw=true',
+      title: 'Encuentro comunitario la memoria se construye caminando'
+    },
+    {
+      src: 'https://github.com/satelite30/logo-test/blob/main/04.jpeg?raw=true',
+      title: 'Encuentro comunitario la memoria se construye caminando'
+    },
+    {
+      src: 'https://github.com/satelite30/logo-test/blob/main/010.jpeg?raw=true',
+      title: 'Encuentro comunitario  la memoria se construye caminando'
+    },
+    {
+      src: 'https://github.com/satelite30/logo-test/blob/main/06.jpeg?raw=true',
+      title: 'Encuentro comunitario la memoria se construye caminando'
+    },
+    {
+      src: 'https://github.com/satelite30/logo-test/blob/main/08.jpeg?raw=true',
+      title: 'Encuentro comunitario la memoria se construye caminando'
+    },
+    {
+      src: 'https://github.com/satelite30/logo-test/blob/main/05.jpeg?raw=true',
+      title: 'Encuentro comunitario la memoria se construye caminando'
+    },
+    {
+      src: 'https://github.com/satelite30/logo-test/blob/main/011.jpeg?raw=true',
+      title: 'Encuentro comunitario  la memoria se construye caminando'
+    },
+    {
+      src: 'https://github.com/satelite30/logo-test/blob/main/07.jpeg?raw=true',
+      title: 'Encuentro comunitario la memoria se construye caminando'
+    }
   ];
 
   let currentGalleryIndex = 0;
@@ -647,7 +697,20 @@ Este sitio muestra la relación de la línea de
   }
 
   function updateGalleryModal() {
-    document.getElementById('galleryModalImg').src = galleryImages[currentGalleryIndex].src;
+    const img = document.getElementById('galleryModalImg');
+    img.src = galleryImages[currentGalleryIndex].src;
+    // Ajuste especial para 'Educación para todos'
+    if (galleryImages[currentGalleryIndex].title === 'Educación para todos' || galleryImages[currentGalleryIndex].title === 'Apoyo a las familias') {
+      img.style.height = '90%';
+      img.style.maxHeight = '90%';
+      img.style.width = 'auto';
+      img.style.objectFit = 'contain';
+    } else {
+      img.style.height = '';
+      img.style.maxHeight = '85vh';
+      img.style.width = 'auto';
+      img.style.objectFit = 'contain';
+    }
     document.getElementById('galleryModalLabel').textContent = galleryImages[currentGalleryIndex].title;
   }
 
