@@ -92,7 +92,7 @@
         <div class="row align-items-start g-4 ">
           <div class="col-lg-5 col-md-6 col-12 mb-3 mb-md-0">
             <div class="page-cover">
-              <img src="https://static.wixstatic.com/media/697903_14a4e71cde2f4069a2180282fa7410a4~mv2.jpg/v1/fill/w_317,h_212,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5769_JPG.jpg" alt="2014 Apropiación social del conocimiento" class="img-fluid rounded shadow" />
+              <img src="https://static.wixstatic.com/media/697903_14a4e71cde2f4069a2180282fa7410a4~mv2.jpg/v1/fill/w_317,h_212,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5769_JPG.jpg" alt="2014 Apropiación social del conocimiento" class="img-fluid rounded shadow main-img-modal" style="object-fit: contain; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#mainImgModal2018" />
             </div>
 
             <div class="botones  ">
@@ -100,6 +100,21 @@
               <p class="mt-4" style="font-size: 16px;font-weight: lighter;font-style: italic;">
                 Visita nuestros informes de Investigación 
               </p>
+
+    <!-- Modal Bootstrap para imagen principal -->
+    <div class="modal fade" id="mainImgModal2018" tabindex="-1" aria-labelledby="mainImgModal2018Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark">
+          <div class="modal-header border-0 flex-column align-items-start">
+            <h4 class="modal-title w-100 text-center text-light fw-bold mb-2" id="mainImgModal2018Label">Imagen ampliada</h4>
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Cerrar" style="filter: invert(1) grayscale(1) brightness(2);"></button>
+          </div>
+          <div class="modal-body d-flex justify-content-center align-items-center position-relative" style="min-height:60vh;">
+            <img id="modalMainImg2018" src="https://static.wixstatic.com/media/697903_14a4e71cde2f4069a2180282fa7410a4~mv2.jpg/v1/fill/w_317,h_212,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5769_JPG.jpg" alt="Imagen ampliada" class="img-fluid rounded shadow mx-auto d-block" style="max-height:70vh; object-fit:contain; background:#f8f8f8;" />
+          </div>
+        </div>
+      </div>
+    </div>
               
             <button type="button" class="btn btn-primary w-100 mb-2" data-bs-toggle="modal" data-bs-target="#pdfModalMedellin">
               Informe General de Investigación Medellín
@@ -785,6 +800,30 @@ Escobar, M. A. (2021). Discursos de paz en cotidianidades de guerra: Contradicci
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Hover effect para la imagen principal
+      document.addEventListener('DOMContentLoaded', function() {
+        var mainImg = document.querySelector('.main-img-modal');
+        if(mainImg) {
+          mainImg.addEventListener('mouseover', function() {
+            mainImg.style.transform = 'scale(1.04) rotate(-1deg)';
+            mainImg.style.boxShadow = '0 8px 32px rgba(0,0,0,0.18)';
+          });
+          mainImg.addEventListener('mouseout', function() {
+            mainImg.style.transform = '';
+            mainImg.style.boxShadow = '';
+          });
+        }
+        // Al abrir el modal, asegurarse que la imagen es la correcta (por si se cambia en el futuro)
+        var modal = document.getElementById('mainImgModal2018');
+        if(modal && mainImg) {
+          modal.addEventListener('show.bs.modal', function () {
+            document.getElementById('modalMainImg2018').src = mainImg.src;
+          });
+        }
+      });
+    </script>
 
     
   
