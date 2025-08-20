@@ -12,7 +12,19 @@
       .page-hero h1 { font-weight: 800; }
 .page-hero h1 span { color: #004200; }
       .page-hero p { max-width: 900px; margin: 10px auto 0; }
-      .page-cover img { max-height: 460px; object-fit: cover; border-radius: 12px; width: 100%; }
+      .page-cover img {
+        max-height: 460px;
+        object-fit: cover;
+        border-radius: 12px;
+        width: 100%;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+      }
+      .page-cover img:hover {
+        transform: scale(1.04) rotate(-1deg);
+        box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+        cursor: pointer;
+      }
       .page-content { max-width: 1000px; margin: 30px auto; }
     </style>
   </head>
@@ -42,28 +54,38 @@
       <section class="page-hero">
         <div class="container">
           <span class="badge-pill">proyecto</span>
-          <h1 class="mt-2">2015 <span>Barrios populares Medellín y favelas São Paulo</span></h1>
+          <h1 class="mt-2">2015 <br><span>Barrios populares Medellín y <br> favelas São Paulo</span></h1>
           <p>Estudio comparado de memorias urbanas y transformaciones territoriales en Medellín y São Paulo.</p>
         </div>
       </section>
 
       <section class="container page-content">
         <div class="row align-items-start g-4">
-          <div class="col-lg-5 col-md-6 col-12 mb-3 mb-md-0">
+          <div class="col-lg-3 col-md-3 col-12 mb-3 mb-md-0">
             <div class="page-cover">
               <img src="https://static.wixstatic.com/media/697903_ca928a40426c40069751ced4417c8c01~mv2_d_2592_1728_s_2.jpg/v1/fill/w_288,h_189,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/697903_ca928a40426c40069751ced4417c8c01~mv2_d_2592_1728_s_2.jpg" alt="2015 Barrios Medellín y favelas São Paulo" class="img-fluid rounded shadow" />
-            </div>
-          </div>
-          <div class="col-lg-7 col-md-6 col-12">
-            <article class="content">
-              <h3>Descripción</h3>
+
+              <article class="content mt-4">
+              
               <p>
-                Análisis de procesos de intervención urbana y sus efectos en tramas sociales, acceso a derechos y prácticas cotidianas.
+                 La descripción y espacialización de la memoria urbana de la población que habita el área de influencia de la intervención PUI-NOR, realizada en la centralidad de Santo Domingo Savio, comuna 1 del Municipio de Medellín (Colombia) entre 2004 y 2011, permitió alcanzar la pretensión de la investigación que alude a la consulta de fuentes primarias; complementada por otras fuentes ya identificadas, entre las cuales destacan: información oficial, resultados de investigación publicados, bases de datos, estadísticas, mapas, vídeos, fotografías y resultados de entrevistas a agentes clave que vivieron y participaron la transformación urbanística y social.
               </p>
             </article>
+            </div>
+          </div>
+          <div class="col-lg-9 col-md-9 col-12">
+            
+              <div class="informacion-externa  align-items-center text-center">
+    <iframe src="http://www.favelasaopaulomedellin.fau.usp.br/taller-santo-domingo-savio/"  width="100%" height="1200px" title="Sitio"></iframe>
+    </div> 
+
           </div>
         </div>
       </section>
+
+        
+
+
     </main>
 
     <footer class="footer text-center">
