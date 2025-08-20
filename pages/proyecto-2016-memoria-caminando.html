@@ -76,8 +76,10 @@
       </section> -->
 
       <div class="contenidosLamemoria container">
-        <ul class="fs-4" style="list-style-type: none; padding-left: 1.5em;">
-          <li class="text-center"> FOTO-POEMARIO: La memoria se construye caminando</li>
+        <div class="fs-4" style="list-style-type: none; padding-left: 1.5em;">
+          <h2 class="text-center mt-4"> FOTO-POEMARIO: <br> La memoria se construye caminando</h2>
+          
+        </div>
           <div class="fotopoem container my-5">
   <div class="row justify-content-center align-items-center" style="height:80%;">
     <div class="col-md-9 col-12">
@@ -182,18 +184,21 @@
   <p class="col-10 text-center justify-content-center m-auto">La descripción y espacialización de la memoria urbana de la población que habita el área de influencia de la intervención PUI-NOR, realizada en la centralidad de Santo Domingo Savio, comuna 1 del Municipio de Medellín (Colombia) entre 2004 y 2011</p>
 </div>
 
-          <li> Fotografías</li>
-          <li> Vídeos</li>
-
-          <div class="videosMaso">
-  <div id="videoCarouselContainer" style="max-width:700px;margin:0 auto;text-align:center;">
-    <h4 class="mb-3">Videos del proyecto</h4>
-    <div style="position:relative;">
-      <iframe id="carouselVideoIframe" width="100%" height="400" style="background:#000;max-width:100%;box-shadow:0 2px 8px rgba(0,0,0,0.12);object-fit:contain;" src="https://www.youtube.com/embed/wx3sSuIlYso" title="Video del proyecto" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <button onclick="prevVideo()" style="position:absolute;top:50%;left:10px;transform:translateY(-50%);background:#fff;border:none;border-radius:50%;width:36px;height:36px;box-shadow:0 2px 8px rgba(0,0,0,0.12);font-size:1.5rem;cursor:pointer;z-index:2;">&#10094;</button>
-      <button onclick="nextVideo()" style="position:absolute;top:50%;right:10px;transform:translateY(-50%);background:#fff;border:none;border-radius:50%;width:36px;height:36px;box-shadow:0 2px 8px rgba(0,0,0,0.12);font-size:1.5rem;cursor:pointer;z-index:2;">&#10095;</button>
+    <div class="videosMaso">
+  <div id="videoCarouselContainer" class="container" style="max-width:900px;margin:0 auto;">
+    <h4 class="mb-3 mt-4 text-center">Videos </h4>
+    <div class="row align-items-center">
+      <div class="col-md-3 col-12 mb-3 mb-md-0 d-flex flex-md-column flex-row justify-content-center align-items-center " id="videoThumbnailsCol" style="gap:40px;">
+        <div  id="videoDots" style="display:flex;flex-direction:column;gap:20px;width:100%;align-items:center;padding: 0 80px;"></div>
+      </div>
+      <div class="col-md-9 col-12">
+        <div style="position:relative;">
+          <iframe id="carouselVideoIframe" width="100%" height="400" style="background:#000;max-width:100%;box-shadow:0 2px 8px rgba(0,0,0,0.12);object-fit:contain;" src="https://www.youtube.com/embed/wx3sSuIlYso" title="Video del proyecto" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <!-- <button onclick="prevVideo()" style="position:absolute;top:50%;left:10px;transform:translateY(-50%);background:#fff;border:none;border-radius:50%;width:36px;height:36px;box-shadow:0 2px 8px rgba(0,0,0,0.12);font-size:1.5rem;cursor:pointer;z-index:2;">&#10094;</button>
+          <button onclick="nextVideo()" style="position:absolute;top:50%;right:10px;transform:translateY(-50%);background:#fff;border:none;border-radius:50%;width:36px;height:36px;box-shadow:0 2px 8px rgba(0,0,0,0.12);font-size:1.5rem;cursor:pointer;z-index:2;">&#10095;</button> -->
+        </div>
+      </div>
     </div>
-  <div id="videoDots" style="margin-top:10px; display:flex; justify-content:center; gap:10px;"></div>
   </div>
   <script>
     // Lista de videos de YouTube (solo IDs)
@@ -229,7 +234,7 @@
 
     function updateVideoDots() {
       videoDots.innerHTML = videoList.map((id,i) => `
-        <img src='${getYoutubeThumbnail(id)}' onclick='showVideo(${i})' style='width:60px;height:40px;object-fit:cover;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,0.12);margin:0 3px;cursor:pointer;border:${i===videoIndex?'3px solid #198754':'2px solid #bbb'};transition:border 0.2s;'>
+        <img src='${getYoutubeThumbnail(id)}' onclick='showVideo(${i})' style='width:230px;height:160px;object-fit:cover;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.12);margin:0 10px 0 10px;cursor:pointer;border:${i===videoIndex?'3px solid #198754':'2px solid #bbb'};transition:border 0.2s;'>
       `).join('');
     }
 
@@ -238,14 +243,14 @@
           </div>
 
 
+        <p> Fotografías</p>
+          <p> Vídeos</p>
+          <p> Canciones</p>
 
 
 
 
-
-
-          <li> Canciones</li>
-        </ul>
+          
       </div>
 
     </main>
