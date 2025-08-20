@@ -22,25 +22,27 @@
 }
 
 /* Tooltip to the left for direction-l */
+/* Ahora el tooltip de direction-l va a la derecha */
 .direction-l .flag-wrapper .timeline-img-tooltip {
-  left: auto;
-  right: 110%;
-  transform: translateY(-50%) translateX(-12px) scale(0.8);
-}
-.direction-l .flag-wrapper:hover .timeline-img-tooltip {
-  opacity: 1;
-  transform: translateY(-50%) translateX(-12px) scale(1);
-}
-
-/* Tooltip to the right for direction-r */
-.direction-r .flag-wrapper .timeline-img-tooltip {
   left: 110%;
   right: auto;
   transform: translateY(-50%) translateX(12px) scale(0.8);
 }
-.direction-r .flag-wrapper:hover .timeline-img-tooltip {
+.direction-l .flag-wrapper:hover .timeline-img-tooltip {
   opacity: 1;
   transform: translateY(-50%) translateX(12px) scale(1);
+}
+
+/* Tooltip to the right for direction-r */
+/* Ahora el tooltip de direction-r va a la izquierda */
+.direction-r .flag-wrapper .timeline-img-tooltip {
+  left: auto;
+  right: 110%;
+  transform: translateY(-50%) translateX(-12px) scale(0.8);
+}
+.direction-r .flag-wrapper:hover .timeline-img-tooltip {
+  opacity: 1;
+  transform: translateY(-50%) translateX(-12px) scale(1);
 }
 
    
