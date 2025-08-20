@@ -23,6 +23,15 @@
       .page-hero p { max-width: 900px; margin: 10px auto 0; }
       .page-cover img { max-height: 460px; object-fit: cover; border-radius: 12px; width: 100%; }
       .page-content { max-width: 1000px; margin: 30px auto; }
+
+       #videoDots img {
+      transition: border 0.8s, transform 0.2s;
+    }
+    #videoDots img:hover {
+      transform: scale(1.18);
+      z-index: 2;
+      transition: ease-in-out;
+    }
     </style>
   </head>
   <body>
@@ -185,6 +194,7 @@
 </div>
 
     <div class="videosMaso">
+  
   <div id="videoCarouselContainer" class="container" style="max-width:900px;margin:0 auto;">
     <h4 class="mb-3 mt-4 text-center">Videos </h4>
     <div class="row align-items-center">
