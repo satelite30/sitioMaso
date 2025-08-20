@@ -10,7 +10,7 @@
     <style>
       .page-hero { background: #f8f6f2; padding: 60px 0 20px; text-align: center; }
       .page-hero h1 { font-weight: 800; }
-.page-hero h1 span { color: #004200; }
+      .page-hero h1 span { color: #004200; }
       .page-hero p { max-width: 900px; margin: 10px auto 0; }
       .page-cover img {
         max-height: 460px;
@@ -64,7 +64,22 @@
         <div class="row align-items-start g-4">
           <div class="col-lg-3 col-md-4 col-12 mb-3 mb-md-0">
             <div class="page-cover mb-4">
-              <img src="https://static.wixstatic.com/media/697903_89872cd8ba19413fad554c887da5f2e0~mv2.jpg/v1/fill/w_300,h_192,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/697903_89872cd8ba19413fad554c887da5f2e0~mv2.jpg" alt="2014 Apropiación social del conocimiento" class="img-fluid rounded shadow w-100" />
+              <img id="mainImg2014" src="https://static.wixstatic.com/media/697903_89872cd8ba19413fad554c887da5f2e0~mv2.jpg/v1/fill/w_300,h_192,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/697903_89872cd8ba19413fad554c887da5f2e0~mv2.jpg" alt="2014 Apropiación social del conocimiento" class="img-fluid rounded shadow w-100" style="object-fit: contain; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#mainImgModal2014" />
+
+    <!-- Modal Bootstrap para imagen principal -->
+    <div class="modal fade" id="mainImgModal2014" tabindex="-1" aria-labelledby="mainImgModal2014Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark">
+          <div class="modal-header border-0 flex-column align-items-start">
+            <h4 class="modal-title w-100 text-center text-light fw-bold mb-2" id="mainImgModal2014Label">Imagen ampliada</h4>
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Cerrar" style="filter: invert(1) grayscale(1) brightness(2);"></button>
+          </div>
+          <div class="modal-body d-flex justify-content-center align-items-center position-relative" style="min-height:60vh;">
+            <img id="modalMainImg2014" src="https://static.wixstatic.com/media/697903_89872cd8ba19413fad554c887da5f2e0~mv2.jpg/v1/fill/w_300,h_192,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/697903_89872cd8ba19413fad554c887da5f2e0~mv2.jpg" alt="Imagen ampliada" class="img-fluid rounded shadow mx-auto d-block" style="max-height:70vh; object-fit:contain; background:#f8f8f8;" />
+          </div>
+        </div>
+      </div>
+    </div>
             </div>
             <article class="content">
               <h3 class="mb-3">Apropiación social del conocimiento</h3>
@@ -147,5 +162,29 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Hover effect y modal para la imagen principal
+      document.addEventListener('DOMContentLoaded', function() {
+        var mainImg = document.getElementById('mainImg2014');
+        if(mainImg) {
+          mainImg.addEventListener('mouseover', function() {
+            mainImg.style.transform = 'scale(1.04) rotate(-1deg)';
+            mainImg.style.boxShadow = '0 8px 32px rgba(0,0,0,0.18)';
+          });
+          mainImg.addEventListener('mouseout', function() {
+            mainImg.style.transform = '';
+            mainImg.style.boxShadow = '';
+          });
+        }
+        // Al abrir el modal, asegurarse que la imagen es la correcta (por si se cambia en el futuro)
+        var modal = document.getElementById('mainImgModal2014');
+        if(modal && mainImg) {
+          modal.addEventListener('show.bs.modal', function () {
+            document.getElementById('modalMainImg2014').src = mainImg.src;
+          });
+        }
+      });
+    </script>
   </body>
   </html>
