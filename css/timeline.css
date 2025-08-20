@@ -99,18 +99,18 @@
 }
 /* Timeline images */
 .timeline-img {
-	width: 100%;
-	max-width: 180px;
-	aspect-ratio: 1/1;
-	height: auto;
-	object-fit: cover;
-	border-radius: 16px;
-	border: 2px solid #ccc;
-	margin-bottom: 8px;
-	transition: transform 0.3s, box-shadow 0.3s;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1/1;
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid #ccc;
+  margin-bottom: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .timeline-img:hover {
 	transform: scale(1.08) rotate(-3deg);
