@@ -3,6 +3,7 @@
   position: relative;
 }
 
+
 .timeline-img-tooltip {
   position: absolute;
   top: 50%;
@@ -20,6 +21,7 @@
   z-index: 30;
   box-shadow: 0 2px 12px rgba(0,0,0,0.18);
 }
+
 
 /* Tooltip to the left for direction-l */
 /* Ahora el tooltip de direction-l va a la derecha */
@@ -76,6 +78,17 @@
   background: linear-gradient(to bottom, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
   z-index: 1;
 }
+
+@media (max-width: 670px) {
+  .timeline:before {
+    z-index: 1 !important;
+  }
+  .timeline-img {
+    position: relative;
+    z-index: 2;
+  }
+}
+
 
 .timeline li {
   padding: 1em 0;
