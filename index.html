@@ -16,6 +16,31 @@
     <link rel="shortcut icon" href="./recursos/img/logoLitt2.ico" type="image/x-icon">
 
     <style>
+       @media (min-width: 992px) {
+        .logo {
+          margin-left: 0 !important;
+          margin-right: auto !important;
+          display: block !important;
+          justify-content:start ;
+          width: 50%;
+        }
+        .navbar-brand {
+          justify-content: flex-start !important;
+          
+          
+        }
+      }
+      @media (max-width: 991.98px) {
+        .logo {
+          margin-left: auto !important;
+          margin-right: auto !important;
+          display: block !important;
+          
+        }
+        .navbar-brand {
+          justify-content: center !important;
+        }
+      }
       
     </style>
 
@@ -27,30 +52,30 @@
   <header>
     <nav
   class="navbar d-flex navbar-expand-lg navbar-light bg-white shadow-sm" >
-  <div class="container justify-content-center ">
-    <a
-      class="navbar-brand m-4 justify-content-center col-lg-4 col-md-6 col-sm-8"
-      href="../index.html"
-    >
-      <img
-        src="./recursos/img/logo3.png "
-        alt="Logo"
-        width="0%"
-        class="logo d-flex m-auto "
-      />
-    </a>
-
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-    >
+  <div class="container  border border-info justify-content-center ">
+    
+    <div class="col-sm-10 col-md-12 col-lg-6 ">
+      <a
+        class="navbar-brand m-4 col-sm-10 col-md-11 col-lg-8  d-block d-lg-flex align-items-center "
+        href="../index.html"
+        style="justify-content: center; justify-content: start ;"
+      >
+        <img
+          src="./recursos/img/logo4.png"
+          alt="Logo"
+          width="100%"
+          class="logo d-block mx-auto mx-lg-0 "
+        />
+      </a>
+    </div>
+    
+    <button class="navbar-toggler"
+      type="button" data-bs-toggle="collapse"  data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" >
-        
+    <div class="collapse navbar-collapse border" >
+
     <ul class="navbar-nav ms-auto d-flex justify-content-center ">
     <li class="nav-item m-auto">
         <a class="nav-link" href="./pages/red.html">Red</a>
@@ -70,8 +95,12 @@
         <li class="nav-item m-auto">
           <a class="nav-link" href="./pages/contacto.html">Contacto</a>
         </li>
+
+        </ul>
       </div>
-    </ul>
+      
+      
+
   </div>
 </nav>
 
