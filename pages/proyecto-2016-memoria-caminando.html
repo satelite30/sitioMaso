@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../css/galeriagrid.css">
     <style>
       .img-thumbnail:hover {
         border: 2px solid #198754 !important; /* Bootstrap success color */
@@ -60,7 +61,7 @@
       <section class="page-hero">
         <div class="container">
           <span class="badge-pill">proyecto</span>
-          <h1 class="mt-2">2016 <span>La memoria se construye caminando</span></h1>
+          <h1 class="mt-2">2016 <br> <span>La memoria se </span><br> construye caminando</h1>
           
         </div>
       </section>
@@ -85,10 +86,11 @@
       </section> -->
 
       <div class="contenidosLamemoria container">
-        <div class="fs-4" style="list-style-type: none; padding-left: 1.5em;">
-          <h2 class="text-center mt-4"> FOTO-POEMARIO: <br> La memoria se construye caminando</h2>
+        <div class="fs-2" style="color: gray; font-style: italic;">
+          <h2 class="text-center mt-2"> Foto-poemario: La memoria se construye caminando</h2>
           
         </div>
+        
           <div class="fotopoem container my-5">
   <div class="row justify-content-center align-items-center" style="height:80%;">
     <div class="col-md-9 col-12">
@@ -187,13 +189,13 @@
     </div>
   </div>
 </div>
-
-<!-- Texto descripcion -->
-<div class="container">
-  <p class="col-10 text-center justify-content-center m-auto">La descripción y espacialización de la memoria urbana de la población que habita el área de influencia de la intervención PUI-NOR, realizada en la centralidad de Santo Domingo Savio, comuna 1 del Municipio de Medellín (Colombia) entre 2004 y 2011</p>
 </div>
-
-    <div class="videosMaso">
+         <section class="container-fluid py-4 videoscompleto" style="background: #ececec;">
+        <!-- Texto descripcion -->
+<div class="container ">
+  <p class="col-9 pt-3 text-center justify-content-center  m-auto">La descripción y espacialización de la memoria urbana de la población que habita el área de influencia de la intervención PUI-NOR, realizada en la centralidad de Santo Domingo Savio, comuna 1 del Municipio de Medellín (Colombia) entre 2004 y 2011</p>
+</div>
+    <div class="videosMaso container">
   
   <div id="videoCarouselContainer" class="container" style="max-width:900px;margin:0 auto;">
     <h4 class="mb-3 mt-4 text-center">Videos </h4>
@@ -210,59 +212,76 @@
       </div>
     </div>
   </div>
-  <script>
-    // Lista de videos de YouTube (solo IDs)
-    const videoList = [
-      "wx3sSuIlYso",
-      "IP8gBA3Yr3I"
-    ];
-    let videoIndex = 0;
-    const videoIframe = document.getElementById('carouselVideoIframe');
-    const videoDots = document.getElementById('videoDots');
+ 
+          </div>
 
-    function getYoutubeEmbedUrl(id) {
-      return `https://www.youtube.com/embed/${id}?rel=0&autoplay=1`;
-    }
+</section>
 
-    function showVideo(idx) {
-      videoIndex = (idx + videoList.length) % videoList.length;
-      videoIframe.src = getYoutubeEmbedUrl(videoList[videoIndex]);
-      updateVideoDots();
-    }
 
-    function prevVideo() {
-      showVideo(videoIndex - 1);
-    }
+          <div class="canciones container">
+            <h3 class="text-center mt-5">Canciones</h3>
+            
+          <div class="container row border p-4 col-10 m-auto">
+            <div class="col-6">
+            <iframe width="100%" height="160" scrolling="no" framerr="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/305134089&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-580720655" title="Liliana Sánchez" target="_blank" style="color: #cccccc; text-decoration: none;">Liliana Sánchez</a> · <a href="https://soundcloud.com/user-580720655/contracausa" title="Contracausa" target="_blank" style="color: #cccccc; text-decoration: none;">Contracausa</a></div>
+            </div>
 
-    function nextVideo() {
-      showVideo(videoIndex + 1);
-    }
+            <div class="col-6">
+              <iframe width="100%" height="160" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/305134348&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-580720655" title="Liliana Sánchez" target="_blank" style="color: #cccccc; text-decoration: none;">Liliana Sánchez</a> · <a href="https://soundcloud.com/user-580720655/esperanza-jhasz-ft-kien-c" title="ESPERANZA. JHASZ FT KIEN C" target="_blank" style="color: #cccccc; text-decoration: none;">ESPERANZA. JHASZ FT KIEN C</a></div>
 
-    function getYoutubeThumbnail(id) {
-      return `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
-    }
+            </div>
 
-    function updateVideoDots() {
-      videoDots.innerHTML = videoList.map((id,i) => `
-        <img src='${getYoutubeThumbnail(id)}' onclick='showVideo(${i})' style='width:230px;height:160px;object-fit:cover;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.12);margin:0 10px 0 10px;cursor:pointer;border:${i===videoIndex?'3px solid #198754':'2px solid #bbb'};transition:border 0.2s;'>
-      `).join('');
-    }
-
-    showVideo(0);
-  </script>
+          </div>
           </div>
 
 
-        <p> Fotografías</p>
-          <p> Vídeos</p>
-          <p> Canciones</p>
+          <div class="fotogaleria container-fluid  ">
+
+            <div class="col-8 m-auto p-4">
+            <!-- Photo Grid -->
+              <div class="row"> 
+  <div class="column">
+    <img src="https://static.wixstatic.com/media/697903_44489d95207f4048af7abcd1f5f47edd~mv2.jpeg/v1/fill/w_536,h_472,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_44489d95207f4048af7abcd1f5f47edd~mv2.jpeg" style="width:100%">
+    <img src="https://static.wixstatic.com/media/697903_82cccd11b5c941fb9001d125aee8e9f1~mv2.jpeg/v1/fill/w_694,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_82cccd11b5c941fb9001d125aee8e9f1~mv2.jpeg" style="width:100%">
+    <img src="https://static.wixstatic.com/media/697903_5f53b96503ce48a1beeb9d779eeeeeab~mv2.jpeg/v1/fill/w_694,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_5f53b96503ce48a1beeb9d779eeeeeab~mv2.jpeg" style="width:100%">
+    <img src="https://static.wixstatic.com/media/697903_6c24d4a5455b43e78259aa2999322d89~mv2.jpeg/v1/fill/w_694,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_6c24d4a5455b43e78259aa2999322d89~mv2.jpeg" style="width:100%">
+    <img src="https://static.wixstatic.com/media/697903_78343fb733804a75b632d6b9ab3d074a~mv2.jpeg/v1/fill/w_390,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_78343fb733804a75b632d6b9ab3d074a~mv2.jpeg" style="width:100%">
+    <img src="https://static.wixstatic.com/media/697903_8ffe6cb64c1e40e69ccb7f143824281a~mv2.jpeg/v1/fill/w_697,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_8ffe6cb64c1e40e69ccb7f143824281a~mv2.jpeg" style="width:100%">
+    <img src="https://static.wixstatic.com/media/697903_7aae384eea5d49b78206da37d557d87f~mv2.jpeg/v1/fill/w_694,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_7aae384eea5d49b78206da37d557d87f~mv2.jpeg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://static.wixstatic.com/media/697903_602b7cb42f1148598b5588b80f8634dd~mv2.jpeg/v1/fill/w_390,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_602b7cb42f1148598b5588b80f8634dd~mv2.jpeg" style="width:100%">
+    <img src="https://static.wixstatic.com/media/697903_3517af7843b04a4994d871644ad1f0a9~mv2.jpeg/v1/fill/w_694,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_3517af7843b04a4994d871644ad1f0a9~mv2.jpeg" style="width:100%">
+    <img src="https://static.wixstatic.com/media/697903_88b17465d9704f17aff4eacb67f73b1d~mv2.jpeg/v1/fill/w_694,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_88b17465d9704f17aff4eacb67f73b1d~mv2.jpeg" style="width:100%">
+    <img src="https://static.wixstatic.com/media/697903_bd20460286144040aa5f0e91af37dd3f~mv2_d_4608_3456_s_4_2.jpg/v1/fill/w_694,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_bd20460286144040aa5f0e91af37dd3f~mv2_d_4608_3456_s_4_2.jpg" style="width:100%">
+    <img src="https://static.wixstatic.com/media/697903_1a7fb967e921411fb8c826a94244ae17~mv2.jpeg/v1/fill/w_694,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_1a7fb967e921411fb8c826a94244ae17~mv2.jpeg" style="width:100%">
+    <img src="https://static.wixstatic.com/media/697903_7237ffaaad004ffd93dc89c6d6b567e1~mv2.jpeg/v1/fill/w_694,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_7237ffaaad004ffd93dc89c6d6b567e1~mv2.jpeg" style="width:100%">
+    <img src="https://static.wixstatic.com/media/697903_a9875a552af844c889235dc9271a0462~mv2.jpeg/v1/fill/w_390,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_a9875a552af844c889235dc9271a0462~mv2.jpeg" style="width:100%">
+  </div>  
+  <div class="column">
+    <img src="https://static.wixstatic.com/media/697903_7d960fae3833426889a066a0deafa1e2~mv2.jpeg/v1/fill/w_390,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_7d960fae3833426889a066a0deafa1e2~mv2.jpeg" style="width:100%">
+    <img src="https://static.wixstatic.com/media/697903_8a5623e217af497f86ed70d13763312e~mv2.jpeg/v1/fill/w_694,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_8a5623e217af497f86ed70d13763312e~mv2.jpeg" style="width:100%">
+    <img src="https://static.wixstatic.com/media/697903_dae4c34823a34eba9ca1f3818a0a20d9~mv2_d_4608_3456_s_4_2.jpg/v1/fill/w_694,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_dae4c34823a34eba9ca1f3818a0a20d9~mv2_d_4608_3456_s_4_2.jpg" style="width:100%">
+    <img src="https://static.wixstatic.com/media/697903_1c1fee734f014a359932ecb2698bf2ed~mv2.jpeg/v1/fill/w_708,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_1c1fee734f014a359932ecb2698bf2ed~mv2.jpeg" style="width:100%">
+    <img src="https://static.wixstatic.com/media/697903_2206861a81e04f7782423c32f16ca43c~mv2.jpeg/v1/fill/w_390,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_2206861a81e04f7782423c32f16ca43c~mv2.jpeg" style="width:100%">
+    <img src="https://static.wixstatic.com/media/697903_d9ec573d4ec24b1fbecc579ea71c9520~mv2.jpeg/v1/fill/w_694,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_d9ec573d4ec24b1fbecc579ea71c9520~mv2.jpeg" style="width:100%">
+    <img src="https://static.wixstatic.com/media/697903_74f2ed920e2347609bdae4a03d44f15d~mv2.jpeg/v1/fill/w_694,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_74f2ed920e2347609bdae4a03d44f15d~mv2.jpeg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://static.wixstatic.com/media/697903_febae8da6197460fb0ed37ffe686ce2a~mv2.jpeg/v1/fill/w_697,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_febae8da6197460fb0ed37ffe686ce2a~mv2.jpeg" style="width:100%">
+    <img src="https://static.wixstatic.com/media/697903_8ea0046e7f784cd19ab57bd5df0412f5~mv2.jpeg/v1/fill/w_694,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_8ea0046e7f784cd19ab57bd5df0412f5~mv2.jpeg" style="width:100%">
+    <img src="https://static.wixstatic.com/media/697903_e1e9b6188333464b8d7838788d88767b~mv2.jpeg/v1/fill/w_390,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_e1e9b6188333464b8d7838788d88767b~mv2.jpeg" style="width:100%">
+    <img src="https://static.wixstatic.com/media/697903_a1bd847e1fe9494fbd4a7154d4112117~mv2.jpeg/v1/fill/w_694,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_a1bd847e1fe9494fbd4a7154d4112117~mv2.jpeg" style="width:100%">
+    <img src="https://static.wixstatic.com/media/697903_542a9ac650934fde89d46f7d84891421~mv2.jpeg/v1/fill/w_694,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_542a9ac650934fde89d46f7d84891421~mv2.jpeg" style="width:100%">
+  </div>
+        </div>
+          </div>
+              </div>
 
 
 
 
-          
-      </div>
-
+     
     </main>
 
     <footer class="footer text-center">
@@ -324,5 +343,46 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+     <script>
+    // Lista de videos de YouTube (solo IDs)
+    const videoList = [
+      "wx3sSuIlYso",
+      "IP8gBA3Yr3I"
+    ];
+    let videoIndex = 0;
+    const videoIframe = document.getElementById('carouselVideoIframe');
+    const videoDots = document.getElementById('videoDots');
+
+    function getYoutubeEmbedUrl(id) {
+      return `https://www.youtube.com/embed/${id}?rel=0&autoplay=1`;
+    }
+
+    function showVideo(idx) {
+      videoIndex = (idx + videoList.length) % videoList.length;
+      videoIframe.src = getYoutubeEmbedUrl(videoList[videoIndex]);
+      updateVideoDots();
+    }
+
+    function prevVideo() {
+      showVideo(videoIndex - 1);
+    }
+
+    function nextVideo() {
+      showVideo(videoIndex + 1);
+    }
+
+    function getYoutubeThumbnail(id) {
+      return `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+    }
+
+    function updateVideoDots() {
+      videoDots.innerHTML = videoList.map((id,i) => `
+        <img src='${getYoutubeThumbnail(id)}' onclick='showVideo(${i})' style='width:230px;height:160px;object-fit:cover;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.12);margin:0 10px 0 10px;cursor:pointer;border:${i===videoIndex?'3px solid #198754':'2px solid #bbb'};transition:border 0.2s;'>
+      `).join('');
+    }
+
+    showVideo(0);
+  </script>
   </body>
   </html>
