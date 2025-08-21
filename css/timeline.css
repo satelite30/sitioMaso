@@ -61,6 +61,7 @@
 }
 
 .timeline:before {
+  
   position: absolute;
   left: 50%;
   top: 0;
@@ -86,6 +87,7 @@
   .timeline-img {
     position: relative;
     z-index: 2;
+    
   }
 }
 
