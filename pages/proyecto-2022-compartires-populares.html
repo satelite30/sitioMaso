@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../style.css" />
     <style>
+      .image-hdb {
+        max-width: 100%;
+        height: auto;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+        border-radius: 12px;
+      }
+      .image-hdb:hover {
+        transform: scale(1.04) rotate(-1deg);
+        box-shadow: 0 8px 40px rgba(0,0,0,0.28);
+      }
       /* X blanca en el modal de galería */
       .modal-content .btn-close {
         filter: invert(1) grayscale(1) brightness(2);
@@ -129,8 +141,20 @@
 
           
 
-            <!-- video -->
-      <div class="container-fluid m-3 align-items-center justify-content-center m-auto mt-5   ">
+          <img src="https://github.com/satelite30/-logossitio/blob/main/HdB.jpeg?raw=true" alt="logo huellas de barrio" class="image-hdb col-lg-12 col-sm-10 col-md-10 m-auto" id="hdbLogoImg" data-bs-toggle="modal" data-bs-target="#hdbModal">
+
+    <!-- Modal para imagen Huellas de Barrio -->
+    <div class="modal fade" id="hdbModal" tabindex="-1" aria-labelledby="hdbModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content bg-white p-2">
+          <div class="modal-header border-0">
+            <h5 class="modal-title w-100 text-center fw-bold" id="hdbModalLabel">Video clip canción Huellas de Barrio</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body d-flex justify-content-center align-items-center">
+               <!-- video -->
+                
+      <div class="container-fluid  align-items-center justify-content-center m-auto ">
         <div class=" d-flex justify-content-center align-items-center" style="min-height: 60vh;">
           <div class="col-lg-12 col-md-10 col-sm-12 mx-auto ">
             <iframe class="text-center w-100" style="height: 70vh; display: block; margin: auto;" src="https://www.youtube.com/embed/W9zla7jn9VU?list=RDW9zla7jn9VU&autoplay=1&mute=1&controls=1" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> 
@@ -138,6 +162,13 @@
           </div>
         </div>
       </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+           
 
       <div class="container">
 
