@@ -257,7 +257,10 @@
   </div>
 </div>
 </div>
-         <section class="container-fluid py-4 videoscompleto" style="background: #ececec;">
+        
+
+
+<section class="container-fluid py-4 videoscompleto" style="background: #ececec;">
         <!-- Texto descripcion -->
 <div class="container ">
   <p class="col-9 pt-3 text-center justify-content-center  m-auto">La descripción y espacialización de la memoria urbana de la población que habita el área de influencia de la intervención PUI-NOR, realizada en la centralidad de Santo Domingo Savio, comuna 1 del Municipio de Medellín (Colombia) entre 2004 y 2011</p>
@@ -272,7 +275,8 @@
       </div>
       <div class="col-md-9 col-12 ">
         <div style="position:relative;">
-          <iframe id="carouselVideoIframe" width="100%" height="400" style="background:#000;max-width:100%;box-shadow:0 2px 8px rgba(0,0,0,0.12);object-fit:contain;" src="https://youtu.be/IP8gBA3Yr3I" title="Video del proyecto" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture muted" allowfullscreen></iframe>
+          <iframe id="carouselVideoIframe" width="100%" height="400" style="background:#000;max-width:100%;box-shadow:0 2px 8px rgba(0,0,0,0.12);object-fit:contain;" src="https://www.youtube.com/embed/IP8gBA3Yr3I?rel=0&mute=1" title="Video del proyecto" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <button id="unmuteBtn" class="btn btn-success position-absolute top-0 end-0 m-2" style="z-index:10;">Activar sonido</button>
           <!-- <button onclick="prevVideo()" style="position:absolute;top:50%;left:10px;transform:translateY(-50%);background:#fff;border:none;border-radius:50%;width:36px;height:36px;box-shadow:0 2px 8px rgba(0,0,0,0.12);font-size:1.5rem;cursor:pointer;z-index:2;">&#10094;</button>
           <button onclick="nextVideo()" style="position:absolute;top:50%;right:10px;transform:translateY(-50%);background:#fff;border:none;border-radius:50%;width:36px;height:36px;box-shadow:0 2px 8px rgba(0,0,0,0.12);font-size:1.5rem;cursor:pointer;z-index:2;">&#10095;</button> -->
         </div>
@@ -421,19 +425,21 @@
     const videoList = [
       "IP8gBA3Yr3I",
       "wx3sSuIlYso"
-      
     ];
     let videoIndex = 0;
     const videoIframe = document.getElementById('carouselVideoIframe');
     const videoDots = document.getElementById('videoDots');
+    const unmuteBtn = document.getElementById('unmuteBtn');
 
-    function getYoutubeEmbedUrl(id) {
-      return `https://www.youtube.com/embed/${id}?rel=0&autoplay=1`;
+    function getYoutubeEmbedUrl(id, muted = true) {
+      return `https://www.youtube.com/embed/${id}?rel=0&autoplay=1${muted ? '&mute=1' : ''}`;
     }
+
+    let isMuted = true;
 
     function showVideo(idx) {
       videoIndex = (idx + videoList.length) % videoList.length;
-      videoIframe.src = getYoutubeEmbedUrl(videoList[videoIndex]);
+      videoIframe.src = getYoutubeEmbedUrl(videoList[videoIndex], isMuted);
       updateVideoDots();
     }
 
@@ -451,9 +457,27 @@
 
     function updateVideoDots() {
       videoDots.innerHTML = videoList.map((id,i) => `
-        <img src='${getYoutubeThumbnail(id)}' onclick='showVideo(${i})' style='width:230px;height:160px;object-fit:cover;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.12);margin:0 10px 0 10px;cursor:pointer;border:${i===videoIndex?'3px solid #198754':'2px solid #bbb'};transition:border 0.2s;'>
+        <img src='${getYoutubeThumbnail(id)}' onclick='showVideo(${i})' style='width:230px;height:160px;object-fit:cover;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.12);margin:0 10px 0 10px;cursor:pointer;border:${i===videoIndex?'3px solid #198754':'2px solid #bbb'};transition:border 0.2s;' >
       `).join('');
     }
+
+    unmuteBtn.addEventListener('click', function() {
+      isMuted = false;
+      videoIframe.src = getYoutubeEmbedUrl(videoList[videoIndex], false);
+      unmuteBtn.style.display = 'none';
+    });
+
+    // Ocultar el botón si el usuario ya activó el sonido
+    function checkUnmuteBtn() {
+      if (!isMuted) {
+        unmuteBtn.style.display = 'none';
+      } else {
+        unmuteBtn.style.display = 'block';
+      }
+    }
+
+    // Mostrar el botón al cargar
+    checkUnmuteBtn();
 
     showVideo(0);
   </script>
