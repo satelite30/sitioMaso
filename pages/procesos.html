@@ -11,8 +11,85 @@
        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../style.css" />
     <title>publicaciones-huellas-de-barrio</title>
+
+
+    <style>
+         @media (min-width: 992px) {
+        .logo {
+          margin-left: 0 !important;
+          margin-right: auto !important;
+          display: block !important;
+          justify-content:start ;
+          width: 50%;
+          /* border: 3px dashed black; */
+        }
+        .navbar-brand {
+          justify-content: flex-start !important;
+          
+          
+        }
+      }
+      @media (max-width: 991.98px) {
+        .logo {
+          margin-left: auto !important;
+          margin-right: auto !important;
+          display: block !important;
+          
+        }
+        .navbar-brand {
+          justify-content: center !important;
+        }
+      }
+      
+
+    </style>
 </head>
 <body>
+
+ <header>
+    <nav
+  class="navbar d-flex navbar-expand-lg navbar-light bg-white shadow-sm " >
+  <div class="container  row justify-content-center m-auto d-flex ">
+    
+    <div class="col-sm-10  col-md-12 col-lg-8 ">
+      <a
+        class="navbar-brand m-4 col-sm-10 col-md-11 col-lg-8  d-block d-lg-flex align-items-center "
+        href="../index.html"
+        style="justify-content: center; justify-content: start ;"
+      >
+        <img
+          src="../recursos/img/logo4.png"
+          alt="Logo"
+          width="100%"
+          class="logo d-block mx-auto mx-lg-0 "
+        />
+      </a>
+    </div>
+    
+    <div class="col-lg-4  col-md-12 col-sm-12">
+      <ul class="navbar-nav ms-auto d-flex justify-content-center w-100 ">
+      <li class="nav-item m-auto  m-2">
+        <a class="nav-link " href="./pages/red.html">Red</a>
+      </li>
+      <li class="nav-item m-auto">
+        <a class="nav-link " href="./pages/procesos.html">Procesos</a>
+      </li>
+      <li class="nav-item m-auto">
+        <a class="nav-link" href="./pages/publicaciones.html">Publicaciones</a>
+      </li>
+      <li class="nav-item m-auto">
+        <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+      </li>
+    </ul>
+
+    </div>
+
+    
+  </div>
+</nav>
+
+</header>
+
 
 <main>
 <div class="fondo">
@@ -249,6 +326,8 @@
     
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="../js/navbar-animation.js"></script>
 
 </body>
 </html>
