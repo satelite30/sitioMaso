@@ -16,6 +16,23 @@
     <link rel="shortcut icon" href="./recursos/img/logoLitt2.ico" type="image/x-icon">
 
     <style>
+       /* Overlay para el lightbox del carousel activo */
+  .carousel-lightbox-overlay {
+    transition: 0.3s, backdrop-filter 0.3s;
+    width: 35%;
+    margin: 20px;
+
+    /* Puedes personalizar el efecto aquí */
+  }
+
+  .carousel-lightbox-overlay:hover{
+    transform: scale(1.05);
+    transition: ease-in-out 0.1s;
+    background:#d6d6d600;
+     backdrop-filter: blur(0px); 
+
+  }
+      
        @media (min-width: 992px) {
         .logo {
           margin-left: 0 !important;
@@ -42,7 +59,8 @@
           justify-content: center !important;
         }
       }
-      
+
+     
     </style>
 
 
@@ -96,33 +114,90 @@
     
   <main>
     
-  <div class="container-fluid border border-info border-4   d-flex justify-content-center p-0">
+  <div class="container-fluid   d-flex justify-content-center p-0">
     <div class="carousel-container w-90">
       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active position-relative">
             <img src="./recursos/img/DSC_9320-copy.jpg" class="d-block w-100" style="object-position: 1% 2%;" alt="First slide" onclick="openLightbox(this.src)">
-            <div class="carousel-lightbox-overlay position-absolute start-0 bottom-0 w-100" style="height:30%;background:rgba(0,0,0,0.45);backdrop-filter:blur(2px);z-index:2;display:flex;align-items:center;justify-content:center;">
+            <div class="carousel-lightbox-overlay position-absolute end-0 bottom-0  d-flex justify-content-end align-items-center rounded-3  " style="height:30%;background:rgba(0, 0, 0, 0.192);backdrop-filter:blur(2px);z-index:2;">
+
+              
+              <div class="col-11  justify-content-center m-auto fs-5">
+                <p class="text-light me-4 mb-0 text-center">Ejemplo de texto</p>
+                <p class="text-light me-4 mb-0 text-center ">ejemplo de texto</p>
+                <a href="#"><p class="text-decoration-none me-4 mb-0 text-center">ejemplo de texto</p></a>
+                
+
+              </div>
+              
               <!-- Aquí puedes poner contenido opcional, por ejemplo un texto o íconos -->
             </div>
           </div>
+
+<!--      Nueva imagen 2 -->     
           <div class="carousel-item">
             <img src="./recursos/img/corazon1.jpeg" class="d-block w-100 current-img" style="width: fit-content;" alt="Second slide" onclick="openLightbox(this.src)">
+
+             <div class="carousel-lightbox-overlay position-absolute end-0 bottom-0  d-flex justify-content-end align-items-center rounded-3  " style="height:30%;background:rgba(0, 0, 0, 0.479);backdrop-filter:blur(2px);z-index:2;">
+
+              <!-- inicio contenido 2-->
+              <div class="col-11  justify-content-center m-auto fs-5">
+                <p class="text-light me-4 mb-0 text-center">Ejemplo de texto</p>
+                <p class="text-light me-4 mb-0 text-center ">ejemplo de texto</p>
+                <a href="#"><p class="text-decoration-none me-4 mb-0 text-center">ejemplo de texto</p></a>
+                
+
+              </div>
+              
+              <!-- cierre contenido 2-->
+            </div>
           </div>
+
+
+<!--      Nueva imagen 3 -->            
           <div class="carousel-item">
             <img src="https://static.wixstatic.com/media/697903_5754937e97d540729d134900f2f4fc8e~mv2.jpg/v1/fill/w_730,h_487,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_5754937e97d540729d134900f2f4fc8e~mv2.jpg" class="d-block w-100" alt="Third slide" onclick="openLightbox(this.src)">
+
+            <div class="carousel-lightbox-overlay position-absolute start-0 bottom-0  d-flex justify-content-start align-items-center rounded-3  " style="height:30%;background:rgba(0, 0, 0, 0.5);backdrop-filter:blur(2px);z-index:2;">
+
+              <!-- inicio contenido 2-->
+              <div class="col-11  justify-content-center m-auto fs-5">
+                <p class="text-light me-4 mb-0 text-center">Ejemplo de texto</p>
+                <p class="text-light me-4 mb-0 text-center ">ejemplo de texto</p>
+                <a href="#"><p class="text-decoration-none me-4 mb-0 text-center">ejemplo de texto</p></a>
+                
+
+              </div>
+              
+              <!-- cierre contenido 2-->
+            </div>
+
           </div>
+
+<!--      Nueva imagen 4 -->            
           <div class="carousel-item">
             <img src="https://static.wixstatic.com/media/697903_08e75e718b2745ab90bf87220596b283~mv2_d_1956_1332_s_2.jpg/v1/fill/w_764,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_08e75e718b2745ab90bf87220596b283~mv2_d_1956_1332_s_2.jpg" class="d-block w-100" alt="Third slide" onclick="openLightbox(this.src)">
-<style>
-  /* Overlay para el lightbox del carousel activo */
-  .carousel-lightbox-overlay {
-    transition: background 0.3s, backdrop-filter 0.3s;
-    /* Puedes personalizar el efecto aquí */
-  }
-</style>
+
+            <div class="carousel-lightbox-overlay position-absolute end-0 bottom-0  d-flex justify-content-end align-items-center rounded-3  " style="height:30%;background:rgba(0, 0, 0, 0.11);backdrop-filter:blur(2px);z-index:2;">
+
+              <!-- inicio contenido 2-->
+              <div class="col-11  justify-content-center m-auto fs-5">
+                <p class="text-light me-4 mb-0 text-center">Ejemplo de texto</p>
+                <p class="text-light me-4 mb-0 text-center ">ejemplo de texto</p>
+                <a href="#"><p class="text-decoration-none me-4 mb-0 text-center">ejemplo de texto</p></a>
+                
+
+              </div>
+              
+              <!-- cierre contenido 2-->
+            </div>
+
           </div>
         </div>
+<!-- cierre final ⬆️⬆️ -->
+
+
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
