@@ -10,7 +10,7 @@
     <style>
       .page-hero { background: #f8f6f2; padding: 60px 0 20px; text-align: center; }
       .page-hero h1 { font-weight: 800; }
-.page-hero h1 span { color: #004200; }
+      .page-hero h1 span { color: #004200; }
       .page-hero p { max-width: 900px; margin: 10px auto 0; }
       .page-cover img {
         max-height: 460px;
@@ -20,12 +20,48 @@
         transition: transform 0.3s, box-shadow 0.3s;
         box-shadow: 0 4px 16px rgba(0,0,0,0.10);
       }
+
+      .imagesIframes{  display: none; } 
+
       .page-cover img:hover {
         transform: scale(1.04) rotate(-1deg);
         box-shadow: 0 8px 32px rgba(0,0,0,0.18);
         cursor: pointer;
       }
       .page-content { max-width: 1000px; margin: 30px auto; }
+
+        /* Ocultar tooltips de timeline en col-md y menor */
+    @media (max-width: 660px) {
+      .informacion-externa{
+        display: none;  
+      }
+
+      .imagesIframes{
+        display: block;
+        background: rgba(204, 204, 204, 0.788);
+        width: 100%;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+      .imagesIframes img,
+      .imagesIframes .col-lg-10,
+      .imagesIframes .col-md-10,
+      .imagesIframes .col-sm-9 {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        box-sizing: border-box;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        
+      }
+
+
+    }
+
+
+
     </style>
   </head>
   <body>
@@ -94,9 +130,69 @@
           </div>
           <div class="col-lg-9 col-md-9 col-12">
             
-              <div class="informacion-externa  align-items-center text-center">
+    <div class="informacion-externa align-items-center text-center border">
     <iframe src="http://www.favelasaopaulomedellin.fau.usp.br/taller-santo-domingo-savio/"  width="100%" height="1200px" title="Sitio"></iframe>
     </div> 
+
+    
+
+<!--     inicio de contenido para query celular -->
+
+    <div class="imagesIframes col-lg-10 col-md-10 col-sm-10 border  pt-2 px-2" >
+
+      <p style="text-align: justify; margin-top: 40px; ">
+     <b> Rescatar la voz de la población mediante la implementación de un taller participativo</b> implicó un proceso de planeación previo, con la finalidad de orientar las actividades a desplegar, fijar sus alcances y limitaciones. 
+
+      Lineamientos metodológicos para el Taller de Memoria Urbana
+    </p>
+
+      <div class="textoinves fs-6 mb-4" style="text-align: justify;">
+        <h4 class="fw-bold text-dark mb-2">RESULTADOS POR COMPONENTE</h4>
+        <p class="mb-1"><strong>Vías, movilidad, accesibilidad, espacio público y equipamientos sociales</strong></p>
+        <p class="mb-1"><strong>Institucionalidad</strong> <span class="text-success">Positivo</span></p>
+        <p>Mayor presencia de la administración en la implementación de programas para diferentes sectores de la población y control del territorio por la institucionalidad.</p>
+        <p class="mb-1"><strong>Mobilidad y Economía</strong> <span class="text-success">Positivo</span></p>
+        <p>Familiaridad y sentido de pertenencia con el transporte, libre movilización de la población a diferentes lugares del sector y de la ciudad, menor tiempo para desplazarse de la vivienda al lugar de trabajo.</p>
+        <p class="mb-1"><strong>Economía</strong> <span class="text-success">Positivo</span></p>
+        <p>Apertura al turismo que incentivó la economía del barrio.</p>
+        <p class="mb-1"><strong>Visibilidad del barrio</strong> <span class="text-success">Positivo</span></p>
+        <p>Atracción del turismo local, nacional y extranjero promueve el reconocimiento del sector.</p>
+        <p class="mb-1"><strong>Espacio público</strong> <span class="text-success">Positivo</span></p>
+        <p>Respeto, uso y apropiación social, sentido de pertenencia y cuidado de los espacios y equipamientos para reunión o encuentro, realización y convergencia de múltiples actividades que unen poblaciones de diferentes barrios.</p>
+        <hr>
+        <p class="mb-1"><span class="text-danger">Negativo</span></p>
+        <p>Disminución de la acción colectiva para la resolución de las problemáticas comunitarias, la urbanización fue centrada en el área del metrocable.</p>
+        <p class="mb-1"><span class="text-danger">Negativo</span></p>
+        <p>Nueva precariedad urbana en términos de desempleo de la población masculina que antes de la intervención, conducía las líneas de transporte público tradicional (bus, colectivo) desaparecidas tras la implementación del sistema articulado de transporte público.</p>
+        <p class="mb-1"><span class="text-danger">Negativo</span></p>
+        <p>El comercio en zonas específicas como la calle “Puerto rico” invade los andenes y el espacio público, el ruido producido por las distintas actividades comerciales irrumpe en la tranquilidad de los habitantes.</p>
+        <p class="mb-1"><span class="text-danger">Negativo</span></p>
+        <p>Las contradicciones presentes: “antes de la biblioteca, Santo Domingo no existía. Ahora todos quieren ir a visitarla y esto generara la sensación de que todo está bien, sin embargo, algunos conflictos permanecen”.</p>
+        <p class="mb-1"><span class="text-danger">Negativo</span></p>
+        <p>Las construcciones y mejoras de espacio público estuvieron concentradas alrededor del Metrocable y la Biblioteca España, lo demás, continúo siendo territorio olvidado por el gobierno.</p>
+      </div>
+
+      <small class="text-muted d-block mb-2" style="font-size: 0.95em; font-style: italic;">
+        origen &copy; <a href="http://www.favelasaopaulomedellin.fau.usp.br" target="_blank" rel="noopener" class="text-decoration-underline text-muted">favelasaopaulomedellin.fau.usp.br</a>
+      </small>
+
+
+      <img src="http://www.favelasaopaulomedellin.fau.usp.br/wp-content/uploads/2016/02/02_Movilidad-espacio-p%C3%BAblico-y-usos-antes.jpg" class="col-lg-10" alt="">
+      <small class="text-muted d-block mt-2" style="font-size: 0.95em; font-style: italic;">
+        Crédito fotográfico &copy; <a href="http://www.favelasaopaulomedellin.fau.usp.br" target="_blank" rel="noopener" class="text-decoration-underline text-muted">favelasaopaulomedellin.fau.usp.br</a>
+      </small>
+
+      <img src="http://www.favelasaopaulomedellin.fau.usp.br/wp-content/uploads/2016/02/02_Movilidad-espacio-p%C3%BAblico-y-usos-despu%C3%A9s.jpg" class="col-lg-10 py-4" alt="">
+       <small class="text-muted d-block mt-2" style="font-size: 0.95em; font-style: italic;">
+        Crédito fotográfico &copy; <a href="http://www.favelasaopaulomedellin.fau.usp.br" target="_blank" rel="noopener" class="text-decoration-underline text-muted">favelasaopaulomedellin.fau.usp.br</a>
+      </small>
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+
+
+    </div>
+
 
           </div>
         </div>
