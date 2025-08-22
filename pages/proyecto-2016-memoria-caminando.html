@@ -101,7 +101,7 @@
     <div class="col-md-9 col-12">
       <div id="fotopoemCarousel" class="carousel slide " data-bs-ride="carousel" data-bs-interval="5000" style="height:530px">
         <div class="carousel-inner px-5 ">
-          <div class="carousel-item active">
+          <div class="carousel-item col-sm-12 col-md-12 active border border-danger " >
             <img src="https://static.wixstatic.com/media/697903_47e071177b884191b93a280348c30ebc~mv2_d_2750_2353_s_2.jpg/v1/fill/w_608,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_47e071177b884191b93a280348c30ebc~mv2_d_2750_2353_s_2.jpg" class="d-block w-100 rounded shadow" alt="Foto 1" style="object-fit:contain; background:#f8f8f8; height:520px;">
           </div>
           <div class="carousel-item">
@@ -208,9 +208,9 @@
       <div class="col-md-3 col-12 mb-3 mb-md-0 d-flex flex-md-column flex-row justify-content-center align-items-center " id="videoThumbnailsCol" style="gap:40px;">
         <div  id="videoDots" style="display:flex;flex-direction:column;gap:20px;width:100%;align-items:center;padding: 0 80px;"></div>
       </div>
-      <div class="col-md-9 col-12">
+      <div class="col-md-9 col-12 ">
         <div style="position:relative;">
-          <iframe id="carouselVideoIframe" width="100%" height="400" style="background:#000;max-width:100%;box-shadow:0 2px 8px rgba(0,0,0,0.12);object-fit:contain;" src="https://www.youtube.com/embed/wx3sSuIlYso" title="Video del proyecto" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe id="carouselVideoIframe" width="100%" height="400" style="background:#000;max-width:100%;box-shadow:0 2px 8px rgba(0,0,0,0.12);object-fit:contain;" src="https://youtu.be/IP8gBA3Yr3I" title="Video del proyecto" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture muted" allowfullscreen></iframe>
           <!-- <button onclick="prevVideo()" style="position:absolute;top:50%;left:10px;transform:translateY(-50%);background:#fff;border:none;border-radius:50%;width:36px;height:36px;box-shadow:0 2px 8px rgba(0,0,0,0.12);font-size:1.5rem;cursor:pointer;z-index:2;">&#10094;</button>
           <button onclick="nextVideo()" style="position:absolute;top:50%;right:10px;transform:translateY(-50%);background:#fff;border:none;border-radius:50%;width:36px;height:36px;box-shadow:0 2px 8px rgba(0,0,0,0.12);font-size:1.5rem;cursor:pointer;z-index:2;">&#10095;</button> -->
         </div>
@@ -357,8 +357,9 @@
      <script>
     // Lista de videos de YouTube (solo IDs)
     const videoList = [
-      "wx3sSuIlYso",
-      "IP8gBA3Yr3I"
+      "IP8gBA3Yr3I",
+      "wx3sSuIlYso"
+      
     ];
     let videoIndex = 0;
     const videoIframe = document.getElementById('carouselVideoIframe');
