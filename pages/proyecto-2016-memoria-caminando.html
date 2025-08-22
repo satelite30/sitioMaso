@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../css/galeriagrid.css">
-    <style>
-      
-    </style>
+    
     <style>
       .page-hero { background: #f8f6f2; padding: 60px 0 20px; text-align: center; }
       .page-hero h1 { font-weight: 800; }
@@ -18,6 +16,21 @@
       .page-hero p { max-width: 900px; margin: 10px auto 0; }
       .page-cover img { max-height: 460px; object-fit: cover; border-radius: 12px; width: 100%; }
       .page-content { max-width: 1000px; margin: 30px auto; }
+
+      /* Cambia el color de los íconos prev/next del carousel */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg);
+      /* Puedes ajustar el filtro para el color deseado, o usar background-image si prefieres un SVG personalizado */
+    }
+
+    /* Separar los controles prev/next del carousel 20px hacia afuera de la imagen */
+    .carousel-control-prev {
+      left: -20px;
+    }
+    .carousel-control-next {
+      right: -20px;
+    }
 
   .shadow{ box-shadow: 11px 22px 32px rgb(34, 34, 34) !important; }
 
@@ -55,6 +68,21 @@
 
 
 
+
+@media (max-width: 900px) { 
+  
+    .img-thumbnail:hover {
+        border: 2px solid #8ff3c5 !important; /* Bootstrap success color */
+        box-shadow: 0 0 8px #b4ffdc55;
+        filter: brightness(1.1);
+        transform: scale(1.2,1.2);
+        
+      }
+     
+    }
+
+
+
     @media (max-width: 400px) { 
       .fotosThumb img {
       width: 80%;
@@ -66,19 +94,21 @@
         
     }
 
-    
+  
     .thumbImg img{
       max-height:60vh;
     }
 
-
+     
     }
 
-
     
 
     
 
+    
+
+    
     </style>
   </head>
   <body>
@@ -141,77 +171,95 @@
   <div class="row justify-content-center align-items-center">
     <div class="col-lg-8 col-md-12 col-sm-12  d-flex justify-content-center align-items-center mb-3 mb-lg-0" >
       <div id="fotopoemCarousel" class="carousel slide w-100 px-4 " data-bs-ride="carousel" data-bs-interval="5000" style="height: 65vh;">
+
+        <!-- inicio de items carousel img -->
+
         <div class="macroThum carousel-inner w-100 " >
-          <div class="thumbImg carousel-item active px-4 " >
-            <img src="https://static.wixstatic.com/media/697903_47e071177b884191b93a280348c30ebc~mv2_d_2750_2353_s_2.jpg/v1/fill/w_608,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_47e071177b884191b93a280348c30ebc~mv2_d_2750_2353_s_2.jpg" class="d-block w-100 rounded shadow img-fluid " alt="Foto 1" style="object-fit:contain; background:#f8f8f8; ">
+          <div class="thumbImg carousel-item active px-4" >
+            <img src="https://static.wixstatic.com/media/697903_47e071177b884191b93a280348c30ebc~mv2_d_2750_2353_s_2.jpg/v1/fill/w_608,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_47e071177b884191b93a280348c30ebc~mv2_d_2750_2353_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 1" style="object-fit:contain; background:#f8f8f8;" onclick="showModalImg(this.src)">
+          </div>
+          <div class="carousel-item px-4" style="height: 65vh;">
+            <img src="https://static.wixstatic.com/media/697903_fd320a7e226e4e18be0b9b689c18a524~mv2_d_1417_1417_s_2.jpg/v1/fill/w_520,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_fd320a7e226e4e18be0b9b689c18a524~mv2_d_1417_1417_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 2" style="object-fit:contain; background:#f8f8f8; max-height:60vh;" onclick="showModalImg(this.src)">
+          </div>
+          <div class="carousel-item px-4" style="height: 65vh;">
+            <img src="https://static.wixstatic.com/media/697903_787cb515d3e8409b919bb004aff8d2ea~mv2_d_2750_2551_s_4_2.jpg/v1/fill/w_561,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_787cb515d3e8409b919bb004aff8d2ea~mv2_d_2750_2551_s_4_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 3" style="object-fit:contain; background:#f8f8f8; max-height:60vh;" onclick="showModalImg(this.src)">
+          </div>
+          <div class="carousel-item px-4" style="height: 65vh;">
+            <img src="https://static.wixstatic.com/media/697903_47ad00b97aaf4b81ba63000658a2eb23~mv2_d_2750_2268_s_2.jpg/v1/fill/w_631,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_47ad00b97aaf4b81ba63000658a2eb23~mv2_d_2750_2268_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 4" style="object-fit:contain; background:#f8f8f8; max-height:60vh;" onclick="showModalImg(this.src)">
+          </div>
+          <div class="carousel-item px-4" style="height: 65vh;">
+            <img src="https://static.wixstatic.com/media/697903_179f43e9605747c082e552852abc0986~mv2_d_1332_2409_s_2.jpg/v1/fill/w_288,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_179f43e9605747c082e552852abc0986~mv2_d_1332_2409_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 5" style="object-fit:contain; background:#f8f8f8; max-height:60vh;" onclick="showModalImg(this.src)">
+          </div>
+          <div class="carousel-item px-4" style="height: 65vh;">
+            <img src="https://static.wixstatic.com/media/697903_d1902d173fa240f79783a513acba6824~mv2_d_3800_4724_s_4_2.jpg/v1/fill/w_418,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_d1902d173fa240f79783a513acba6824~mv2_d_3800_4724_s_4_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 6" style="object-fit:contain; background:#f8f8f8; max-height:60vh;" onclick="showModalImg(this.src)">
+          </div>
+          <div class="carousel-item px-4" style="height: 65vh;">
+            <img src="https://static.wixstatic.com/media/697903_b1249dbbca444d709a681b9abe664a72~mv2_d_5924_3118_s_4_2.jpg/v1/fill/w_988,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_b1249dbbca444d709a681b9abe664a72~mv2_d_5924_3118_s_4_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 7" style="object-fit:contain; background:#f8f8f8; max-height:60vh;" onclick="showModalImg(this.src)">
+          </div>
+          <div class="carousel-item px-4" style="height: 65vh;">
+            <img src="https://static.wixstatic.com/media/697903_57c032603e194127a8ce7d8f94b1d468~mv2_d_2750_1899_s_2.jpg/v1/fill/w_753,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_57c032603e194127a8ce7d8f94b1d468~mv2_d_2750_1899_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 8" style="object-fit:contain; background:#f8f8f8; max-height:60vh;" onclick="showModalImg(this.src)">
+          </div>
+          <div class="carousel-item px-4" style="height: 65vh;">
+            <img src="https://static.wixstatic.com/media/697903_a70b694544fd4f06bf2bc564dcf27594~mv2_d_2750_2409_s_4_2.jpg/v1/fill/w_594,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_a70b694544fd4f06bf2bc564dcf27594~mv2_d_2750_2409_s_4_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 9" style="object-fit:contain; background:#f8f8f8; max-height:60vh;" onclick="showModalImg(this.src)">
+          </div>
+          <div class="carousel-item px-4" style="height: 65vh;">
+            <img src="https://static.wixstatic.com/media/697903_ab2d17b743fc407fa3f8446e193185de~mv2_d_1899_3118_s_2.jpg/v1/fill/w_317,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_ab2d17b743fc407fa3f8446e193185de~mv2_d_1899_3118_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 10" style="object-fit:contain; background:#f8f8f8; max-height:60vh;" onclick="showModalImg(this.src)">
+          </div>
+          <div class="carousel-item px-4" style="height: 65vh;">
+            <img src="https://static.wixstatic.com/media/697903_90fd00ad57ef4a4aa2a8cc2e705c320c~mv2_d_2750_2268_s_2.jpg/v1/fill/w_631,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_90fd00ad57ef4a4aa2a8cc2e705c320c~mv2_d_2750_2268_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 11" style="object-fit:contain; background:#f8f8f8; max-height:60vh;" onclick="showModalImg(this.src)">
+          </div>
+          <div class="carousel-item px-4" style="height: 65vh;">
+            <img src="https://static.wixstatic.com/media/697903_cb6a34ab151640e089112006983087cf~mv2_d_2721_2324_s_2.jpg/v1/fill/w_609,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_cb6a34ab151640e089112006983087cf~mv2_d_2721_2324_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 12" style="object-fit:contain; background:#f8f8f8; max-height:60vh;" onclick="showModalImg(this.src)">
+          </div>
+          <div class="carousel-item px-4" style="height: 65vh;">
+            <img src="https://static.wixstatic.com/media/697903_e864aec55079428a834a6f4a2d90ddc7~mv2_d_6048_4176_s_4_2.jpg/v1/fill/w_753,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_e864aec55079428a834a6f4a2d90ddc7~mv2_d_6048_4176_s_4_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 13" style="object-fit:contain; background:#f8f8f8; max-height:60vh;" onclick="showModalImg(this.src)">
+          </div>
+          <div class="carousel-item px-4" style="height: 65vh;">
+            <img src="https://static.wixstatic.com/media/697903_876ecfdc24974f349c8f0a180cc580cb~mv2_d_2750_2324_s_2.jpg/v1/fill/w_616,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_876ecfdc24974f349c8f0a180cc580cb~mv2_d_2750_2324_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 14" style="object-fit:contain; background:#f8f8f8; max-height:60vh;" onclick="showModalImg(this.src)">
+          </div>
+          <div class="carousel-item px-4" style="height: 65vh;">
+            <img src="https://static.wixstatic.com/media/697903_b37d037218f24bc1942b44b9a7eb8925~mv2_d_1871_1701_s_2.jpg/v1/fill/w_572,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_b37d037218f24bc1942b44b9a7eb8925~mv2_d_1871_1701_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 15" style="object-fit:contain; background:#f8f8f8; max-height:60vh;" onclick="showModalImg(this.src)">
+          </div>
+          <div class="carousel-item px-4" style="height: 65vh;">
+            <img src="https://static.wixstatic.com/media/697903_9b30e21c5b3c4b27959e3ef168253b68~mv2_d_1956_1843_s_2.jpg/v1/fill/w_552,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_9b30e21c5b3c4b27959e3ef168253b68~mv2_d_1956_1843_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 16" style="object-fit:contain; background:#f8f8f8; max-height:60vh;" onclick="showModalImg(this.src)">
+          </div>
+          <div class="carousel-item px-4" style="height: 65vh;">
+            <img src="https://static.wixstatic.com/media/697903_bcb26b34d307482d97cae82a2a04d26d~mv2_d_1276_2268_s_2.jpg/v1/fill/w_293,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_bcb26b34d307482d97cae82a2a04d26d~mv2_d_1276_2268_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 17" style="object-fit:contain; background:#f8f8f8; max-height:60vh;" onclick="showModalImg(this.src)">
+          </div>
+          <div class="carousel-item px-4" style="height: 65vh;">
+            <img src="https://static.wixstatic.com/media/697903_c2293327ee764ff29896e94113ec0cf8~mv2_d_1559_1333_s_2.jpg/v1/fill/w_608,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_c2293327ee764ff29896e94113ec0cf8~mv2_d_1559_1333_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 18" style="object-fit:contain; background:#f8f8f8; max-height:60vh;" onclick="showModalImg(this.src)">
+          </div>
+          <div class="carousel-item px-4" style="height: 65vh;">
+            <img src="https://static.wixstatic.com/media/697903_e26af32331bd482e9613d8f6040a9a5c~mv2_d_1956_1701_s_2.jpg/v1/fill/w_598,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_e26af32331bd482e9613d8f6040a9a5c~mv2_d_1956_1701_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 19" style="object-fit:contain; background:#f8f8f8; max-height:60vh;" onclick="showModalImg(this.src)">
           </div>
 
-          <div class="carousel-item  px-4 " style="height: 65vh;">
-            <img src="https://static.wixstatic.com/media/697903_fd320a7e226e4e18be0b9b689c18a524~mv2_d_1417_1417_s_2.jpg/v1/fill/w_520,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_fd320a7e226e4e18be0b9b689c18a524~mv2_d_1417_1417_s_2.jpg" class="d-block w-100 rounded shadow img-fluid  " alt="Foto 2" style="object-fit:contain; background:#f8f8f8; max-height:60vh;">
+    <!-- Modal para macroThum -->
+    <div class="modal fade" id="macroThumModal" tabindex="-1" aria-labelledby="macroThumModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-lg-10">
+        <div class="modal-content bg-dark">
+          <div class="modal-body p-0 text-center">
+            <img id="macroThumModalImg" src="" alt="Foto ampliada" style="width:100%;max-height:80vh;object-fit:contain;  padding: 10px 0px;">
           </div>
-          <div class="carousel-item px-4" style="height: 65vh;">
-            <img src="https://static.wixstatic.com/media/697903_787cb515d3e8409b919bb004aff8d2ea~mv2_d_2750_2551_s_4_2.jpg/v1/fill/w_561,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_787cb515d3e8409b919bb004aff8d2ea~mv2_d_2750_2551_s_4_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 3" style="object-fit:contain; background:#f8f8f8; max-height:60vh;">
-          </div>
-          <div class="carousel-item px-4" style="height: 65vh;">
-            <img src="https://static.wixstatic.com/media/697903_47ad00b97aaf4b81ba63000658a2eb23~mv2_d_2750_2268_s_2.jpg/v1/fill/w_631,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_47ad00b97aaf4b81ba63000658a2eb23~mv2_d_2750_2268_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 4" style="object-fit:contain; background:#f8f8f8; max-height:60vh;">
-          </div>
-          <div class="carousel-item px-4" style="height: 65vh;">
-            <img src="https://static.wixstatic.com/media/697903_179f43e9605747c082e552852abc0986~mv2_d_1332_2409_s_2.jpg/v1/fill/w_288,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_179f43e9605747c082e552852abc0986~mv2_d_1332_2409_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 5" style="object-fit:contain; background:#f8f8f8; max-height:60vh;">
-          </div>
-          <div class="carousel-item px-4" style="height: 65vh;">
-            <img src="https://static.wixstatic.com/media/697903_d1902d173fa240f79783a513acba6824~mv2_d_3800_4724_s_4_2.jpg/v1/fill/w_418,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_d1902d173fa240f79783a513acba6824~mv2_d_3800_4724_s_4_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 6" style="object-fit:contain; background:#f8f8f8; max-height:60vh;">
-          </div>
-          <div class="carousel-item px-4" style="height: 65vh;">
-            <img src="https://static.wixstatic.com/media/697903_b1249dbbca444d709a681b9abe664a72~mv2_d_5924_3118_s_4_2.jpg/v1/fill/w_988,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_b1249dbbca444d709a681b9abe664a72~mv2_d_5924_3118_s_4_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 7" style="object-fit:contain; background:#f8f8f8; max-height:60vh;">
-          </div>
-          <div class="carousel-item px-4" style="height: 65vh;">
-            <img src="https://static.wixstatic.com/media/697903_57c032603e194127a8ce7d8f94b1d468~mv2_d_2750_1899_s_2.jpg/v1/fill/w_753,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_57c032603e194127a8ce7d8f94b1d468~mv2_d_2750_1899_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 8" style="object-fit:contain; background:#f8f8f8; max-height:60vh;">
-          </div>
-          <div class="carousel-item px-4" style="height: 65vh;">
-            <img src="https://static.wixstatic.com/media/697903_a70b694544fd4f06bf2bc564dcf27594~mv2_d_2750_2409_s_4_2.jpg/v1/fill/w_594,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_a70b694544fd4f06bf2bc564dcf27594~mv2_d_2750_2409_s_4_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 9" style="object-fit:contain; background:#f8f8f8; max-height:60vh;">
-          </div>
-          <div class="carousel-item px-4" style="height: 65vh;">
-            <img src="https://static.wixstatic.com/media/697903_ab2d17b743fc407fa3f8446e193185de~mv2_d_1899_3118_s_2.jpg/v1/fill/w_317,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_ab2d17b743fc407fa3f8446e193185de~mv2_d_1899_3118_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 10" style="object-fit:contain; background:#f8f8f8; max-height:60vh;">
-          </div>
-          <div class="carousel-item px-4" style="height: 65vh;">
-            <img src="https://static.wixstatic.com/media/697903_90fd00ad57ef4a4aa2a8cc2e705c320c~mv2_d_2750_2268_s_2.jpg/v1/fill/w_631,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_90fd00ad57ef4a4aa2a8cc2e705c320c~mv2_d_2750_2268_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 11" style="object-fit:contain; background:#f8f8f8; max-height:60vh;">
-          </div>
-          <div class="carousel-item px-4" style="height: 65vh;">
-            <img src="https://static.wixstatic.com/media/697903_cb6a34ab151640e089112006983087cf~mv2_d_2721_2324_s_2.jpg/v1/fill/w_609,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_cb6a34ab151640e089112006983087cf~mv2_d_2721_2324_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 12" style="object-fit:contain; background:#f8f8f8; max-height:60vh;">
-          </div>
-          <div class="carousel-item px-4" style="height: 65vh;">
-            <img src="https://static.wixstatic.com/media/697903_e864aec55079428a834a6f4a2d90ddc7~mv2_d_6048_4176_s_4_2.jpg/v1/fill/w_753,h_520,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_e864aec55079428a834a6f4a2d90ddc7~mv2_d_6048_4176_s_4_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 13" style="object-fit:contain; background:#f8f8f8; max-height:60vh;">
-          </div>
-          <div class="carousel-item px-4" style="height: 65vh;">
-            <img src="https://static.wixstatic.com/media/697903_876ecfdc24974f349c8f0a180cc580cb~mv2_d_2750_2324_s_2.jpg/v1/fill/w_616,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_876ecfdc24974f349c8f0a180cc580cb~mv2_d_2750_2324_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 14" style="object-fit:contain; background:#f8f8f8; max-height:60vh;">
-          </div>
-          <div class="carousel-item px-4" style="height: 65vh;">
-            <img src="https://static.wixstatic.com/media/697903_b37d037218f24bc1942b44b9a7eb8925~mv2_d_1871_1701_s_2.jpg/v1/fill/w_572,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_b37d037218f24bc1942b44b9a7eb8925~mv2_d_1871_1701_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 15" style="object-fit:contain; background:#f8f8f8; max-height:60vh;">
-          </div>
-          <div class="carousel-item px-4" style="height: 65vh;">
-            <img src="https://static.wixstatic.com/media/697903_9b30e21c5b3c4b27959e3ef168253b68~mv2_d_1956_1843_s_2.jpg/v1/fill/w_552,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_9b30e21c5b3c4b27959e3ef168253b68~mv2_d_1956_1843_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 16" style="object-fit:contain; background:#f8f8f8; max-height:60vh;">
-          </div>
-          <div class="carousel-item px-4" style="height: 65vh;">
-            <img src="https://static.wixstatic.com/media/697903_bcb26b34d307482d97cae82a2a04d26d~mv2_d_1276_2268_s_2.jpg/v1/fill/w_293,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_bcb26b34d307482d97cae82a2a04d26d~mv2_d_1276_2268_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 17" style="object-fit:contain; background:#f8f8f8; max-height:60vh;">
-          </div>
-          <div class="carousel-item px-4" style="height: 65vh;">
-            <img src="https://static.wixstatic.com/media/697903_c2293327ee764ff29896e94113ec0cf8~mv2_d_1559_1333_s_2.jpg/v1/fill/w_608,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_c2293327ee764ff29896e94113ec0cf8~mv2_d_1559_1333_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 18" style="object-fit:contain; background:#f8f8f8; max-height:60vh;">
-          </div>
-          <div class="carousel-item px-4" style="height: 65vh;">
-            <img src="https://static.wixstatic.com/media/697903_e26af32331bd482e9613d8f6040a9a5c~mv2_d_1956_1701_s_2.jpg/v1/fill/w_598,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_e26af32331bd482e9613d8f6040a9a5c~mv2_d_1956_1701_s_2.jpg" class="d-block w-100 rounded shadow img-fluid" alt="Foto 19" style="object-fit:contain; background:#f8f8f8; max-height:60vh;">
-          </div>
-
-          <!-- ...repetir para el resto de las imágenes, mismo formato ... -->
+          <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Cerrar"></button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#fotopoemCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </div>
+    </div>
+
+   <!-- ...cierre slide y cominzo thumnail imagenes ... -->
+    <!-- ...controladores de carousel ... -->
+        </div>
+
+        <button class="carousel-control-prev " type="button" data-bs-target="#fotopoemCarousel" data-bs-slide="prev" >
+          <span class="carousel-control-prev-icon " style="color: #000;" aria-hidden="true"></span>
           <span class="visually-hidden">Anterior</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#fotopoemCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="carousel-control-next-icon" style="color: #000;" aria-hidden="true"></span>
           <span class="visually-hidden">Siguiente</span>
         </button>
+
       </div>
+
     </div>
     <div class="fotosThumb col-lg-3 col-md-12 col-sm-12  d-flex flex-column align-items-center " style="max-height:60vh; overflow-y:auto;">
       <div class="d-flex flex-column w-100 align-items-center" style="gap:10px;">
@@ -255,8 +303,8 @@
       </div>
     </div>
   </div>
-</div>
-</div>
+        </div>
+        </div>
         
 
 
@@ -421,6 +469,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
      <script>
+    // Modal para macroThum
+    function showModalImg(src) {
+      document.getElementById('macroThumModalImg').src = src;
+      var modal = new bootstrap.Modal(document.getElementById('macroThumModal'));
+      modal.show();
+    }
+
+
+
     // Lista de videos de YouTube (solo IDs)
     const videoList = [
       "IP8gBA3Yr3I",
