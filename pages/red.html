@@ -18,8 +18,44 @@
     <title>nosotros-huellas-de-barrio</title>
     
     <style>
+
       .drop-info:hover {
-text-decoration: 3px underline #004200 ;
+        text-decoration: 3px underline #004200 ;
+      }
+
+      /* Responsive: centrar imágenes en md y sm, normal en lg */
+      @media (max-width: 991.98px) {
+        .itemsImg {
+          display: flex !important;
+          flex-direction: column;
+          margin: auto;
+          align-items: center !important;
+          justify-content: center !important;
+        }
+        .image-red {
+          display: flex !important;
+          justify-content: center !important;
+          align-items: center !important;
+          width: 100% !important;
+        }
+        .image-red img {
+          margin-left: auto !important;
+          margin-right: auto !important;
+          display: block !important;
+          max-width: 90vw;
+          height: auto;
+          
+        }
+
+        .textoRed{
+          width: 120%;
+          position: relative;
+          left: -40px;
+          margin: auto ;
+          justify-content: center;
+          align-items: center;
+          font-size: 20px;
+        }
       }
 
     </style>
@@ -86,32 +122,30 @@ text-decoration: 3px underline #004200 ;
 
     
     <main class="container  row m-auto pt-5">
-      <div class="itemsImg col-lg-3 col-sm-12 col-md-8 align-items-start  ">
+      <div class="itemsImg col-lg-3 col-sm-12 col-md-8 align-items-start justify-content-center">
 
  <!-- imagenes listado 1-->     
       
       <div class="image-red m-auto  text-center  pt-5 ">
         <img
-          class=""
+          class="m-auto"
           src="../recursos/img/corazon1.jpeg"
           width="100%"
-          style=""
+          
           alt="imagen-corazon"
         />
       </div>
 
 <!-- imagenes listado 2-->
-      <div class="image-red m-auto  text-center  pt-5 ">
+      <div class="image-red m-auto  text-center   py-5  ">
         <img
           class=""
           src="https://static.wixstatic.com/media/697903_551ebfc6425a4ac4b092679de52cee31~mv2_d_3088_1744_s_2.jpg/v1/fill/w_861,h_486,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/697903_551ebfc6425a4ac4b092679de52cee31~mv2_d_3088_1744_s_2.jpg"
           width="100%"
-          style=""
+          
           alt="imagen-corazon"
         />
       </div>
-
-
 
       </div>
 
@@ -123,7 +157,7 @@ text-decoration: 3px underline #004200 ;
       </h1>
       <h2 class="text-center my-4" >SENTIR, PENSAR, TRANSFORMAR LOS BARRIOS</h2>
 
-      <div class="col-10 text-center justify-content-center m-auto" style="font-size: 24px; text-align: justify;">
+      <div class="container-fluid col-lg-10 col-md-12 col-sm-12 text-center justify-content-center m-auto textoRed " style="font-size: 24px; text-align: justify;">
         <p style="text-align: justify;">
           Proceso de investigación-acción-participación, con inicio en 2010, en
           el que han participado habitantes de barrios populares de Medellín,

@@ -56,6 +56,25 @@
       }
       .page-content { max-width: 1000px; margin: 30px auto; }
       p{font-size: 22px; }
+
+
+       /* Ocultar tooltips de timeline en col-md y menor */
+    @media (max-width: 660px) {
+      .textoDesc{ padding:0px 50px; text-align:justify; }
+     
+    }
+    @media (max-width: 400px) {
+      .textoDesc p{ font-size: 16px;padding:0px 0px; }
+     
+    }
+    @media (max-width: 320px) {
+      .textoDesc p{ font-size: 14px;padding:0px 0px; }
+     
+    }
+
+      
+
+
     </style>
   </head>
   <body>
@@ -121,7 +140,7 @@
 
           </div>
           <div class="col-lg-7 col-md-6 col-12" >
-            <article class="content">
+            <article class="content textoDesc">
               <h3>Descripción</h3>
               <p>
                 Proceso de investigación-acción-participación, con inicio en 2010, en el que han participado habitantes de barrios populares de Medellín, universidades de diferentes ciudades de América Latina y servidores públicos.
@@ -172,7 +191,7 @@
 
            
 
-      <div class="container">
+      <div class="container textoDesc">
 
              <h3 class="mt-4"> Huellas de Barrio: red popular, sentipensante y actuante</h3>
               <p>
