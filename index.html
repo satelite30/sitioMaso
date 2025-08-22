@@ -58,6 +58,10 @@
           
           
         }
+
+        
+
+
       }
       @media (max-width: 991.98px) {
         .logo {
@@ -69,7 +73,128 @@
         .navbar-brand {
           justify-content: center !important;
         }
+
+        .slidePrincipal{
+          height: 30em;
+        }
+
+
       }
+
+      @media (max-width: 768px) {
+        
+
+        .slidePrincipal{
+          height: 14em;
+          margin: auto;
+          display: flex;
+        }
+
+        /* Ajuste de imagen del carousel-item para móviles <=586px */
+        .slideImage img {
+          width: 100% !important;
+          height: 50% !important;
+          object-fit: contain !important;
+          max-width: 100vw;
+          max-height: 30em;
+          display: block;
+          margin: 0 auto;
+          justify-content: center;
+
+          
+        }
+
+
+      }
+
+
+      @media (max-width: 480px) {
+        
+
+        .slidePrincipal{
+          height: 15.6rem;
+           background: white;
+          
+        }
+
+        /* Ajuste de imagen del carousel-item para móviles <=586px */
+        .slideImage img {
+          width: 100% !important;
+          height: 50% !important;
+          object-fit: contain !important;
+          max-width: 100vw;
+          max-height: 30em;
+          display: block;
+          margin: 0 auto;
+          
+        }
+
+        
+
+
+      }
+
+
+      @media (max-width: 332px) {
+        
+        .slidePrincipal{
+          height: 9em;
+          background: white;
+        
+        }
+
+        
+
+      }
+
+       @media (max-width: 182px) {
+        
+        .slidePrincipal{
+          height: 6em;
+          background: white;
+         
+        }
+
+        
+
+      }
+
+
+
+
+
+
+
+      /* .carousel-lightbox-overlay{
+   border: 4px dashed blue;
+   z-index: 400;
+   left: 50% !important;
+   right: auto !important;
+   transform: translateX(-50%);
+   margin-left: 0 !important;
+   margin-right: 0 !important;
+   width: 90vw !important;
+   max-width: 95vw;
+   min-width: 60vw;
+  }
+   
+  .carousel-lightbox-overlay{
+        border: 4px dashed blue;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%);
+   margin-left: 0 !important;
+   margin-right: 0 !important;
+   max-width: 95vw;
+   min-width: 60vw;
+       }
+  
+  
+  
+  */
+
+
+
 
      
     </style>
@@ -126,10 +251,10 @@
   <div class="container-fluid   d-flex justify-content-center p-0">
     <div class="carousel-container w-90">
       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
+        <div class="carousel-inner slidePrincipal">
 
 <!--         primer slide -->  
-          <div class="carousel-item active position-relative">
+          <div class="carousel-item slideImage active position-relative ">
             <img src="./recursos/img/DSC_9320-copy.jpg" class="d-block w-100" style="object-position: 1% 2%;" alt="First slide" onclick="openLightbox(this.src)">
             <div class="carousel-lightbox-overlay position-absolute end-0 bottom-0  d-flex justify-content-end align-items-center rounded-3  " style="height:30%;background:rgba(0, 0, 0, 0.192);backdrop-filter:blur(2px);z-index:2;">
               <div class="col-11 justify-content-center text-center m-auto fs-5 ">
@@ -140,7 +265,7 @@
           </div>
 
 <!--      Nueva imagen 2 -->     
-          <div class="carousel-item "style="object-fit:contain;">
+          <div class="carousel-item   slideImage"style="object-fit:contain;">
             <img src="https://github.com/satelite30/-logossitio/blob/main/imagenesprom/prom2-2.png?raw=true" class="d-block w-10 current-img" style="object-position: 2% 1%; " alt="Second slide" onclick="openLightbox(this.src)">
             <div class="carousel-lightbox-overlay position-absolute end-0 bottom-0  d-flex justify-content-end align-items-center rounded-3  " style="height:30%;background:rgba(0, 0, 0, 0.479);backdrop-filter:blur(2px);z-index:2;">
               <div class="col-11 justify-content-center m-auto fs-5">
@@ -151,7 +276,7 @@
 
 
 <!--      Nueva imagen 3 -->            
-          <div class="carousel-item">
+          <div class="carousel-item  slideImage">
             <img src="https://static.wixstatic.com/media/697903_5754937e97d540729d134900f2f4fc8e~mv2.jpg/v1/fill/w_730,h_487,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_5754937e97d540729d134900f2f4fc8e~mv2.jpg" class="d-block w-100" alt="Third slide" onclick="openLightbox(this.src)">
             <div class="carousel-lightbox-overlay position-absolute start-0 bottom-0  d-flex justify-content-start align-items-center rounded-3  " style="height:30%;background:rgba(0, 0, 0, 0.5);backdrop-filter:blur(2px);z-index:2;">
               <div class="col-11 justify-content-center m-auto fs-5">
@@ -162,7 +287,7 @@
           </div>
 
 <!--      Nueva imagen 4 -->            
-          <div class="carousel-item " >
+          <div class="carousel-item slideImage " >
             <img src="https://github.com/satelite30/-logossitio/blob/main/imagenesprom/prom8.png?raw=true" class="d-block w-100" alt="Third slide" onclick="openLightbox(this.src)">
             <div class="carousel-lightbox-overlay position-absolute start-0 bottom-0  d-flex justify-content-end align-items-center rounded-3  " style="height:30%;background:rgba(0, 0, 0, 0.11);backdrop-filter:blur(2px);z-index:2;">
               <div class="col-11 justify-content-center m-auto fs-5">
@@ -174,7 +299,7 @@
 
 
           <!--      Nueva imagen 5 -->            
-          <div class="carousel-item">
+          <div class="carousel-item slideImage">
             <img src="https://raw.githubusercontent.com/satelite30/-logossitio/refs/heads/main/imagenesprom/prom6-3.webp" class="d-block w-100" alt="Third slide" onclick="openLightbox(this.src)">
             <div class="carousel-lightbox-overlay position-absolute end-0 bottom-0  d-flex justify-content-start align-items-center rounded-3  " style="height:30%;background:rgba(0, 0, 0, 0.678);backdrop-filter:blur(2px);z-index:2;">
               <div class="col-11 justify-content-center m-auto fs-5">
@@ -184,7 +309,7 @@
           </div>
 
           <!--      Nueva imagen 6 -->            
-          <div class="carousel-item">
+          <div class="carousel-item slideImage">
             <img src="https://github.com/satelite30/-logossitio/blob/main/imagenesprom/prom7-2.png?raw=true" class="d-block w-100" alt="Third slide" onclick="openLightbox(this.src)">
             <div class="carousel-lightbox-overlay position-absolute end-0 bottom-0  d-flex justify-content-start align-items-center rounded-3  " style="height:30%;background:rgba(0, 0, 0, 0.678);backdrop-filter:blur(2px);z-index:2;">
               <div class="col-11 justify-content-center m-auto fs-5">
