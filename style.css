@@ -37,6 +37,7 @@
     display: flex;
     align-items: center;
     height: 100%;
+    
   }
 
   .nav-link {
@@ -44,7 +45,15 @@
     align-items: center;
     height: 100%;
     padding: 0 15px;
-    color: black;
+    color:#33cc66;
+    transition: color 0.5s ease-in-out;
+    
+  }
+
+  
+
+  .nav-link:hover{
+    color:#33cc66;
     transition: color 0.5s ease-in-out;
   }
 
@@ -103,6 +112,12 @@
   .navbar.filled .nav-link {
     color: white;
   }
+
+   .navbar.filled :hover {
+    color:#33cc66;
+    
+  }
+ 
 
   @keyframes waveBorder {
     0% {
@@ -201,6 +216,7 @@
   
   .nav-item:hover{
     text-decoration: 3px underline #33cc66 ;
+    color: #33cc66;
   }
   
   /* Cambiar el color del subrayado cuando el navbar está cubierto */
