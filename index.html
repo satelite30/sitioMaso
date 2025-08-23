@@ -94,8 +94,12 @@
 
         .slidePrincipal{
           height: 14em;
-          margin: auto;
+          margin: 0 auto;
+          justify-content: start;
           display: flex;
+          object-fit:contain;
+          
+          
         }
         .slideImage img {
           width: 100% !important;
@@ -104,7 +108,11 @@
           max-width: 100vw;
           max-height: 14em;
           display: block;
-          margin: 0 auto;
+          align-items: center;
+          
+          justify-content: center;
+          
+          
         }
 
 
@@ -120,8 +128,8 @@
         }
         .slideImage img {
           width: 100% !important;
-          height: 60% !important;
-          object-fit: contain !important;
+          height: 64% !important;
+          object-fit: cover !important;
           max-width: 100vw;
           max-height: 12.5em;
           display: block;
@@ -271,9 +279,10 @@
         <div class="carousel-inner slidePrincipal">
 
 <!--         primer slide -->  
-          <div class="carousel-item slideImage active position-relative ">
-            <img src="./recursos/img/DSC_9320-copy.jpg" class="d-block w-100" style="object-position: 1% 2%;" alt="First slide" onclick="openLightbox(this.src)">
-            <div class="carousel-lightbox-overlay position-absolute end-0 bottom-0  d-flex justify-content-end align-items-center rounded-3  " style="height:30%;background:rgba(0, 0, 0, 0.192);backdrop-filter:blur(2px);z-index:2;">
+          <div class="carousel-item slideImage active  ">
+            <img src="./recursos/img/DSC_9320-copy.jpg" class="d-block w-100 justify-content-center "  alt="First slide" onclick="openLightbox(this.src)">
+
+            <div class="carousel-lightbox-overlay position-absolute end-0 bottom-0  d-flex justify-content-end  align-items-center rounded-3  " style="height:30%;background:rgba(0, 0, 0, 0.192);backdrop-filter:blur(2px);z-index:2;">
               <div class="col-11 justify-content-center text-center m-auto fs-5 ">
                 <a href="#"><i class="fa-solid fa-hand-pointer text-center justify-content-center;"  style="color: white; font-size: 50px; transform: rotate(-25rad);" ></i></a>
                 <p class="text-light mb-0 mt-2">Recorrido por la memoria urbana de la Comuna 1.<br>Historias y transformación social.<br>Grupo MASO, UdeA.</p>
@@ -282,8 +291,8 @@
           </div>
 
 <!--      Nueva imagen 2 -->     
-          <div class="carousel-item   slideImage"style="object-fit:contain;">
-            <img src="https://github.com/satelite30/-logossitio/blob/main/imagenesprom/prom2-2.png?raw=true" class="d-block w-10 current-img" style="object-position: 2% 1%; " alt="Second slide" onclick="openLightbox(this.src)">
+          <div class="carousel-item   slideImage"style="object-fit:cover;">
+            <img src="https://github.com/satelite30/-logossitio/blob/main/imagenesprom/prom2.jpg?raw=true" class="d-block w-10 current-img"  alt="Second slide" onclick="openLightbox(this.src)">
             <div class="carousel-lightbox-overlay position-absolute end-0 bottom-0  d-flex justify-content-end align-items-center rounded-3  " style="height:30%;background:rgba(0, 0, 0, 0.479);backdrop-filter:blur(2px);z-index:2;">
               <div class="col-11 justify-content-center m-auto fs-5">
                 <p class="text-light mb-0">Procesos comunitarios en barrios populares.<br>Participación y encuentro.<br>Medellín, Colombia.</p>
@@ -317,7 +326,7 @@
 
           <!--      Nueva imagen 5 -->            
           <div class="carousel-item slideImage">
-            <img src="https://raw.githubusercontent.com/satelite30/-logossitio/refs/heads/main/imagenesprom/prom6-3.webp" class="d-block w-100" alt="Third slide" onclick="openLightbox(this.src)">
+            <img src="https://github.com/satelite30/-logossitio/blob/main/imagenesprom/prom6.jpg?raw=true" class="d-block w-100" alt="Third slide" onclick="openLightbox(this.src)">
             <div class="carousel-lightbox-overlay position-absolute end-0 bottom-0  d-flex justify-content-start align-items-center rounded-3  " style="height:30%;background:rgba(0, 0, 0, 0.678);backdrop-filter:blur(2px);z-index:2;">
               <div class="col-11 justify-content-center m-auto fs-5">
                 <p class="text-light mb-0">Educación y cultura popular.<br>Infancia y juventud.<br>Procesos de cambio.</p>
