@@ -9,60 +9,161 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../style.css" />
+       <!-- <link rel="stylesheet" href="../css/styledos.css"> -->
+    <!-- <link rel="stylesheet" href="../style.css" /> -->
     <title>publicaciones-huellas-de-barrio</title>
+
+  <style>
+    /* Hero Section */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+
+  .navbar{
+    z-index: 1000;
+    position: relative;
+    overflow: hidden;
+    margin-top: -20px;
+    background:#004200;
+  }
+
+  /* Estilos para alinear el logo con los elementos de navegación */
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .logo {
+    max-height: 90px;
+    object-fit: contain;
+  }
+
+  .navbar-nav {
+    align-items: center;
+    height: 100%;
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 15px;
+    color: rgb(255, 255, 255);
+    transition: color 0.5s ease-in-out;
+  }
+  .nav-link:hover {
+    color:#85bb85;
+    
+  }
+
+    .navbar-nav>li{
+    font-size: 24px;
+
+  }
+  
+  .nav-item:hover{
+    text-decoration: 3px underline #33cc66 ;
+  }
+  
+  /* Cambiar el color del subrayado cuando el navbar está cubierto */
+  .navbar.filled .nav-item:hover{
+    text-decoration: 3px underline white ;
+  }
+
+
+   .footer {
+      background-color: #0B2447;
+      padding: 40px 0;
+  }
+
+  .footer a {
+    color: white;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.subscribe-input {
+    max-width: 400px;
+    margin: auto;
+}
+.social-icons a {
+    margin: 0 5px;
+    font-size: 24px;
+    color: white;
+}
+.social-icons a:hover {
+    color: #00A8E8;
+}
+.footer img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.imagen-foot:hover{
+    transform: scale(1.05);
+      transition: ease-in-out 100ms;
+}
+    
+/* 🔹 RESPONSIVE DESIGN */
+
+
+  </style>
+
 </head>
 <body>
 
 
-    <header>
+  <header>
     <nav
-  class="navbar d-flex navbar-expand-lg navbar-light bg-white shadow-sm" >
-  <div class="container justify-content-center ">
-    <a
-      class="navbar-brand m-4 justify-content-center col-lg-4 col-md-6 col-sm-8"
-      href="../index.html"
-    >
-      <img
-        src="../recursos/img/logo3.png"
-        alt="Logo"
-        width="0%"
-        class="logo d-flex m-auto "
-      />
-    </a>
-
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" >
-        
-    <ul class="navbar-nav ms-auto d-flex justify-content-center ">
-    <li class="nav-item m-auto">
-        <a class="nav-link" href="../pages/red.html">Red</a>
-      </li>
-
+  class="navbar d-flex navbar-expand-lg navbar-light  shadow-sm " >
+  <div class="container row justify-content-center m-auto d-flex ">
     
-        <li class="nav-item m-auto">
-          <a class="nav-link" href="../pages/red.html">Procesos</a>
-        </li>
-        
-        
-        <li class="nav-item m-auto">
-          <a class="nav-link" href="../pages/publicaciones.html"
-            >Publicaciones</a
-          >
-        </li>
-        <li class="nav-item m-auto">
-          <a class="nav-link" href="../pages/contacto.html">Contacto</a>
-        </li>
-      </div>
+    <div class="col-sm-10  col-md-12 col-lg-8 ">
+      <a
+        class="navbar-brand m-4 col-sm-10 col-md-11 col-lg-8  d-block d-lg-flex align-items-center "
+        href="../index.html"
+        style="justify-content: center; justify-content: start ;"
+      >
+        <img
+          src="../recursos/img/logo4.png"
+          alt="Logo"
+          width="100%"
+          class="logo d-block mx-auto mx-lg-0 "
+        />
+      </a>
+    </div>
+    
+    <div class="col-lg-4  col-md-12 col-sm-12">
+      <ul class="navbar-nav ms-auto d-flex justify-content-center w-100 ">
+      <li class="nav-item m-auto  m-2">
+        <a class="nav-link " href="./pages/red.html">Red</a>
+      </li>
+      <li class="nav-item m-auto">
+        <a class="nav-link " href="./pages/procesos.html">Procesos</a>
+      </li>
+      <li class="nav-item m-auto">
+        <a class="nav-link" href="./pages/publicaciones.html">Publicaciones</a>
+      </li>
+      <li class="nav-item m-auto">
+        <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+      </li>
     </ul>
+
+    </div>
   </div>
 </nav>
 
@@ -92,46 +193,45 @@
             <div class="row text-start mt-5 ">
                 <!-- Sección What We Do -->
                 <div class="col-md-3">
-                    <h6 class="text-light">What We Do</h6>
-                    <ul class="list-unstyled">
-
-                        <li><a href="#">Education</a> </li>
-
-                         <!-- Button trigger modal ------------------------------------------------------------------------------------------------------------------------>
-       
-                        <li><a href="#">Medical Aid</a></li>
-                        <li><a href="#">Entrepreneurship</a></li>
-                        <li><a href="#">Environment</a></li>
-                        <li><a href="#">Blood Bureau</a></li>
-                        <li><a href="#">Health</a></li>
-                        <li><a href="#">Animal Welfare</a></li>
-                        <li><a href="#">Sports</a></li>
-                    </ul>
+          <h6 class="text-light text-md-center text-sm-center">What We Do</h6>
+          <ul class="list-unstyled text-md-center text-sm-center">
+            <li class="mb-1"><a href="#">Education</a> </li>
+            <!-- Button trigger modal -->
+            <li class="mb-1"><a href="#">Medical Aid</a></li>
+            <li class="mb-1"><a href="#">Entrepreneurship</a></li>
+            <li class="mb-1"><a href="#">Environment</a></li>
+            <li class="mb-1"><a href="#">Blood Bureau</a></li>
+            <li class="mb-1"><a href="#">Health</a></li>
+            <li class="mb-1"><a href="#">Animal Welfare</a></li>
+            <li class="mb-1"><a href="#">Sports</a></li>
+          </ul>
                 </div>
     
                 <!-- Sección Donations -->
                 <div class="col-md-3">
-                    <h6 class="text-light">Donations</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="#">How to Donate</a></li>
-                        <li><a href="#">Donation List</a></li>
-                        <li><a href="#">Recent Causes</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
+          <h6 class="text-light text-md-center text-sm-center">Donations</h6>
+          <ul class="list-unstyled text-md-center text-sm-center">
+            <li class="mb-1"><a href="#">How to Donate</a></li>
+            <li class="mb-1"><a href="#">Donation List</a></li>
+            <li class="mb-1"><a href="#">Recent Causes</a></li>
+            <li class="mb-1"><a href="#">FAQ</a></li>
+            <li class="mb-1"><a href="#">Terms of Use</a></li>
+            <li class="mb-1"><a href="#">Privacy Policy</a></li>
+          </ul>
                 </div>
     
                 <!-- Sección Social -->
                 <div class="col-md-3">
-                    <h6 class="text-light">We are on Social</h6>
-                    <a href="#">Facebook</a> | <a href="#">Twitter</a>
-                    <div class="mt-2 imagen-foot">
+                    <h6 class="text-light text-md-center text-sm-center">We are on Social</h6>
+                    <div class="text-md-center text-sm-center mb-2">
+                      <a href="#">Facebook</a> | <a href="#">Twitter</a>
+                    </div>
+                    <div class="mt-2 imagen-foot text-md-center text-sm-center">
                         <a href="../index.html">
                         <img src="https://lamemoriaseconstruyecaminando.wordpress.com/wp-content/uploads/2017/02/dsc5438.jpg?w=648" alt="Social Image">
                     </a>
                     </div>
-                      <div class="social-icons mt-2">
+                      <div class="social-icons mt-2 text-md-center text-sm-center">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -141,13 +241,13 @@
     
       <!-- Sección Contact -->
                 <div class="col-md-3 text-light">
-                    <h6 >Contact</h6>
-                    <p>No: 5/52B, Dr.Vaikhegi Street, Venkatesapuram, Kolathukottam, Chennai - 600041, Tamilnadu, India.</p>
-                    <p>044 24468099</p>
-                    <p>+91 9551555550</p>
-                    <p>+91 9848888088</p>
-                    <p><a href="mailto:info@maatratrust.org">info@maatratrust.org</a></p>
-                    <p><a href="mailto:maatratrust@gmail.com">maatratrust@gmail.com</a></p>
+                    <h6 class="text-md-center text-sm-center">Contact</h6>
+                    <p class="text-md-center text-sm-center">No: 5/52B, Dr.Vaikhegi Street, Venkatesapuram, Kolathukottam, Chennai - 600041, Tamilnadu, India.</p>
+                    <p class="text-md-center text-sm-center">044 24468099</p>
+                    <p class="text-md-center text-sm-center">+91 9551555550</p>
+                    <p class="text-md-center text-sm-center">+91 9848888088</p>
+                    <p class="text-md-center text-sm-center"><a href="mailto:info@maatratrust.org">info@maatratrust.org</a></p>
+                    <p class="text-md-center text-sm-center"><a href="mailto:maatratrust@gmail.com">maatratrust@gmail.com</a></p>
                 </div>
             </div>
         </div>
@@ -157,8 +257,8 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="../js/videocar.js"></script>
-    <script src="../js/navbar-animation.js"></script>
+    <!-- <script src="../js/videocar.js"></script> -->
+    <!-- <script src="../js/navbar-animation.js"></script> -->
 
 </body>
 </html>
