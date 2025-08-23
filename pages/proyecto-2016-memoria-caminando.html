@@ -81,6 +81,30 @@
      
     }
 
+    /* apagar visiualizacion thumnail */
+
+      @media (max-width: 990px) {
+      .fotosThumb{
+        border: 4px dashed purple;
+        visibility: collapse;
+        height: 0px;
+        
+      }
+      }
+
+
+
+/* apagar visiualizacion thumnail */
+
+      @media (max-width: 660px) {
+      .fotosThumb{
+        border: 4px dashed purple;
+        visibility: collapse;
+        height: 0px;
+        
+      }
+      }
+
 
 
     @media (max-width: 400px) { 
@@ -101,12 +125,6 @@
 
      
     }
-
-    
-
-    
-
-    
 
     
     </style>
@@ -261,7 +279,7 @@
       </div>
 
     </div>
-    <div class="fotosThumb col-lg-3 col-md-12 col-sm-12  d-flex flex-column align-items-center " style="max-height:60vh; overflow-y:auto;">
+    <div class="fotosThumb col-lg-3 col-md-12 col-sm-12  d-flex flex-column align-items-center " style="max-height:60vh; overflow-y:auto; ">
       <div class="d-flex flex-column w-100 align-items-center" style="gap:10px;">
         <img src="https://static.wixstatic.com/media/697903_47e071177b884191b93a280348c30ebc~mv2_d_2750_2353_s_2.jpg/v1/fill/w_608,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_47e071177b884191b93a280348c30ebc~mv2_d_2750_2353_s_2.jpg" class="img-thumbnail" style=" object-fit:cover; cursor:pointer;" data-bs-target="#fotopoemCarousel" data-bs-slide-to="0" aria-current="true" aria-label="Foto 1">
 
@@ -308,20 +326,21 @@
         
 
 
-<section class="container-fluid py-4 videoscompleto" style="background: #ececec;">
+<section class="container-fluid pt-4 videoscompleto " >
         <!-- Texto descripcion -->
 <div class="container ">
-  <p class="col-9 pt-3 text-center justify-content-center  m-auto">La descripción y espacialización de la memoria urbana de la población que habita el área de influencia de la intervención PUI-NOR, realizada en la centralidad de Santo Domingo Savio, comuna 1 del Municipio de Medellín (Colombia) entre 2004 y 2011</p>
+  <p class="col-9 pt-3 text-center justify-content-center fs-5 m-auto" style="text-align: justify;"><b> La descripción y espacialización de la memoria urbana de la población que habita el área de influencia de la intervención PUI-NOR</b> , realizada en la centralidad de Santo Domingo Savio, comuna 1 del Municipio de Medellín (Colombia) entre 2004 y 2011</p>
 </div>
     <div class="videosMaso container">
   
-  <div id="videoCarouselContainer" class="container" style="max-width:900px;margin:0 auto;">
+  <div id="videoCarouselContainer" class="container-fluid" style="max-width:900px;margin:0 auto;">
     <h4 class="mb-3 mt-4 text-center">Videos </h4>
-    <div class="row align-items-center">
-      <div class="col-md-3 col-12 mb-3 mb-md-0 d-flex flex-md-column flex-row justify-content-center align-items-center " id="videoThumbnailsCol" style="gap:40px;">
-        <div  id="videoDots" style="display:flex;flex-direction:column;gap:20px;width:100%;align-items:center;padding: 0 80px;"></div>
+    <div class="row align-items-center  ">
+      <div class="col-md-3 col-lg-3 col-sm-10 m-auto my-2 d-flex flex-md-column flex-row justify-content-center align-items-center " id="videoThumbnailsCol" style="gap:30px;">
+        <div  id="videoDots" style="display:flex;flex-direction:column;gap:20px;width:100%;align-items:center; "></div>
       </div>
-      <div class="col-md-9 col-12 ">
+
+      <div class="col-md-8 col-lg-8 col-sm-12 pb-4   ">
         <div style="position:relative;">
           <iframe id="carouselVideoIframe" width="100%" height="400" style="background:#000;max-width:100%;box-shadow:0 2px 8px rgba(0,0,0,0.12);object-fit:contain;" src="https://www.youtube.com/embed/IP8gBA3Yr3I?rel=0&mute=1" title="Video del proyecto" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <button id="unmuteBtn" class="btn btn-success position-absolute top-0 end-0 m-2" style="z-index:10;">Activar sonido</button>
@@ -330,22 +349,23 @@
         </div>
       </div>
     </div>
+
   </div>
- 
           </div>
 
 </section>
 
 
-          <div class="canciones container">
-            <h3 class="text-center mt-5">Canciones</h3>
+          <div class="canciones container-fluid m-auto " style="background: #ececec;">
+            <h3 class="text-center pt-5">Canciones</h3>
             
-          <div class="container row border p-4 col-10 m-auto">
-            <div class="col-lg-6 col-sm-12">
+            <div class="conetidocancio"> </div>
+          <div class="container row  p-4 col-10 m-auto justify-content-center ">
+            <div class="col-lg-5 col-sm-12 col-md-12 ">
             <iframe width="100%" height="160" scrolling="no" framerr="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/305134089&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-580720655" title="Liliana Sánchez" target="_blank" style="color: #cccccc; text-decoration: none;">Liliana Sánchez</a> · <a href="https://soundcloud.com/user-580720655/contracausa" title="Contracausa" target="_blank" style="color: #cccccc; text-decoration: none;">Contracausa</a></div>
             </div>
 
-            <div class="col-lg-6 col-sm-12">
+            <div class="col-lg-5 col-sm-12 col-md-12 ">
               <iframe width="100%" height="160" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/305134348&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-580720655" title="Liliana Sánchez" target="_blank" style="color: #cccccc; text-decoration: none;">Liliana Sánchez</a> · <a href="https://soundcloud.com/user-580720655/esperanza-jhasz-ft-kien-c" title="ESPERANZA. JHASZ FT KIEN C" target="_blank" style="color: #cccccc; text-decoration: none;">ESPERANZA. JHASZ FT KIEN C</a></div>
 
             </div>
@@ -354,9 +374,9 @@
           </div>
 
 
-          <div class="fotogaleria container-fluid ">
+          <div class="fotogaleria container-fluid " style="background: #00420044;">
 
-            <div class="col-8 m-auto p-4">
+            <div class="col-lg-8 col-sm-10 m-auto p-4  ">
               <!-- Photo Grid 4 columns Galeria-->
               <div class="row">
                 <div class="column">
@@ -390,7 +410,7 @@
               </div>
             </div>
     <!-- Modal para galería grid fotogaleria -->
-    <div class="modal fade border border-info" id="fotoGaleriaModal" tabindex="-1" aria-labelledby="fotoGaleriaModalLabel" aria-hidden="true">
+    <div class="modal fade " id="fotoGaleriaModal" tabindex="-1" aria-labelledby="fotoGaleriaModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered" style="max-width:900px;">
         <div class="modal-content bg-dark">
           <div class="modal-body p-0 text-center m-3" >
@@ -514,7 +534,7 @@
 
     function updateVideoDots() {
       videoDots.innerHTML = videoList.map((id,i) => `
-        <img src='${getYoutubeThumbnail(id)}' onclick='showVideo(${i})' style='width:230px;height:160px;object-fit:cover;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.12);margin:0 10px 0 10px;cursor:pointer;border:${i===videoIndex?'3px solid #198754':'2px solid #bbb'};transition:border 0.2s;' >
+        <img src='${getYoutubeThumbnail(id)}' onclick='showVideo(${i})' style='width:80%;height:80%;object-fit:cover;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.12);cursor:pointer;border:${i===videoIndex?'3px solid #198754':'2px solid #bbb'};transition:border 0.2s;' >
       `).join('');
     }
 
