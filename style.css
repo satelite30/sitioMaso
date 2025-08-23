@@ -46,15 +46,12 @@
     height: 100%;
     padding: 0 15px;
     color:#33cc66;
-    transition: color 0.5s ease-in-out;
-    
+    transition: color 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   }
-
-  
 
   .nav-link:hover{
     color:#33cc66;
-    transition: color 0.5s ease-in-out;
+    transition: color 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   }
 
   .navbar::before {
@@ -111,11 +108,12 @@
   /* Cambiar el color del texto cuando el navbar está cubierto */
   .navbar.filled .nav-link {
     color: white;
+    transition: color 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   }
 
-   .navbar.filled :hover {
-    color:#33cc66;
-    
+  .navbar.filled .nav-link:hover {
+    color: #33cc66;
+    transition: color 0.01s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   }
  
 
