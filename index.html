@@ -265,7 +265,23 @@
 
       <div class="wave-top "></div>
 
-<div class="cancionhuellas">
+<div class="cancionhuellas  ">
+  <div class="container-fluid huellas text-center my-4">
+  
+    <div class="row">
+
+  <audio id="audioHuellas" controls style="width:100%;max-width:800px;outline:none;" class="col-8 " >
+    <source src="./recursos/audio/huellasdebarrio.mp3"  type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+  <div class="mt-2 col-3" >
+    <button onclick="document.getElementById('audioHuellas').play()" class="btn btn-success me-2"><i class="fa fa-play"></i> Reproducir</button>
+    <button onclick="document.getElementById('audioHuellas').pause()" class="btn btn-danger"><i class="fa fa-pause"></i> Pausar</button>
+  </div>
+</div>
+
+</div>
+</div>
 
 </div>
 
