@@ -267,7 +267,7 @@
 
   .overlay:hover {
     opacity: 100%;
-    border: 3px solid red;
+    
   }
 
   /* Información encima del carrusel */
@@ -526,13 +526,28 @@
 
       .video-container {
         max-width: 90%;
+        max-height: 80vh;
         margin: 0 auto;
+        /* border: 3px solid red;
+         */
       }
 
-      .video-container video {
-        height: 70vh;
+      .video-container .video {
+        height: 90vh;
         object-fit: cover;
         width: 100%;
+        /* border: 6px dotted purple; */
+      }
+
+        .videoyt{ 
+        height:80vh;
+
+      }
+
+
+      .espaciogaleria{
+        width: 87%;
+       
       }
   
  /*  .hero h1 {
@@ -861,7 +876,13 @@
     height: 100%;
     object-fit: cover;
   }
-  
+
+
+
+
+
+
+
   /* Botón flotante sobre la imagen */
   .btn-circle {
     position: absolute;
@@ -1080,6 +1101,35 @@
      
       width: 90%;
     }
+
+
+
+    .video-container {
+        max-width: 100%;
+        margin: 0 auto;
+        max-height: 50%;
+        
+      }
+
+      
+
+      .videoyt{ 
+        height:40vh;
+
+      }
+
+      .conyoutube{
+        width:90vw;
+
+      }
+
+
+       .espaciogaleria{
+        width: 99%;        
+      }
+
+
+      
 
     
     
