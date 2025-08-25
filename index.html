@@ -5,264 +5,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Medio Ambiente y Sociedad</title>
+
+    <!-- Descripción (aparece en resultados de búsqueda) -->
+  <meta name="description" content="Breve descripción de tu sitio (máx. 160 caracteres). Incluye palabras clave importantes.">
+
+  <!-- Palabras clave (ya no se usa tanto, pero algunos motores lo leen) -->
+  <meta name="keywords" content="palabra clave 1, palabra clave 2, palabra clave 3">
+
+  <!-- Autor -->
+  <meta name="author" content="Tu Nombre o Marca">
+
+  <!-- Robots (indexar y seguir enlaces) -->
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (para compartir en redes sociales) -->
+  <meta property="og:title" content="Nombre de tu Sitio" />
+  <meta property="og:description" content="Breve descripción atractiva para redes sociales." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://popular-esmedellin.com/  " />
+  <meta property="og:image" content="https://tusitio.com/imagen.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nombre de tu Sitio" />
+  <meta name="twitter:description" content="Breve descripción para Twitter." />
+  <meta name="twitter:image" content="https://tusitio.com/imagen.jpg" />
+
+
+
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./css/indexestilos.css">
 
 
   <link rel="shortcut icon" href="./recursos/img/logoLitt2.ico" type="image/x-icon">
 
   <style>
-    /* Toggler blanco y hover */
-    .navbar-toggler {
-      background: transparent;
-      border: none;
-      box-shadow: none;
-      transition: ease-in-out 0.2s;
-      
-    }
-    .navbar-toggler .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-      height:4rem;
-      width:4rem;
-      
-    }
-    .navbar-toggler:hover, .navbar-toggler:focus {
-      border:3px solid #fff !important;
-      border-radius: 8px;
-      transition: ease-in-out 0.2s;
-    }
-    .navbar-toggler:hover .navbar-toggler-icon, .navbar-toggler:focus .navbar-toggler-icon {
-      filter: brightness(0) invert(1);
-    }
-    /* Overlay para el lightbox del carousel activo */
-    .carousel-lightbox-overlay {
-      transition: 0.3s, backdrop-filter 0.3s;
-      width: 35%;
-      margin: 20px;
-
-      /* Puedes personalizar el efecto aquí */
-    }
-
-    /* lista de nuevos contenidos */
-    .listLightbox {
-      display: none !important;
-    }
-
-    .carousel-item:hover {
-
-      transform: scale(0.96);
-      object-fit: cover;
-    }
-
-
-    .carousel-lightbox-overlay:hover {
-      transform: scale(1.05);
-      transition: ease-in-out 0.1s;
-      background: #d6d6d600;
-      backdrop-filter: blur(0px);
-
-    }
-
-
-    
-
-    @media (min-width: 1920px) {
-      .grid-item{ 
-        width: 100%;
-        height: 100%;
-      }
-
-      .galeriacont{
-        
-        padding: 0 6%;
-      }
-      }
-       
-
-
-    @media (min-width: 992px) {
-      .logo {
-        margin-left: 0 !important;
-        margin-right: auto !important;
-        display: block !important;
-        justify-content: start;
-        width: 50%;
-        /* border: 3px dashed black; */
-      }
-
-      .navbar-brand {
-        justify-content: flex-start !important;
-
-
-      }
-
-    }
-
-    @media (max-width: 991.98px) {
-      .logo {
-        margin-left: auto !important;
-        margin-right: auto !important;
-        display: block !important;
-
-      }
-
-      .navbar-brand {
-        justify-content: center !important;
-      }
-
-      .slidePrincipal {
-        height: 30em;
-      }
-
-      .slideImage img {
-        width: 100% !important;
-        height: 80% !important;
-        object-fit: contain !important;
-        max-width: 100vw;
-        max-height: 30em;
-        display: block;
-        margin: 0 auto;
-      }
-
-
-    }
-
-    @media (max-width: 768px) {
-
-
-      .slidePrincipal {
-        height: 14em;
-        margin: 0 auto;
-        justify-content: start;
-        display: flex;
-        object-fit: contain;
-
-
-      }
-
-      .slideImage img {
-        width: 100% !important;
-        height: 65% !important;
-        object-fit: contain !important;
-        max-width: 100vw;
-        max-height: 14em;
-        display: block;
-        align-items: center;
-
-        justify-content: center;
-
-
-      }
-
-
-    }
-
-
-    @media (max-width: 480px) {
-
-
-      .slidePrincipal {
-        height: 12.5em;
-        background: white;
-      }
-
-      .slideImage img {
-        width: 100% !important;
-        height: 64% !important;
-        object-fit: cover !important;
-        max-width: 100vw;
-        max-height: 12.5em;
-        display: block;
-        margin: 0 auto;
-      }
-
-
-
-
-    }
-
-
-    @media (max-width: 332px) {
-
-      .slidePrincipal {
-        height: 9em;
-        background: white;
-      }
-
-      .slideImage img {
-        width: 100% !important;
-        height: 55% !important;
-        object-fit: contain !important;
-        max-width: 100vw;
-        max-height: 9em;
-        display: block;
-        margin: 0 auto;
-      }
-    }
-
-
-
-
-
-    @media (max-width: 182px) {
-
-      .slidePrincipal {
-        height: 6em;
-        background: white;
-      }
-
-      .slideImage img {
-        width: 100% !important;
-        height: 45% !important;
-        object-fit: contain !important;
-        max-width: 100vw;
-        max-height: 6em;
-        display: block;
-        margin: 0 auto;
-      }
-    }
-
-
-
-
-
-
-
-
-
-
-
-    /* .carousel-lightbox-overlay{
-   border: 4px dashed blue;
-   z-index: 400;
-   left: 50% !important;
-   right: auto !important;
-   transform: translateX(-50%);
-   margin-left: 0 !important;
-   margin-right: 0 !important;
-   width: 90vw !important;
-   max-width: 95vw;
-   min-width: 60vw;
-  }
-   
-  .carousel-lightbox-overlay{
-        border: 4px dashed blue;
-        left: 50% !important;
-        right: auto !important;
-        transform: translateX(-50%);
-   margin-left: 0 !important;
-   margin-right: 0 !important;
-   max-width: 95vw;
-   min-width: 60vw;
-       }
-  
-  
-  
-  */
-  </style>
+     </style>
 
 
 </head>
