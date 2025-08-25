@@ -67,4 +67,7 @@
         img.onclick = function() { openLightboxFromSlide(idx); };
       });
     });
+
+    
+ 
   
