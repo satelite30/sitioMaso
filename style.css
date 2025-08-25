@@ -212,15 +212,20 @@
 
   }
   
+  
+
   .nav-item:hover{
     text-decoration: 3px underline #33cc66 ;
+    text-underline-offset: 10px;
     color: #33cc66;
   }
   
   /* Cambiar el color del subrayado cuando el navbar está cubierto */
   .navbar.filled .nav-item:hover{
-    text-decoration: 3px underline white ;
+    text-decoration: 3px underline #33cc66 ;
   }
+
+  
 
    /* Carrusel */
    .carousel-item img {
