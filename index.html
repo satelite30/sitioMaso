@@ -45,6 +45,11 @@
   <link rel="shortcut icon" href="./recursos/img/logoLitt2.ico" type="image/x-icon">
 
   <style>
+    /* Evitar que el modal/lightbox se active en el carousel de logos (logoMasoCarousel) */
+    #logoMasoCarousel .carousel-item img {
+      pointer-events: none;
+      cursor: auto !important;
+    }
      </style>
 
 
@@ -272,48 +277,48 @@ Ciudad Universitaria</li>
               <div class="carousel-item active" style="height: 100%; ">
                 <img src="https://github.com/satelite30/-logossitio/blob/main/logo03.png?raw=true"
                   class="d-block mx-auto" alt="Logo 1"
-                  style="max-width:100%;max-height:300px;padding-top:100px ;object-fit: contain;">
+                  style="max-width:100%;max-height:300px;padding-top:100px ;object-fit: contain; cursor:auto;" draggable="false">
               </div>
 
               <div class="carousel-item " style="height: 100%;">
                 <img src="https://github.com/satelite30/-logossitio/blob/main/HdB.jpeg?raw=true" class="d-block mx-auto"
-                  alt="Logo 3" style="max-width:100%;max-height:390px;object-fit: cover;">
+                  alt="Logo 3" style="max-width:100%;max-height:390px;object-fit: cover; cursor:auto;" draggable="false">
               </div>
 
               <div class="carousel-item" style="height: 100%;">
                 <img src="https://github.com/satelite30/-logossitio/blob/main/Micomuna1.png?raw=true"
-                  class="d-block mx-auto" alt="Logo 2" style="max-width:100%;max-height:400px;object-fit: contain;">
+                  class="d-block mx-auto" alt="Logo 2" style="max-width:100%;max-height:400px;object-fit: contain; cursor:auto;" draggable="false">
               </div>
 
               <div class="carousel-item " style="height: 100%;">
                 <img src="https://github.com/satelite30/-logossitio/blob/main/LaSierra.jpeg?raw=true"
-                  class="d-block mx-auto" alt="Logo 4" style="max-width:100%;max-height:400px;padding-top: 30px;">
+                  class="d-block mx-auto" alt="Logo 4" style="max-width:100%;max-height:400px;padding-top: 30px; cursor:auto;" draggable="false">
               </div>
               <div class="carousel-item " style="height: 100%;">
                 <img src="https://github.com/satelite30/-logossitio/blob/main/SBPM.jpeg?raw=true"
                   class="d-block mx-auto" alt="Logo 5"
-                  style="max-width:100%;max-height:300px;padding-top: 100px;object-fit: contain;">
+                  style="max-width:100%;max-height:300px;padding-top: 100px;object-fit: contain; cursor:auto;" draggable="false">
               </div>
               <div class="carousel-item " style="height: 100%;">
                 <img
                   src="https://github.com/satelite30/-logossitio/blob/main/Casa%20Piedra%20en%20el%20Camino.png?raw=true"
                   class="d-block mx-auto" alt="Logo 6"
-                  style="max-width:100%;max-height:300px;object-fit: contain;padding-top: 40px;">
+                  style="max-width:100%;max-height:300px;object-fit: contain;padding-top: 40px; cursor:auto;" draggable="false">
               </div>
               <div class="carousel-item" style="height: 100%;">
                 <img src="https://github.com/satelite30/-logossitio/blob/main/Udea2.jpeg?raw=true"
                   class="d-block mx-auto" alt="Logo UdeA"
-                  style="max-width:100%;max-height:300px;object-fit: contain;padding-top: 60px;">
+                  style="max-width:100%;max-height:300px;object-fit: contain;padding-top: 60px; cursor:auto;" draggable="false">
               </div>
               <div class="carousel-item" style="height: 100%;">
                 <img src="https://github.com/satelite30/-logossitio/blob/main/Udea1.jpeg?raw=true"
                   class="d-block mx-auto" alt="Logo UdeA 1"
-                  style="max-width:100%;max-height:300px;object-fit: contain;padding-top: 60px;">
+                  style="max-width:100%;max-height:300px;object-fit: contain;padding-top: 60px; cursor:auto;" draggable="false">
               </div>
               <div class="carousel-item" style="height: 100%;">
                 <img src="https://github.com/satelite30/-logossitio/blob/main/sonbat%C3%A1.png?raw=true"
                   class="d-block mx-auto" alt="Logo Sonbatá"
-                  style="max-width:100%;max-height:300px;object-fit: cover;padding-top: 10px;">
+                  style="max-width:100%;max-height:300px;object-fit: cover;padding-top: 10px; cursor:auto;" draggable="false">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#logoMasoCarousel" data-bs-slide="prev"
@@ -645,7 +650,28 @@ Ciudad Universitaria</li>
             <p>Procesos comunitarios</p>
           </div>
 
-          
+     
+          <style>
+           /*  .enlacecontenidos{
+              
+              padding: 2px 2px;
+              border-radius: 4px;
+              font-size: 28px;
+              
+              color:white;
+              text-decoration: none;
+
+            } */
+
+            .enlacecontenidos:hover{
+              border:3px solid #004200;
+              
+              
+            }
+
+          </style>
+
+
           <!-- Modal para galería -->
           <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel"
             aria-hidden="true">
@@ -664,8 +690,10 @@ Ciudad Universitaria</li>
                       class="fa-solid fa-angle-left"></i></button>
                       <div class="container  ">
                   <img id="galleryModalImg"  src="" alt="Imagen galería"
-                    style="max-width:90%;max-height:85vh;border-radius:10px;box-shadow:0 2px 20px #000;object-fit:contain;">
-                  <p class="mt-1  text-white" style="text-decoration: none;"><a href="#">Enlace</a></p>
+                    style="max-width:90%;max-height:85vh;border-radius:10px;box-shadow:0 2px 20px #000;object-fit:contain; ">
+                  <p class="mt-1  text-white" style="text-decoration: none;">
+                    <a class="enlacecontenidos bg-dark btn btn-dark fs-4"  href="#" target="_blank">Enlace</a>
+                  </p>
                   </div>
                   <button id="galleryNext" type="button"
                     class="btn btn-dark position-absolute top-50 end-0 translate-middle-y"
@@ -859,7 +887,7 @@ Ciudad Universitaria</li>
     // Galería de imágenes con navegación
     const galleryImages = [
       {
-        src: 'https://static.wixstatic.com/media/697903_60df5a7ca68243f3ad29f701254ff9a1~mv2.jpg/v1/fill/w_441,h_294,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/697903_60df5a7ca68243f3ad29f701254ff9a1~mv2.jpg',
+        src: 'https://static.wixstatic.com/media/697903_60df5a7ca68243f3ad29f701254ff9a1~mv2.jpg',
         title: 'Transformación de favelas\n              y barrios populares - Barrios populares Medellin'
       },
       {
@@ -915,6 +943,19 @@ Ciudad Universitaria</li>
       });
     });
 
+    // Lista de enlaces para cada imagen de galeriacont
+    const galleryLinks = [
+      '../pages/proyecto-2018-transformacion-favelas.html', // 1. Transformación de favelas y barrios populares
+      '../pages/proyecto-2018-transformacion-favelas.html', // 2. Recorridos territoriales
+      '../pages/proyecto-2022-compartires-populares.html', // 3. CompartirES PopularES
+      '../pages/proyecto-2018-transformacion-favelas.html', // 4. Deseos participativos
+      '../pages/proyecto-2016-memoria-caminando.html', // 5. La memoría se construye caminando
+      '../pages/proyecto-2022-compartires-populares.html', // 6. Barrios PopularES
+      '../pages/proyecto-2015-barrios-medellin-favelas-sp.html', // 7. Barrios populares Medellín y favelas São Paulo
+      '../pages/proyecto-2018-transformacion-favelas.html', // 8. Transformación de favelas en Río de Janeiro-Brasil...
+      '../pages/proyecto-2014-apropiacion-conocimiento.html' // 9. Apropiación social del conocimiento
+    ];
+
     function updateGalleryModal() {
       const img = document.getElementById('galleryModalImg');
       img.src = galleryImages[currentGalleryIndex].src;
@@ -931,6 +972,17 @@ Ciudad Universitaria</li>
         img.style.objectFit = 'contain';
       }
       document.getElementById('galleryModalLabel').textContent = galleryImages[currentGalleryIndex].title;
+
+
+      // Actualizar el enlace según la imagen activa
+      const enlace = document.querySelector('.enlacecontenidos');
+      if (enlace && galleryLinks[currentGalleryIndex]) {
+        enlace.href = galleryLinks[currentGalleryIndex];
+        enlace.textContent = 'Ver más';
+      } else if (enlace) {
+        enlace.href = '#';
+        enlace.textContent = 'Enlace';
+      }
     }
 
     document.addEventListener('DOMContentLoaded', function () {
