@@ -1,0 +1,31 @@
+{
+  "name": "mi-tema-sintaxis-personalizado",
+  "displayName": "Mi Tema de Sintaxis Personalizado",
+  "description": "Tema personalizado con colores de sintaxis modificados",
+  "version": "1.0.0",
+  "publisher": "usuario-personal",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Mi Tema de Sintaxis Personalizado",
+        "uiTheme": "vs-dark",
+        "path": "./themes/custom-syntax-theme.json"
+      }
+    ]
+  },
+  "keywords": [
+    "theme",
+    "dark",
+    "syntax",
+    "personalizado"
+  ],
+  "author": "Tu Nombre",
+  "license": "MIT"
+}
+

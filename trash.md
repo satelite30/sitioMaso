@@ -415,3 +415,41 @@
               </button>
             </div>
           </div>
+
+
+
+          informacion util si no se carga el sitio buscado
+
+          <div class="informacion-externa align-items-center text-center border p-4">
+      <div class="alert alert-warning" role="alert">
+        <h4 class="alert-heading">⚠️ Contenido no disponible</h4>
+        <p>El sitio web original ya no está disponible. Sin embargo, puedes ver la información del proyecto en la sección de contenido móvil más abajo.</p>
+        <hr>
+        <p class="mb-0">Si necesitas acceder al contenido original, puedes intentar contactar directamente con la Universidad de São Paulo (USP).</p>
+      </div>
+      
+      <div class="mt-4">
+        <h5>Información del Proyecto</h5>
+        <p class="text-muted">Este proyecto fue desarrollado en colaboración entre la Universidad de Antioquia y la Universidad de São Paulo, enfocado en el estudio comparativo de barrios populares en Medellín y favelas en São Paulo.</p>
+        
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <h6>Objetivos del Proyecto</h6>
+            <ul class="text-start">
+              <li>Análisis comparativo de memorias urbanas</li>
+              <li>Estudio de transformaciones territoriales</li>
+              <li>Investigación participativa con comunidades</li>
+              <li>Documentación de experiencias locales</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h6>Metodología</h6>
+            <ul class="text-start">
+              <li>Talleres participativos</li>
+              <li>Entrevistas a agentes clave</li>
+              <li>Análisis de fuentes primarias</li>
+              <li>Documentación fotográfica</li>
+            </ul>
+          </div>
+        </div>
+      </div>
