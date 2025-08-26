@@ -108,6 +108,8 @@
 
       }
 
+     
+
     }
 
     @media (max-width: 991.98px) {
@@ -134,6 +136,18 @@
         max-height: 30em;
         display: block;
         margin: 0 auto;
+      }
+
+       .logosmaso{ 
+        
+        padding-top: 0px;
+
+      }
+
+      .logosmaso img{
+        
+        padding: 0px;
+        margin: 0px;
       }
 
 
