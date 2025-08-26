@@ -1,3 +1,53 @@
 {
-    "liveServer.settings.port": 5501
+  "workbench.colorTheme": "Mi Tema de Sintaxis Personalizado",
+  "editor.fontSize": 14,
+  "editor.fontFamily": "'Consolas', 'Monaco', 'Courier New', monospace",
+  "editor.lineHeight": 1.5,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.semanticHighlighting.enabled": true,
+  "workbench.colorCustomizations": {
+    "editor.lineHighlightBackground": "#2a2d2e",
+    "editor.selectionBackground": "#264f78",
+    "editor.findMatchBackground": "#515c6a",
+    "editor.findMatchHighlightBackground": "#3a3d41"
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": ["comment"],
+        "settings": {
+          "foreground": "#6A9955",
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": ["string"],
+        "settings": {
+          "foreground": "#ce9178"
+        }
+      },
+      {
+        "scope": ["keyword"],
+        "settings": {
+          "foreground": "#569cd6",
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": ["entity.name.function"],
+        "settings": {
+          "foreground": "#ff6b6b"
+        }
+      },
+      {
+        "scope": ["variable"],
+        "settings": {
+          "foreground": "#9cdcfe"
+        }
+      }
+    ]
+  }
 }

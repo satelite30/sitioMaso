@@ -1,0 +1,107 @@
+{
+  "name": "Mi Tema de Sintaxis Personalizado",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#1e1e1e",
+    "editor.foreground": "#d4d4d4",
+    "activityBar.background": "#333333",
+    "sideBar.background": "#252526",
+    "statusBar.background": "#007acc",
+    "titleBar.activeBackground": "#3c3c3c"
+  },
+  "tokenColors": [
+    {
+      "name": "Comentarios",
+      "scope": ["comment", "punctuation.definition.comment"],
+      "settings": {
+        "foreground": "#6A9955",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Strings",
+      "scope": ["string", "string.quoted"],
+      "settings": {
+        "foreground": "#ce9178"
+      }
+    },
+    {
+      "name": "Keywords",
+      "scope": ["keyword", "storage.type", "storage.modifier"],
+      "settings": {
+        "foreground": "#569cd6",
+        "fontStyle": "bold"
+      }
+    },
+         {
+       "name": "Functions",
+       "scope": ["entity.name.function", "support.function"],
+       "settings": {
+         "foreground": "#ff6b6b"
+       }
+     },
+    {
+      "name": "Variables",
+      "scope": ["variable", "variable.other"],
+      "settings": {
+        "foreground": "#9cdcfe"
+      }
+    },
+    {
+      "name": "Numbers",
+      "scope": ["constant.numeric"],
+      "settings": {
+        "foreground": "#b5cea8"
+      }
+    },
+    {
+      "name": "Classes",
+      "scope": ["entity.name.class", "support.class"],
+      "settings": {
+        "foreground": "#4ec9b0"
+      }
+    },
+    {
+      "name": "HTML Tags",
+      "scope": ["entity.name.tag", "punctuation.definition.tag"],
+      "settings": {
+        "foreground": "#569cd6"
+      }
+    },
+    {
+      "name": "CSS Properties",
+      "scope": ["support.type.property-name.css"],
+      "settings": {
+        "foreground": "#9cdcfe"
+      }
+    },
+    {
+      "name": "CSS Values",
+      "scope": ["support.constant.property-value.css"],
+      "settings": {
+        "foreground": "#ce9178"
+      }
+    },
+    {
+      "name": "JavaScript Objects",
+      "scope": ["variable.other.object"],
+      "settings": {
+        "foreground": "#4ec9b0"
+      }
+    },
+    {
+      "name": "Operators",
+      "scope": ["keyword.operator"],
+      "settings": {
+        "foreground": "#d4d4d4"
+      }
+    },
+    {
+      "name": "Punctuation",
+      "scope": ["punctuation.definition", "punctuation.separator"],
+      "settings": {
+        "foreground": "#d4d4d4"
+      }
+    }
+  ]
+}
