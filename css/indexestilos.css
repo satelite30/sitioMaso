@@ -85,9 +85,27 @@
         height: 100%;
       }
 
-      .galeriacont{        
-        padding: 0 6%;
+       .conyoutube{
+        border: 2px solid green;
+        max-width: 75%;
+        
       }
+
+
+
+      .galeriacont{        
+        padding: 0 3%;
+        
+      }
+
+     
+
+
+       .espaciogaleria{
+        width: 80%;
+       
+      }
+
       }
        
 
