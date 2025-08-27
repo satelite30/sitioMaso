@@ -228,12 +228,24 @@
           background-position: center top;
           min-height: 300px;
         }
+
+        .texto-intro p{
+      
+      font-size: 22px;
+    }
+
+
       }
       @media (max-width: 767px) {
         .fondocard {
           background-position: center top;
           min-height: 200px;
         }
+
+        .texto-intro p{
+     
+      font-size: 22px;
+    }
       }
       @media (max-width: 575px) {
         .fondocard {
@@ -241,6 +253,11 @@
           min-height: 20%;
           
         }
+
+        .texto-intro p{
+      
+      font-size: 22px;
+    }
  
       }
 
@@ -260,7 +277,7 @@
 
     .texto-intro p{
       
-      font-size: 20px;
+      font-size: 18px;
     }
 
     
@@ -534,11 +551,11 @@
       <div class="info row d-flex w-100   m-auto">
 
         <!-- Borde superior ondulado -->
-        <div class="container col-lg-8 col-xl-5 col-sm-8 col-md-6 justify-content-center  text-center  p-3  ">
+        <div class="container col-lg-8 col-xl-5 col-sm-12 col-md-12  justify-content-center  text-center  p-3  ">
 
           <span class="badge-pill mb-3">Red</span>
 
-          <div class="texto-intro m-auto px-2 col-sm-10 col-lg-10  col-md-10  ">
+          <div class="texto-intro m-auto px-2 col-sm-10 col-lg-10  col-md-10 ">
           <h2>
             <span class="text-dark">Barrios populares</span>
             <span class="text" style="color: #004200;">Medellín</span>
@@ -1417,7 +1434,7 @@ https://github.com/satelite30/logo-test/blob/main/hdb-images/005arbol.jpg?raw=tr
         if (playPromise !== undefined) {
           playPromise.catch(function(error) {
             // Si el navegador bloquea la reproducción automática, intenta silenciar y reproducir
-            audio.muted = true;
+            audio.muted = false;
             audio.play();
           });
         }
