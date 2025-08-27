@@ -646,8 +646,7 @@
 
       <!-- Texto descripción con acordeón -->
       <div class="col-lg-9 col-md-10 col-sm-12  d-flex fs-4  ">
-        <div id="maso-description" class="w-100" data-aos="fade-up"
-     data-aos-duration="600">
+        <div id="maso-description" class="w-100">
           <div class="p-4 w-100" style="text-align: justify;">
             <p>
               Grupo MASO, clasificado en categoría A1 por MinCiencias, adscrito a la Facultad de Ciencias Sociales y
@@ -902,8 +901,7 @@ https://github.com/satelite30/logo-test/blob/main/hdb-images/005arbol.jpg?raw=tr
     </div>
 
     <!-- video -->
-    <div class="container-fluid m-3 align-items-center justify-content-center m-auto " data-aos="fade-up"
-     data-aos-anchor-placement="center-bottom">
+    <div class="container-fluid m-3 align-items-center justify-content-center m-auto ">
       <div class="video-container  d-flex justify-content-center align-items-center " style=" max-height: 80vh;">
         <div class="col-lg-10 col-md-12 col-sm-12 mx-auto conyoutube">
           <iframe class="text-center w-100 videoyt" style=" display: block; margin: auto; max-height: 80vh;"
@@ -1389,6 +1387,22 @@ https://github.com/satelite30/logo-test/blob/main/hdb-images/005arbol.jpg?raw=tr
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
+  </script>
+  <script>
+    // Intentar reproducir el audio automáticamente al cargar el sitio
+    window.addEventListener('DOMContentLoaded', function() {
+      var audio = document.getElementById('audioHuellas');
+      if (audio) {
+        var playPromise = audio.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(function(error) {
+            // Si el navegador bloquea la reproducción automática, intenta silenciar y reproducir
+            audio.muted = true;
+            audio.play();
+          });
+        }
+      }
+    });
   </script>
 </body>
 </html>
