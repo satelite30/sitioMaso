@@ -413,10 +413,8 @@
 
     <!-- descripción del grupo -->
 
-   <div class="container-fluid mt-4  m-auto "> 
-    <div class="row justify-content-center align-items-center texto text-center w-80 "
-
-      style="background: url(); background-size: cover; background-position: center; background-repeat: no-repeat; background: #eeeeeede;">
+  <div id="maso-bg-container" class="container-fluid mt-4  m-auto border border-danger " style="background-image: url(https://github.com/satelite30/logo-test/blob/main/hdb-images/003b.jpg?raw=true); background-size: cover; background-position: center; background-repeat: no-repeat; transition: background-position 0.7s cubic-bezier(.4,2,.6,1);">
+   <div class="row justify-content-center align-items-center texto text-center w-80 " style="background: #eeeeeede;">
       <div class="col-lg-12 col-md-12 col-sm-4 text-center d-flex m-auto text-center pt-4  w-80 ">
 
         <div class="col-lg-4  col-md-6 col-sm-10 text-center m-auto  ">
@@ -1112,18 +1110,23 @@
       var toggleBtn = document.getElementById('toggle-desc');
       var extra = document.getElementById('maso-extra');
       var arrow = document.getElementById('arrow');
-      if (toggleBtn && extra && arrow) {
+      var bgContainer = document.getElementById('maso-bg-container');
+      if (toggleBtn && extra && arrow && bgContainer) {
         toggleBtn.addEventListener('click', function () {
           if (extra.style.display === 'none') {
             extra.style.display = 'block';
             arrow.classList.remove('fa-angle-down');
             arrow.classList.add('fa-angle-up');
             toggleBtn.setAttribute('aria-label', 'Mostrar menos');
+            // Mover el background hacia abajo para dar efecto de expansión
+            bgContainer.style.backgroundPosition = 'center 30%';
           } else {
             extra.style.display = 'none';
             arrow.classList.remove('fa-angle-up');
             arrow.classList.add('fa-angle-down');
             toggleBtn.setAttribute('aria-label', 'Mostrar más');
+            // Regresar el background a la posición original
+            bgContainer.style.backgroundPosition = 'center top';
           }
         });
       }
