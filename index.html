@@ -52,6 +52,27 @@
   <link rel="shortcut icon" href="./recursos/img/logoLitt2.ico" type="image/x-icon">
 
   <style>
+    /* Opacidad del fondo de la sección maso-bg-container */
+    #maso-bg-container {
+      position: relative;
+      z-index: 1;
+    }
+    #maso-bg-container::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: inherit;
+      background-size: cover;
+      background-position: inherit;
+      background-repeat: inherit;
+      opacity: 0.8;
+      z-index: 0;
+      pointer-events: none;
+    }
+    #maso-bg-container > * {
+      position: relative;
+      z-index: 1;
+    }
     /* Evitar que el modal/lightbox se active en el carousel de logos (logoMasoCarousel) */
     #logoMasoCarousel .carousel-item img {
       pointer-events: none;
@@ -413,8 +434,10 @@
 
     <!-- descripción del grupo -->
 
-  <div id="maso-bg-container" class="container-fluid mt-4  m-auto border border-danger " style="background-image: url(https://github.com/satelite30/logo-test/blob/main/hdb-images/003b.jpg?raw=true); background-size: cover; background-position: center; background-repeat: no-repeat; transition: background-position 0.7s cubic-bezier(.4,2,.6,1);">
-   <div class="row justify-content-center align-items-center texto text-center w-80 " style="background: #eeeeeede;">
+<!--     agregar imagen background -->
+  <div id="maso-bg-container" class="container-fluid mt-4  m-auto " style="background-image: url(https://github.com/satelite30/logo-test/blob/main/hdb-images/003b.jpg?raw=true); background-size: cover; background-position: center; background-repeat: no-repeat; transition: background-position 0.7s cubic-bezier(.4,2,.6,1); z-index: 30;">
+   <div class="row justify-content-center align-items-center texto text-center w-80 " style="background: #eeeeeea2;">
+
       <div class="col-lg-12 col-md-12 col-sm-4 text-center d-flex m-auto text-center pt-4  w-80 ">
 
         <div class="col-lg-4  col-md-6 col-sm-10 text-center m-auto  ">
